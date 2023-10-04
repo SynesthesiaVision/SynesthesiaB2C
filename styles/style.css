@@ -1,0 +1,93 @@
+/* UNIVERSAL */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --rosaEscuro: #D96277;
+    --rosaClaro: #F29580;
+    --roxo: #A432A6;
+    --rosaRoxeado: #BF4594;
+    --azulClaro: #977EF2;
+    --preto: #0D0D0D;
+    --cinzaTxt: #3B3B3B;
+}
+
+#nav-bar, #menu-op {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    min-height: 5em;
+
+    font-family: AeonikBold;
+    
+}
+
+#nav-bar {
+    padding-left: 5em;
+    padding-right: 5em;
+    user-select: none;
+    background-image: linear-gradient(1turn,white,rgba(0, 0, 0, 0.275));
+}
+
+a:hover {
+    transition: 0.5s;
+    color: var(--rosaEscuro)
+}
+
+#menu-op {
+    gap: 3em;
+}
+
+ul, li, a {
+    list-style: none;
+    text-decoration: none;
+    color: var(--cinzaTxt);
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2em;
+    font-family: 'Nunito Sans', sans-serif;
+    color: var(--preto);
+    user-select: none;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+img {
+    pointer-events: none
+}
+
+main {
+    min-height: 30em;
+}
+
+/* RODAPÉ */
+footer {
+    background-color: var(--preto);
+    height: 10em;
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: lighter;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    position: relative;
+    width:100%;
+    left:0;
+    bottom:0;
+}
