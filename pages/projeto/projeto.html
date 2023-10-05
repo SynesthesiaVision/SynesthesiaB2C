@@ -17,9 +17,86 @@
     <title>Projeto Synesthesia Vision</title>
 
     <style>
-        main {
+        /* INTRODUÇÃO */
+        iframe {
+            border-radius: 5px;
+            border: none;
+        }
+
+        .introduction {
+            display: flex;
+            flex-direction: column;
             justify-content: center;
+            align-items: center;
+            margin-top: 2em;
+        }
+
+        .introduction p {
+            font-size: 1.1em;
+            width: 38%;
             text-align: center;
+            margin-top: 2em;
+            margin-bottom: 1em;
+        }
+
+        .introduction h5 {
+            font-size: 1em;
+        }
+
+        .introduction a {
+            text-decoration: underline;
+        }
+
+        .videoIFPE,
+        .audiobinaural, 
+        .etapa-testes { 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 3em;
+        }
+
+        .introduction, .etapa-testes, .videoIFPE  {
+            margin-bottom: 5em;
+        }
+
+        .videoIFPE p {
+            font-size: 0.9em;
+            margin: 0.5em;
+        }
+
+        /* DESCRIÇÃO AUDIO BINAURAL */
+        .audiobinaural h3, .etapa-testes h3 {
+            font-size: 1.8em;
+        }
+
+        .desc-audio-binaural {
+            font-size: 1.1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .desc-audio-binaural p {
+            width: 30%;
+        }
+
+        /* ETAPA DE TESTES */
+        .etapa-testes p, 
+        .etapa-testes img {
+            font-size: 1.1em;
+            width: 50%;
+
+            border-radius: 5px;
+        }
+
+        .etapa-testes {
+            gap: 1em;
+        }
+
+        .etapa-testes p:last-of-type {
+            font-size: 0.9em;
         }
 
     </style>
@@ -53,12 +130,58 @@
     </header>
 
     <main>
-        <h2>Synesthesia Vision</h2>
-        <p>“De um aparelho ocular batizado de Synesthesia Vision, nasceram a esperança e a vontade de estudantes e
-            professores em propiciar, gradativamente, um recurso que pode dar mais autonomia a pessoas com deficiência
-            visual. O objeto utiliza um recurso chamado de Áudio Binaural Tridimensional que é capaz de transformar
-            distâncias em sons.”</p>
-        <h5>Leia mais: <a href="https://m.leiaja.com/carreiras/2018/12/04/sons-da-inclusao-grupo-cria-oculos-3d-para-cegos/">Sons da inclusão: grupo cria óculos 3D para cegos</a></h5>
+        <div class="desc-project-complete">
+            <div class="introduction">
+                <h2>Synesthesia Vision</h2>
+                <p>“De um aparelho ocular batizado de Synesthesia Vision, nasceram a esperança e a vontade de estudantes
+                    e
+                    professores em propiciar, gradativamente, um recurso que pode dar mais autonomia a pessoas com
+                    deficiência
+                    visual. O objeto utiliza um recurso chamado de <b>Áudio Binaural Tridimensional</b> que é capaz de
+                    transformar
+                    distâncias em sons.”</p>
+                <h5>Leia mais: <a
+                        href="https://m.leiaja.com/carreiras/2018/12/04/sons-da-inclusao-grupo-cria-oculos-3d-para-cegos/">Sons
+                        da inclusão: grupo cria óculos 3D para cegos</a></h5>
+            </div>
+
+            <div class="videoIFPE">
+                <h3>IFPE Acontece Synesthesia Vision</h3>
+                <p class="center">Descrição do vídeo</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/3hJMsVoCtBw"> </iframe>
+            </div>
+
+            <div class="audiobinaural">
+                <h3>Mas o que seria o áudio binaural?</h3>
+                <div class="desc-audio-binaural">
+                    <p>O áudio Binaural é um recurso imersivo que localiza o áudio em volta de quem está ouvindo,
+                        simulando
+                        como um ser humano consegue captar os sons naturalmente. É uma técnica de gravação e reprodução
+                        sonora bastante interessante, pois, com apenas dois microfones, é possível criar o efeito de som
+                        ambiente. </p>
+                    <img src="../../assets/img/audiobinaural.png" width="350">
+                    <p class="desc-extra">Alguns áudios binaurais também são usados em terapias; tais áudios têm o poder
+                        para acessar em uma
+                        certa frequência o subconsciente humano, podendo alterar coisas no corpo como a liberação de
+                        endorfina, também usados para meditação.</p>
+                </div>
+            </div>
+
+            <div class="etapa-testes">
+                <h3>Primeiros Testes</h3>
+
+                <img src="../../assets/img/usuarioTesteOculos.jpg" 
+                alt="Imagem de Carlão - Deficiente Visual testando a primeira versão dos Óculos"
+                width="700">
+
+                <p>José Carlos Amaral, 35 anos. Ou Carlão, como é carinhosamente chamado pelos amigos, possui total
+                    deficiência visual. Auxiliado pelo óculos do projeto, em versão para teste, pôde caminhar de forma
+                    independente e cuidadosa pelo Campus Recife do Instituto Federal de Pernambuco.</p>
+
+                <p class="center">No vídeo a seguir é contado do professor que, apesar das dificuldades, conseguiu superar tudo.</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/xYWOiG5KZYU"> </iframe>
+                </div>
+        </div>
     </main>
 
     <footer>
