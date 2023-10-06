@@ -57,6 +57,10 @@ h2 {
     user-select: none;
 }
 
+main h2 {
+    text-align: center;
+}
+
 h3 {
     font-size: 1.5em;
 }
@@ -89,4 +93,8 @@ footer {
     width: 100%;
     left: 0;
     bottom: 0;
+}
+
+.inverse {
+    order: 3;
 }

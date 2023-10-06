@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +10,48 @@
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,700&display=swap"
+        rel="stylesheet">
 
     <title>Projeto Synesthesia Vision</title>
+
+    <style>
+        .card,
+        .card-insta {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 3em;
+            
+        }
+
+        .container-card p {
+            /* width: 25%; */
+            width: 25em;
+
+            margin: 1em;
+        }
+
+        h2 {
+            margin-bottom: 1em;
+        }
+
+        .confira-btn, .confira-btn a {
+            background-color: var(--roxo);
+            color: white;
+            border-radius: 4px;
+            border: none;
+            margin: 1em;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 1em;
+
+            padding: 1em;
+            width: 10em;
+        }
+    </style>
 </head>
+
 <body>
     <h1 hidden>Synesthesia Vision</h1>
     <header>
@@ -41,11 +80,63 @@
     </header>
 
     <main>
-        
+        <h2>SYNESTHESIA NA MÍDIA</h2>
+
+        <div class="card">
+            <img src="../../assets/img/img_Febrace2023.png" alt="Imagem da equipe da Febrace 2023"
+            width="300">
+            <div class="container-card">
+                <h3>FEBRACE 2023</h3>
+                <p>A equipe formada por Lucas Alves, Marcelo Henrique e Ryan Gomes apresentaram virtualmente o projeto
+                    de
+                    "Desenvolvimento de Placa de Circuito Impresso para Bengala Sensorial" para avaliadores da FEBRACE.
+                </p>
+                <button class="confira-btn">
+                    <a href="https://www.instagram.com/p/Cnjn_eVuiQU/?igshid=YmMyMTA2M2Y%3D" target="_blank">CONFIRA</a>
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="../../assets/img/img_synesthesiaOficina.png" alt="Imagem do evento Oficinas Synesthesia Vision 2022"
+                width="300" class="inverse">
+            <div class="container-card">
+                <h3>Oficinas Synesthesia Vision 2022</h3>
+                <p>No dia 29/06/2022 a equipe do projeto Oficinas Synesthesia Vison , do Grendes&Labgeo ministrou a
+                    oficina
+                    "Utilização de Arduíno para desenvolver tecnologias para o meio ambiente", como parte do evento que
+                    contempla a Semana do Meio Ambiente do IFPE - Campus Cabo de Santo Agostinho.</p>
+                <button class="confira-btn">
+                    <a href="https://www.instagram.com/p/Cfjw2tNrLzq/?igshid=MDJmNzVkMjY%3D" target="_blank">CONFIRA</a>
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="../../assets/img/img_ingredienteX.png" alt="Imagem do evento Oficinas Ingrediente X 2022"
+                width="300">
+            <div class="container-card">
+                <h3>Oficinas ingrediente X 2022</h3>
+                <p>A oficina ingrediente X visou desenvolver o interesse de estudantes dos anos finais do ensino
+                    fundamental
+                    II pela programação de computadores.</p>
+                <button class="confira-btn">
+                    <a href="https://www.instagram.com/p/Caz9vzGLMB2/?igshid=MDJmNzVkMjY%3D" target="_blank">CONFIRA</a>
+                </button>
+            </div>
+        </div>
+
+
+        <div class="card-insta">
+            <h3>Quer acompanhar mais conteúdo e ficar por dentro do projeto?</h3>
+            <a href="https://www.instagram.com/synesthesiavision" target="_blank">Nos acompanhe no Instagram</a>
+        </div>
+
     </main>
 
     <footer>
         <p>© 2023 Synesthesia Vision. All rights reserved</p>
     </footer>
 </body>
+
 </html>
