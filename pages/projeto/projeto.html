@@ -46,9 +46,10 @@
             text-decoration: underline;
         }
 
+        /* VIDEOIFPE */
         .videoIFPE,
-        .audiobinaural, 
-        .etapa-testes { 
+        .audiobinaural,
+        .etapa-testes {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -61,26 +62,47 @@
             margin-bottom: 5em;
         }
 
+        .videoIFPE {
+            display: none;
+        }
+
         .videoIFPE p {
             font-size: 0.9em;
             margin: 0.5em;
         }
 
-        /* DESCRIÇÃO AUDIO BINAURAL */
-        .audiobinaural h3,
-        .etapa-testes h3,
-        .ecolocalizacao h3 {
+        /* AUDIO BINAURAL */
+        .audiobinaural {
+            gap: 1.5em;
+        }
+
+        h3 {
             font-size: 1.8em;
             user-select: none;
+            text-align: center;
+        }
+
+        .audiobinaural, .ecolocalizacao, .sinestesia {
+            padding: 1.5em;
         }
 
         .desc-audio-binaural,
-        .desc-ecolocalizacao {
+        .desc-ecolocalizacao,
+        .desc-sinestesia {
             font-size: 1.1em;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
+            gap: 1.5em;
+        }
+
+        .desc-sinestesia p {
+            width: 40%;
+        }
+
+        .desc-sinestesia {
+            flex-direction: column;
         }
 
         .desc-audio-binaural p {
@@ -88,9 +110,28 @@
         }
 
         /* ECOLOCALIZAÇÃO */
+        .ecolocalizacao {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1.5em;
+        }
 
         .desc-ecolocalizacao p {
-            width: 40%;
+            width: 60%;
+        }
+
+        /* CONCEITO */
+        .synesthesiaConcept {
+            margin: 3em;
+        }
+
+        .desc-concept {
+            text-align: center;
+            font-size: 1.1em;
+            width: em;
+            margin: 0.5em;
         }
 
         /* ETAPA DE TESTES */
@@ -104,6 +145,7 @@
 
         .etapa-testes {
             gap: 1em;
+            display: none;
         }
 
         .etapa-testes p:last-of-type {
@@ -144,12 +186,9 @@
             <div class="introduction">
                 <h2>SYNESTHESIA VISION</h2>
                 <p>“De um aparelho ocular batizado de Synesthesia Vision, nasceram a esperança e a vontade de estudantes
-                    e
-                    professores em propiciar, gradativamente, um recurso que pode dar mais autonomia a pessoas com
-                    deficiência
-                    visual. O objeto utiliza um recurso chamado de <b>Áudio Binaural Tridimensional</b> que é capaz de
-                    transformar
-                    distâncias em sons.”</p>
+                    e professores em propiciar, gradativamente, um recurso que pode dar mais autonomia a pessoas com
+                    deficiência visual. O objeto utiliza um recurso chamado de <b>Áudio Binaural Tridimensional</b> que é capaz de
+                    transformar distâncias em sons.”</p>
                 <h5>Leia mais: <a
                         href="https://m.leiaja.com/carreiras/2018/12/04/sons-da-inclusao-grupo-cria-oculos-3d-para-cegos/">Sons
                         da inclusão: grupo cria óculos 3D para cegos</a></h5>
@@ -164,43 +203,48 @@
             <div class="sinestesia">
                 <h3>O que é Sinestesia?</h3>
                 <div class="desc-sinestesia">
-                    <p>txt</p>
-                    <img src="#" alt="#">
+                    <img src="../../assets/img/sinestesia.png" width="250">
+                    <p>A sinestesia é uma condição perceptual na qual os sentidos de uma pessoa se fundem ou se
+                        sobrepõem de maneira incomum. Isso significa que uma pessoa com sinestesia pode experimentar
+                        estímulos sensoriais de uma maneira que é diferente da maioria das pessoas. Por exemplo, alguém com
+                        sinestesia pode perceber sons como cores, sabores como formas ou números como tendo personalidades distintas.</p>
                 </div>
             </div>
-
 
             <div class="audiobinaural">
                 <h3>Mas o que seria o Áudio Binaural?</h3>
                 <div class="desc-audio-binaural">
                     <p>O áudio Binaural é um recurso imersivo que localiza o áudio em volta de quem está ouvindo,
-                        simulando
-                        como um ser humano consegue captar os sons naturalmente. É uma técnica de gravação e reprodução
+                        simulando como um ser humano consegue captar os sons naturalmente. É uma técnica de gravação e reprodução
                         sonora bastante interessante, pois, com apenas dois microfones, é possível criar o efeito de som
                         ambiente. </p>
                     <img src="../../assets/img/audiobinaural.png" width="350">
                     <p class="desc-extra">Alguns áudios binaurais também são usados em terapias; tais áudios têm o poder
-                        para acessar em uma
-                        certa frequência o subconsciente humano, podendo alterar coisas no corpo como a liberação de
+                        para acessar em uma certa frequência o subconsciente humano, podendo alterar coisas no corpo como a liberação de
                         endorfina, também usados para meditação.</p>
                 </div>
             </div>
 
             <div class="ecolocalizacao">
                 <h3>E o que é Ecolocalização?</h3>
+                <img src="../../assets/img/ecolocalizacao.png" width="350">
                 <div class="desc-ecolocalizacao">
                     <p>Ecolocalização é um processo que consiste na emissão de ondas sonoras pelos animais para obter
-                        informações sobre outros animais e o ambiente. <br> Os golfinhos são um exemplo que utiliza desse processo para perceber
-                        o ambiente em volta. Ao emitir essas ondas e for encontrado um objeto, o som é processado até chegar no cérebro, onde ocorre o
-                        processo de interpretação. Através da ecolocalização o animal sabe qual a distância, tamanho,
+                        informações sobre outros animais e o ambiente. Os golfinhos são um exemplo que utiliza
+                        desse processo para perceber o ambiente em volta. Ao emitir essas ondas e for encontrado um objeto, o som é processado até
+                        chegar no cérebro, onde ocorre o processo de interpretação. Através da ecolocalização o animal sabe qual a distância, tamanho,
                         textura e densidade de um objeto qualquer, além de ser o principal mecanismo de caça e orientação. </p>
-                    <img src="../../assets/img/ecolocalizacao.png" width="350">
                 </div>
             </div>
             <!-- https://www.bbc.com/portuguese/vert-fut-47926489 -->
 
-
-            <p> Esses foram os princípios para o desenvolvimento de óculos sensoriais que possibilitem uma espécie de visão sinestésica do mundo, ou seja, que permita que a audição seja os olhos de um cego</p>
+            <div class="synesthesiaConcept">
+                <h3>Projeto de Óculos Sensoriais para Cegos - Synesthesia Vision</h3>
+                <div class="desc-concept">
+                    <p> Esses foram os princípios para o desenvolvimento de óculos sensoriais que possibilitem uma espécie de
+                        visão sinestésica do mundo. <br> (ou seja, que permita que a audição seja os olhos de um cego)</p>
+                </div>
+            </div>
 
             <div class="etapa-testes">
                 <h3>Primeiros Testes</h3>
@@ -216,9 +260,6 @@
                     superar tudo.</p>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/xYWOiG5KZYU"> </iframe>
             </div>
-                <p class="center">No vídeo a seguir é contado do professor que, apesar das dificuldades, conseguiu superar tudo.</p>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/xYWOiG5KZYU"> </iframe>
-                </div>
         </div>
     </main>
 

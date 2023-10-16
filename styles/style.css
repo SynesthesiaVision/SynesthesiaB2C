@@ -77,7 +77,7 @@ main {
     text-align: center;
 }
 
-/* RODAPÉ */
+/* RODAPÉ */ 
 footer {
     background-color: var(--preto);
     height: 10em;
@@ -90,7 +90,7 @@ footer {
     text-align: center;
 
     position: relative;
-    width: 100%;
+
     left: 0;
     bottom: 0;
 }
