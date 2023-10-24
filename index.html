@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,700&display=swap"
+        rel="stylesheet">
+
+    <title>Synesthesia Vision</title>
+
+    <style>
+        /* Padrão dos Cards */
+        .presentation,
+        .characteristics,
+        .buy,
+        .midia {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            margin-bottom: 10em;
+        }
+
+        /* Header */
+        .presentation {
+            margin: 5em;
+        }
+
+        /* Direcionamento pra descrição do Projeto */
+        .project {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .desc-project {
+            text-align: center;
+        }
+
+        .desc-project h2 {
+            margin-bottom: 0.5em;
+        }
+
+        .desc-project p {
+            font-size: 1.1em;
+            width: 35em;
+            margin-bottom: 0.5em;
+        }
+
+        .desc-project p:last-of-type {
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        /* Botão do Saiba Mais */
+        .about-project-btn {
+            background-color: var(--rosaEscuro);
+            color: white;
+            border-radius: 4px;
+            border: none;
+            margin: 1em;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 1em;
+            padding: 1em;
+        }
+
+        .about-project-btn:hover {
+            color: white;
+            opacity: 0.9;
+            transition: 0.5s;
+        }
+
+        .characteristics {
+            gap: 2em;
+        }
+
+        .card-characteristics {
+            display: flex;
+            align-items: center;
+            gap: 3em;
+            text-align: center;
+        }
+
+        .card-desc-chara {
+            order: 2;
+        }
+
+        .card-desc-chara p {
+            font-size: 1.1em;
+            width: 28em;
+        }
+
+        .card-desc-chara h3 {
+            margin-bottom: 0.5em;
+        }
+
+        /* Compra dos óculos */
+        .buy {
+            gap: 5em;
+        }
+
+        #buy-btn {
+            background-color: var(--rosaRoxeado);
+            color: white;
+            border-radius: 4px;
+            border: none;
+            margin: 1em;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 1em;
+
+            padding: 1em;
+        }
+
+        /* noticias sobre o projeto */
+        .midia {
+            display: flex;
+            flex-direction: row;
+            gap: 2em;
+        }
+
+        .title-midia {
+            margin: 1em;
+        }
+
+        .desc-event {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            text-align: center;
+            align-items: center;
+        }
+
+        .desc-event p {
+            font-size: 1.1em;
+            width: 25em;
+        }
+
+        #midia-btn {
+            background-color: var(--roxo);
+            color: white;
+            border-radius: 4px;
+            border: none;
+            margin: 1em;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 1em;
+
+            padding: 1em;
+            width: 10em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 hidden>Synesthesia Vision</h1>
+    <header>
+        <div id="nav-bar">
+            <img src="assets/img/logo.png" width="50" alt="Logo Synesthesia Vision">
+            <ul id="menu-op">
+                <li>
+                    <a href="#">INÍCIO</a>
+                </li>
+                <li>
+                    <a href="pages/projeto/projeto.html">PROJETO</a>
+                </li>
+                <li>
+                    <a href="pages/educação/educacao.html">EDUCAÇÃO</a>
+                </li>
+                <li>
+                    <a href="pages/noticias/noticias.html">NOTÍCIAS</a>
+                </li>
+                <li>
+                    <a href="pages/contato/contato.html">CONTATO</a>
+                </li>
+
+            </ul>
+            <a href="#"></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="card">
+            <div class="presentation">
+                <img src="assets/img/logoAlt.png" width="500">
+                <img src="assets/img/oculos.png" width="600">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="project">
+                <!-- <img src="assets/img/logo.png" width="200"> -->
+                <img src="assets/img/oculos.gif" width="500">
+                <div class="desc-project">
+                    <h2>Entenda o Projeto</h2>
+                    <p>Esses óculos não são apenas um acessório! São uma visão de futuro que coloca a independência e a
+                        mobilidade no centro das atenções. Utilizando tecnologia de áudio binaural de ponta, é possível
+                        proporcionar uma experiência sensorial única, assim permitindo que pessoas cegas naveguem pelo
+                        mundo com confiança e facilidade.
+                    </p>
+
+                    <p>Quer entender mais sobre?</p>
+                    <button class="about-project-btn">
+                        <a href="pages/projeto/projeto.html" class="about-project-btn">Saiba Mais</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="characteristics">
+                <h2>Características</h2>
+                <div class="card-characteristics">
+                    <div class="card-desc-chara">
+                        <h3>Confiança e independência</h3>
+                        <p>Esses óculos não são apenas um acessório, são uma visão de futuro que coloca a independência
+                            e a mobilidade no centro das atenções. É oferecido uma experiência sensorial única,
+                            permitindo que pessoas cegas naveguem pelo mundo com confiança e facilidade.</p>
+                    </div>
+                    <img src="assets/img/independence.png" width="250">
+                </div>
+
+                <div class="card-characteristics">
+                    <div class="card-desc-chara">
+                        <h3>Personalização</h3>
+                        <p>Além disso, esses óculos são totalmente personalizáveis, adaptando-se às preferências
+                            individuais de cada usuário. <br> Escolha cor e tamanho conforme sua necessidade!</p>
+                    </div>
+                    <img class="inverse" src="assets/img/personalize.png" width="250">
+                </div>
+
+                <div class="card-characteristics">
+                    <div class="card-desc-chara">
+                        <h3>Tecnologia inovadora</h3>
+                        <p>Imagine caminhar por ruas movimentadas, atravessar cruzamentos e explorar ambientes
+                            desconhecidos sem depender de ninguém. Os óculos audiobinaurais usam som tridimensional para
+                            criar uma imagem sonora do ambiente ao seu redor, guiando-o com precisão por obstáculos e
+                            direções. <br> É como ter um guia pessoal invisível a cada passo!</p>
+                    </div>
+                    <img src="assets/img/tecbinaural.png" width="250">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card" hidden>
+            <div class="buy">
+                <h2>Adquira já os Óculos</h2>
+                <img src="assets/img/logoAlt.png" width="500">
+
+                <button id="buy-btn">
+                    <a href="#" id="buy-btn">Comprar</a>
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="title-midia">Eventos que o Synesthesia participou</h2>
+            <div class="midia">
+                <img src="assets/img/img_Febrace2023.png" width="350">
+                <div class="desc-event">
+                    <h3>FEBRACE 2023</h3>
+                    <p>A equipe formada por Lucas Alves, Marcelo Henrique e Ryan gomes apresentaram virtualmente o
+                        projeto de Desenvolvimento de placa de circuito impresso para Bengala sensorial para avaliadores
+                        da FEBRACE.</p>
+                    <p>Quer saber sobre mais eventos que envolveu o projeto e conhecer a equipe por trás dos óculos?</p>
+                    <button id="midia-btn">
+                        <a href="pages/noticias/noticias.html" id="midia-btn">Leia Mais</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2023 Synesthesia Vision. All rights reserved</p>
+    </footer>
+</body>
+
+</html>
