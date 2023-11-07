@@ -1,0 +1,435 @@
+/* INTRODUÇÃO */
+/* iframe {
+    border-radius: 5px;
+    border: none;
+} */
+
+#voltarTopo {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    background: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#voltarTopo i {
+    font-size: 3em;
+}
+
+.descBengala, .descConcept,
+.descContext, .descSynesthesia {
+    user-select: none;
+}
+
+/* IDEIA */
+.descContext {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5em;
+
+    margin: 15% 0em 15% 0px;
+}
+
+.descContext p {
+    font-size: 1.2em;
+}
+
+.descContext p:last-of-type {
+    font-size: 1em;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.descContext h3 {
+    font-size: 1.5em;
+}
+
+.descSynesthesia {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin: 0.5em
+}
+
+/* BENGALA */
+.descBengala {
+    display: flex;
+    border-top: 2px solid #cf5084;;
+    border-bottom: 2px solid #cf5084;;
+}
+
+.descBengala > .desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 50%;
+}
+
+.descBengala p {
+    width: 34em;
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    font-size: 1.5em;
+}
+
+.descBengala p:first-of-type {
+    font-size: 1.2em;
+}
+
+.descBengala p:last-of-type {
+    font-size: 1.4em;
+}
+
+.imgBengala {
+    width: 50em;
+    background-color: #cf5084;
+    display: flex;
+    justify-content: center;
+}
+
+/* CONCEITOS */
+.descConcept {
+    margin: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.descConcept a {
+    color: #cf5084;
+}
+
+.h6Concepts {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    gap: 1em;
+    margin: 1em;
+    color: #9a92fb;
+}
+
+.h6Concepts h6:first-of-type{
+    color: #b837a2;
+}
+
+.h6Concepts h6:last-of-type {
+    color: #eb8576;
+}
+
+/* MARKS */
+.marks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.marks h3 {
+    font-size: 1.8em;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.marks h4 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #cf5084;
+}
+
+.marks img {
+    margin: 2em;
+}
+
+.slide-container {
+    display: flex;
+    justify-content: center !important;
+    margin-bottom: 1em;
+}
+
+.slide-container:nth-child(1) {
+    background-image: url('../../assets/img/backgroundMarkI.png');
+    width: 100%;
+    height: 500px;
+    color: white;
+}
+
+.slide-container:nth-child(2) {
+    background-image: url('../../assets/img/backgroundMarkII.png');
+    width: 100%;
+    height: 500px;
+    color: white;
+}
+
+.slide-container:nth-child(3) {
+    background-image: url('../../assets/img/backgroundMarkIII.png');
+    width: 100%;
+    height: 500px;
+    color: white;
+}
+
+.descMark {
+    width: 45%;
+    margin-right: 5em;
+}
+
+.containerMarkI {
+    border-radius: 4px;
+    gap: 1em;
+    width: 55%;
+}
+
+.markI , .markII, .markIII{
+    margin: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.markI h5, .markII h5, .markIII h5 {
+    font-size: 1.3em;
+}
+
+.markI p , .markII p, .markIII p {
+    font-size: 0.9em;
+    text-align: justify;
+}
+
+.containerMarkI, .containerMarkII, .containerMarkIII {
+    display: none;
+}
+
+.containerMarkI.active, .containerMarkII.active, .containerMarkIII.active {
+    display: block;
+}
+
+
+/* Slide do Mark I */
+.containerMarkI:nth-child(1) {
+    background: url('../../assets/img/markI.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25em;
+    height: 14em;
+    
+}
+
+/* .containerMarkI:nth-child(2) {
+    background: url('../../assets/img/img_Febrace2023.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25em;
+    height: 14em;
+}
+
+.containerMarkI:nth-child(3) {
+    background: url('../../assets/img/img_ingredienteX.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25em;
+    height: 14em;
+} */
+
+/* Slide do Mark II */
+.containerMarkII:nth-child(1) {
+    background: url('../../assets/img/markII.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25em;
+    height: 14em; 
+}
+
+/* .containerMarkII:nth-child(2) {
+    background: url('../../assets/img/usuarioTesteOculos.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25em;
+    height: 14em; 
+}
+
+.containerMarkII:nth-child(3) {
+    background: url('../../assets/img/usuarioTesteOculos.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25em;
+    height: 14em; 
+} */
+
+/* Slide do Mark III */
+.containerMarkIII:nth-child(1) {
+    background: url('../../assets/img/markIII.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25em;
+    height: 14em; 
+}
+
+/* .containerMarkIII:nth-child(2) {
+    background: url('../../assets/img/usuarioTesteOculos.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25em;
+    height: 14em; 
+}
+
+.containerMarkIII:nth-child(3) {
+    background: url('../../assets/img/usuarioTesteOculos.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25em;
+    height: 14em; 
+} */
+
+#prev, #next {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+/* Equipe do projeto */
+.team {
+    margin-top: 5em;
+    margin-bottom: 2em;
+}
+
+.team h3 {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0.3em;
+}
+
+.team h4 {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #b837a2;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.team h6 {
+    font-size: 1.4em;
+    margin-top: 2%;
+}
+
+.team p {
+    font-size: 1.2em;
+}
+
+.team h5:last-of-type {
+    margin-top: 3em;
+    margin-bottom: 1em
+}
+
+#prof1 {
+    background-image: url('../../assets/img/team/Aida.jpg');
+}
+
+#prof2 {
+    background-image: url('../../assets/img/team/Gilmar.jpg');
+}
+
+#prof3 {
+    background-image: url('../../assets/img/team/Carlos.jpg');
+}
+
+.coord {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3em;
+}
+
+.prof {
+    height: 30em;
+    border-radius: 2px;
+    border: none;
+    background-size: cover;
+    width: 25%;
+    box-shadow: 2px 2px 10px black;
+}
+
+.prof:hover {
+    cursor: pointer;
+}
+
+.descProf {
+    margin: 0;
+    padding: 0.8em;
+    color: #fff;
+    text-align: center;
+    background: #00000055;
+}
+
+.descProf h6 {
+    margin-bottom: 0.5em;
+}
+
+.collab {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.aluno {
+    background-size: cover;
+    width: 20em;
+    height: 25em;
+    border-radius: 2px;
+    border: none;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.aluno img {
+    background-size: contain;
+    width: 19em;
+    height: 19em;
+    border-radius: 2px;
+}
+
+.aluno p {
+    font-size: 1em;
+}
+
+/* IDEIAS */
+#black-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 9999;
+    transition: opacity 1.5s;
+    opacity: 1;
+    
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#black-screen h2 {
+    color: white;
+}
