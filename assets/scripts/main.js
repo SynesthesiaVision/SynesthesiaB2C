@@ -1,18 +1,49 @@
-let slidesI = document.querySelectorAll('.containerMarkI');
-let slidesII = document.querySelectorAll('.containerMarkII');
-let slidesIII = document.querySelectorAll('.containerMarkIII');
-let index = 0;
+let slideMarkI = document.querySelectorAll('.containerMarkI');
+let slideMarkII = document.querySelectorAll('.containerMarkII');
+let slideMarkIII = document.querySelectorAll('.containerMarkIII');
+
+let indexI = 0;
+let indexII = 0;
+let indexIII = 0;
 
 function nextI() {
-    slidesI[index].classList.remove('active');
-    index = (index + 1) % slidesI.length;
-    slidesI[index].classList.add('active');
+    slideMarkI[indexI].classList.remove('active');
+    indexI = (indexI + 1) % slideMarkI.length;
+    slideMarkI[indexI].classList.add('active');
 }
+
+function nextII() {
+    slideMarkII[indexII].classList.remove('active');
+    indexII = (indexII + 1) % slideMarkII.length;
+    slideMarkII[indexII].classList.add('active');
+}
+
+function nextIII() {
+    slideMarkIII[indexIII].classList.remove('active');
+    indexIII = (indexIII + 1) % slideMarkIII.length;
+    slideMarkIII[indexIII].classList.add('active');
+}
+
+
 
 function prevI() {
-    slidesI[index].classList.remove('active');
-    index = (index - 1 + slidesI.length) % slidesI.length;
-    slidesI[index].classList.add('active');
+    slideMarkI[indexI].classList.remove('active');
+    indexI = (indexI - 1 + slideMarkI.length) % slideMarkI.length;
+    slideMarkI[indexI].classList.add('active');
 }
 
-setInterval(nextI, 7000);
+function prevII() {
+    slideMarkII[indexII].classList.remove('active');
+    indexII = (indexII - 1 + slideMarkII.length) % slideMarkII.length;
+    slideMarkII[indexII].classList.add('active');
+}
+
+function prevIII() {
+    slideMarkIII[indexIII].classList.remove('active');
+    indexIII = (indexIII - 1 + slideMarkIII.length) % slideMarkIII.length;
+    slideMarkIII[indexIII].classList.add('active');
+}
+
+setInterval(nextI, 5000);
+setInterval(nextII, 5000);
+setInterval(nextIII, 5000);

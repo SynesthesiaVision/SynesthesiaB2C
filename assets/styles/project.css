@@ -214,96 +214,62 @@
     display: block;
 }
 
-
 /* Slide do Mark I */
 .containerMarkI:nth-child(1) {
-    background: url('../../assets/img/markI.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 25em;
-    height: 14em;
-    
+    background: url('../../assets/img/markI.png'); 
 }
 
-/* .containerMarkI:nth-child(2) {
-    background: url('../../assets/img/img_Febrace2023.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 25em;
-    height: 14em;
+.containerMarkI:nth-child(2) {
+    background: url('../../assets/img/carlos_markI.png');
 }
 
 .containerMarkI:nth-child(3) {
-    background: url('../../assets/img/img_ingredienteX.png');
+    background: url('../../assets/img/usuarioTesteOculos.jpg');
+}
+
+/* Slide do Mark II */
+.containerMarkII:nth-child(1) {
+    background: url('../../assets/img/markII.png');
+}
+
+.containerMarkII:nth-child(2) {
+    background: url('../../assets/img/markII_v2.jpg');
+}
+
+/* Slide do Mark III */
+.containerMarkIII:nth-child(1) {
+    background: url('../../assets/img/markIII.png'); 
+}
+
+.containerMarkIII:nth-child(2) {
+    background: url('../../assets/img/markIII_v2.jpg');
+}
+
+.containerMarkIII:nth-child(3) {
+    background: url('../../assets/img/markIII_v3.jpg');
+}
+
+/* Padronização da estilização das imagens nos slides (marks I, II e III) */
+.containerMarkI:nth-child(1), .containerMarkI:nth-child(2), .containerMarkI:nth-child(3),
+.containerMarkII:nth-child(1), .containerMarkII:nth-child(2),
+.containerMarkIII:nth-child(1), .containerMarkIII:nth-child(2), .containerMarkIII:nth-child(3) {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     width: 25em;
     height: 14em;
-} */
-
-/* Slide do Mark II */
-.containerMarkII:nth-child(1) {
-    background: url('../../assets/img/markII.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 25em;
-    height: 14em; 
 }
-
-/* .containerMarkII:nth-child(2) {
-    background: url('../../assets/img/usuarioTesteOculos.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 25em;
-    height: 14em; 
-}
-
-.containerMarkII:nth-child(3) {
-    background: url('../../assets/img/usuarioTesteOculos.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 25em;
-    height: 14em; 
-} */
-
-/* Slide do Mark III */
-.containerMarkIII:nth-child(1) {
-    background: url('../../assets/img/markIII.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 25em;
-    height: 14em; 
-}
-
-/* .containerMarkIII:nth-child(2) {
-    background: url('../../assets/img/usuarioTesteOculos.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 25em;
-    height: 14em; 
-}
-
-.containerMarkIII:nth-child(3) {
-    background: url('../../assets/img/usuarioTesteOculos.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 25em;
-    height: 14em; 
-} */
 
 #prev, #next {
     display: flex;
     align-items: center;
     cursor: pointer;
+}
+
+#prev:hover, #next:hover {
+    opacity: 0.6;
+    transition: 1s;
+    font-size: 1.1em;
 }
 
 
@@ -432,4 +398,103 @@
 
 #black-screen h2 {
     color: white;
+}
+
+/* Responsividade */
+/* Celulares e Telas menores */
+@media (min-width: 320px) and (max-width: 480px) {
+    .descSynesthesia h3 {
+        font-size: 1.2em;
+    }
+
+    .descSynesthesia img {
+        display: none;
+    }
+
+    .descBengala > .desc {
+        width: 100%;
+    }
+
+    .desc p {
+        width: 100%;
+    }
+
+    .imgBengala {
+        display: none;
+    }
+
+    .descConcept {
+        margin: 1em;
+        text-align: justify;
+    }
+
+    .h6Concepts {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2em;
+    }
+
+    .descConcept p {
+        text-align: center;
+    }
+
+    .marks h3 {
+        font-size: 1.7em;
+        text-align: center;
+    }
+
+    .marks h4 {
+        font-size: 1.2em;
+    }
+
+    .marks img {
+        width: 70%;
+    }
+
+    .markI .slide, .markII .slide, 
+    .markIII .slide, #next, #prev {
+        display: none;
+    }
+
+    .slide-container:nth-child(1) {
+        width: 100%;
+
+    }
+
+    .descMark h5 {
+        font-size: 1em;
+    }
+
+    .descMark {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .coord {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .prof {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .collab {
+        display: grid;
+        flex-direction: column;
+    }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 811px) {
+    body {
+        /* background: #cf5084; */
+    }
+}
+
+/* Telas maiores */
+@media screen and (min-width: 812px) {
+    /* Computador, notebook e etc */
 }

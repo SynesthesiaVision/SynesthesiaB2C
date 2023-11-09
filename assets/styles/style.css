@@ -103,6 +103,205 @@ footer {
     bottom: 0;
 }
 
+footer a {
+    color: white;
+}
+
 .inverse {
     order: 3;
+}
+
+
+/* CSS do Index */
+/* Padrão dos Cards */
+.presentation,
+.characteristics,
+.buy,
+.midia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    margin-bottom: 10em;
+}
+
+/* Header */
+.presentation {
+    margin: 5em;
+}
+
+/* Direcionamento pra descrição do projeto */
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desc-project {
+    text-align: center;
+}
+
+.desc-project h2 {
+    margin-bottom: 0.5em;
+}
+
+.desc-project p {
+    font-size: 1.1em;
+    width: 40em;
+    margin-bottom: 0.5em;
+}
+
+.desc-project p:last-of-type {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/* Botão do Saiba Mais */
+.about-project-btn {
+    background-color: var(--rosaEscuro);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    margin: 1em;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1em;
+    padding: 1em;
+}
+
+.about-project-btn:hover {
+    color: white;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+
+.characteristics {
+    gap: 2em;
+}
+
+.characteristics h2 {
+    font-size: 2.5em;
+}
+
+.card-characteristics {
+    display: flex;
+    align-items: center;
+    gap: 3em;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.card-desc-chara {
+    order: 2;
+}
+
+.card-desc-chara p {
+    font-size: 1.1em;
+    width: 26em;
+}
+
+.conf h3{
+    color: #b7569d;
+}
+
+.perso h3{
+    color: #3e977f;
+}
+
+.tecIno h3{
+    color: #e14a4f;
+}
+
+/* Compra dos óculos */
+.buy {
+    gap: 5em;
+}
+
+#buy-btn {
+    background-color: var(--rosaRoxeado);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    margin: 1em;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1em;
+
+    padding: 1em;
+}
+
+/*  sobre o projeto */
+.midia {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+
+.title-midia {
+    margin: 1em;
+}
+
+.desc-event {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    text-align: center;
+    align-items: center;
+}
+
+.desc-event p {
+    font-size: 1.1em;
+    width: 25em;
+}
+
+#midia-btn {
+    background-color: var(--roxo);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    margin: 1em;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1em;
+
+    padding: 1em;
+    width: 10em;
+    cursor: pointer;
+}
+
+
+/* Responsividade */
+/* Celulares e Telas menores */
+@media screen and (max-width: 480px) {
+    #nav-bar img {
+        display: none;
+    }
+
+    #nav-bar {
+        padding: 0;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8em;    
+    }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 811px) {
+    #nav-bar img {
+        display: none;
+    }
+
+    #nav-bar {
+        padding: 0;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8em;    
+    }
+}
+
+/* Telas maiores */
+@media screen and (min-width: 812px) {
+    /* Computador, notebook e etc */
 }

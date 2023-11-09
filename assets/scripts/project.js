@@ -5,7 +5,7 @@ setTimeout(function () {
     setTimeout(function () {
         telaPreta.style.display = 'none';
     }, 1500);
-}, 5000); // Definir os segundos de duração dessa tela
+}, 1000); // Definir os segundos de duração dessa tela
 
 // Funcionalidade pra voltar para o inicio da pagina
 function voltarAoTopo() {
