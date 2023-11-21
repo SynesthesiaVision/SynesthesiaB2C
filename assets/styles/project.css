@@ -155,7 +155,6 @@
 .slide-container {
     display: flex;
     justify-content: center !important;
-    margin-bottom: 1em;
 }
 
 .slide-container:nth-child(1) {
@@ -482,7 +481,7 @@
     }
 
     .collab {
-        display: grid;
+        display: flex;
         flex-direction: column;
     }
 }

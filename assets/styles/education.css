@@ -33,3 +33,24 @@ p {
 .btnView a {
     color: white
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+    main h2 {
+        font-size: 1.5em;
+        margin: 1em;
+    }
+
+    .ebook1, .ebook2 {
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .desc-ebook1, .desc-ebook2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .ebook2 img{
+        order: 0 !important;
+    }
+}

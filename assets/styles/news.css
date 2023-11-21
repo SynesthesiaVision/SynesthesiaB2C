@@ -37,3 +37,26 @@ h2 {
     padding: 1em;
     width: 10em;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+    main h2 {
+        font-size: 1.5em;
+        margin: 1em;
+    }
+
+    .card {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .card img {
+        order: 0 !important;
+    }
+
+    .card p {
+        width: 90%;
+    }
+
+}

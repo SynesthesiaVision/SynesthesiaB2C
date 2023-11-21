@@ -284,6 +284,63 @@ footer a {
         align-items: center;
         font-size: 0.8em;    
     }
+
+    p {
+        text-overflow: ellipsis;
+    }
+
+    .card {
+        margin-bottom: 5em;
+    }
+
+    .presentation img:first-of-type {
+        width: 300px;
+    }
+
+    .presentation img:last-of-type {
+        width: 350px;
+    }
+
+    .project img {
+        display: none;
+    }
+
+    .project {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .desc-project p {
+        font-size: 0.9em;
+        width: 100%;
+
+    }
+
+    .card-characteristics {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .card-characteristics img {
+        order: 0 !important; 
+    }
+
+    .conf p, .perso p, .tecIno p {
+        font-size: 0.8em;
+        width: 100%;
+    }
+
+    .midia {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .desc-event p {
+        font-size: 1em;
+        width: 100%;
+    }
+    
 }
 
 /* Tablets */
