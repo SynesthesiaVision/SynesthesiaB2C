@@ -248,11 +248,12 @@ footer a {
     gap: 1em;
     text-align: center;
     align-items: center;
+    width: 40em;
 }
 
 .desc-event p {
     font-size: 1.1em;
-    width: 25em;
+    text-align: center;
 }
 
 #midia-btn {
@@ -316,7 +317,6 @@ footer a {
     .desc-project p {
         font-size: 0.9em;
         width: 100%;
-
     }
 
     .card-characteristics {
@@ -346,3 +346,25 @@ footer a {
     
 }
 
+/* Estilos para tablets */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .project {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-characteristics {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .card-characteristics img {
+        order: 0 !important; 
+    }
+    
+    .midia {
+        display: flex;
+        flex-direction: column;
+    }
+}
