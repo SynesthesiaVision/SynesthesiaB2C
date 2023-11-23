@@ -485,15 +485,3 @@
         flex-direction: column;
     }
 }
-
-/* Tablets */
-@media (min-width: 481px) and (max-width: 811px) {
-    body {
-        /* background: #cf5084; */
-    }
-}
-
-/* Telas maiores */
-@media screen and (min-width: 812px) {
-    /* Computador, notebook e etc */
-}

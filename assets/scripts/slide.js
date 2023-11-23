@@ -24,8 +24,6 @@ function nextIII() {
     slideMarkIII[indexIII].classList.add('active');
 }
 
-
-
 function prevI() {
     slideMarkI[indexI].classList.remove('active');
     indexI = (indexI - 1 + slideMarkI.length) % slideMarkI.length;

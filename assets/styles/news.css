@@ -38,6 +38,8 @@ h2 {
     width: 10em;
 }
 
+/* Responsividade */
+/* Celulares e Telas menores */
 @media (min-width: 320px) and (max-width: 480px) {
     main h2 {
         font-size: 1.5em;

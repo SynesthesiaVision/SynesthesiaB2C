@@ -257,7 +257,6 @@ footer a {
 
 #midia-btn {
     background-color: var(--roxo);
-    color: white;
     border-radius: 4px;
     border: none;
     margin: 1em;
@@ -267,6 +266,10 @@ footer a {
     padding: 1em;
     width: 10em;
     cursor: pointer;
+}
+
+#midia-btn a {
+    color: white;
 }
 
 
@@ -343,22 +346,3 @@ footer a {
     
 }
 
-/* Tablets */
-@media (min-width: 481px) and (max-width: 811px) {
-    #nav-bar img {
-        display: none;
-    }
-
-    #nav-bar {
-        padding: 0;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        font-size: 0.8em;    
-    }
-}
-
-/* Telas maiores */
-@media screen and (min-width: 812px) {
-    /* Computador, notebook e etc */
-}
