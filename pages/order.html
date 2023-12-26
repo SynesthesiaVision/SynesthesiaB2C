@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="../assets/styles/order.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,700&display=swap"
+        rel="stylesheet">
+
+    <!-- ICONS -->
+    <script src="https://kit.fontawesome.com/e2bd8765fe.js" crossorigin="anonymous"></script>
+
+    <!-- SCRIPTS -->
+    <script src="../assets/scripts/order.js" defer></script>
+    <title>Encomende seus óculos</title>
+</head>
+
+<body>
+    <header>
+        <div id="nav-bar-order">
+            <img src="../assets/img/logo.png" width="50" alt="Logo Synesthesia Vision">
+            <ul id="menu-op-order">
+                <li>
+                    <a href="../index.html">INÍCIO</a>
+                </li>
+            </ul>
+            <li>
+                <a href="signin.html">FAZER LOGIN</a>
+            </li>
+        </div>
+    </header>
+
+    <main>
+        <h2>Personalize seus Óculos</h2>
+        <form action="" method="post" class="form-customize-glasses">
+            <img id="gifImage" src="../assets/img/oculos-preto.gif">
+
+            <div class="options-customize-glasses">
+                <fieldset class="size">
+                    <legend>Tamanho</legend>
+                    <div>
+                        <div class="radioSize">
+                            <label for="small">
+                                <input type="radio" id="small" name="optionSize" value="small" />
+                                <span>P</span>
+                            </label>
+                        </div>
+
+                        <div class="radioSize">
+                            <label for="medium">
+                                <input type="radio" id="medium" name="optionSize" value="medium" />
+                                <span>M</span>
+                            </label>
+                        </div>
+
+                        <div class="radioSize">
+                            <label for="big">
+                                <input type="radio" id="big" name="optionSize" value="big" />
+                                <span>G</span>
+                            </label>
+                        </div>
+
+                    </div>
+                </fieldset>
+
+                <fieldset class="color">
+                    <legend id="titleColor">Cor</legend>
+                    <div>
+                        <div class="radioColor">
+                            <label for="black">
+                                <input type="radio" id="black" name="optionColor" value="black" onchange="changeColor(), changeGif('black')"/>
+                            </label>
+                        </div>
+
+                        <div class="radioColor">
+                            <label for="white">
+                                <input type="radio" id="white" name="optionColor" value="white" onchange="changeColor(), changeGif('white')" />
+                            </label>
+                        </div>
+
+                        <div class="radioColor">
+                            <label for="pink">
+                                <input type="radio" id="pink" name="optionColor" value="pink" onchange="changeColor(), changeGif('pink')"/>
+                            </label>
+                        </div>
+
+                        <div class="radioColor">
+                            <label for="blue">
+                                <input type="radio" id="blue" name="optionColor" value="blue" onchange="changeColor(), changeGif('blue')"/>
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+                <button type="submit">Comprar</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2023 Synesthesia Vision. All rights reserved</p> <br>
+        <a href="mailto:synesthesiavision@recife.ifpe.edu.br">Entre em contato</a>
+    </footer>
+</body>
+
+</html>

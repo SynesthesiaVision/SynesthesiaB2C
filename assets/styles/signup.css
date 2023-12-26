@@ -1,0 +1,66 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    overflow: hidden;
+}
+
+.left {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+}
+
+label span {
+    font-weight: bold;
+    margin-bottom: 0.1em;
+    margin-top: 1em;
+    font-size: 1em;
+}
+
+label input {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 3px;
+    width: 18em;
+    padding: 0.3em;
+    font-size: 1.1em;
+}
+
+.btnSignUp {
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1em;
+    padding: 0.7em;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.right {
+    height: 100%;
+    width: 50%;
+
+    background-image: url('../img/2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
