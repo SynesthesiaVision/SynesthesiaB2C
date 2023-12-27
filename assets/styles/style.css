@@ -232,16 +232,8 @@ footer a {
 }
 
 /*  sobre o projeto */
-.midia {
-    display: flex;
-    flex-direction: row;
-    gap: 2em;
-}
 
-.title-midia {
-    margin: 1em;
-}
-
+/* Novo midia */
 .desc-event {
     display: flex;
     flex-direction: column;
@@ -249,11 +241,37 @@ footer a {
     text-align: center;
     align-items: center;
     width: 40em;
+    color: #000;
 }
 
-.desc-event p {
-    font-size: 1.1em;
-    text-align: center;
+/* Imagens do slide */
+.midiaImage1, .midiaImage2, .midiaImage3 {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 400px;
+}
+
+.midiaImage1 {
+    background-image: url('../img/img_Febrace2023.png');
+}
+
+.midiaImage2 {
+    background-image: url('../img/img_ingredienteX.png');
+}
+
+.midiaImage3 {
+    background-image: url('../img/img_synesthesiaOficina.png');
+}
+
+.desc-event p:first-of-type {
+    font-size: 1em;
+    width: 30em;
+}
+
+.desc-event p:last-of-type {
+    font-size: 0.9em;
+    width: 25em;
 }
 
 #midia-btn {
@@ -271,6 +289,18 @@ footer a {
 
 #midia-btn a {
     color: white;
+}
+
+.midia {
+    margin: 0 auto;
+    padding: 2em;
+    width: 60vw;
+}
+
+.glide__slide {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 

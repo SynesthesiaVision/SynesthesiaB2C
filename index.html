@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/glide.core.min.css">
 
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -123,25 +124,89 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="container">
             <h2 class="title-midia">Eventos que o Synesthesia participou</h2>
             <div class="midia">
-                <img src="assets/img/img_Febrace2023.png" width="350">
-                <div class="desc-event">
-                    <h3>FEBRACE 2023</h3>
-                    <p>A equipe formada por Lucas Alves, Marcelo Henrique e Ryan gomes apresentaram virtualmente o
-                        projeto de Desenvolvimento de placa de circuito impresso para Bengala sensorial para avaliadores
-                        da FEBRACE.</p>
-                    <p>Quer saber sobre mais eventos que envolveu o projeto e conhecer a equipe por trás dos óculos?</p>
-                    <button id="midia-btn">
-                        <a href="pages/news.html">
-                            <i class="fa-solid fa-book-open" style="color: #ffffff;"></i>
-                            Leia Mais</a>
-                    </button>
+                <div class="glide">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                            <li class="glide__slide">
+                                <div class="midiaImage1"></div>
+                                <div class="desc-event">
+                                    <h3>FEBRACE 2023</h3>
+                                    <p>A equipe formada por Lucas Alves, Marcelo Henrique e Ryan gomes apresentaram
+                                        virtualmente
+                                        o
+                                        projeto de Desenvolvimento de placa de circuito impresso para Bengala sensorial
+                                        para
+                                        avaliadores
+                                        da FEBRACE.</p>
+                                    <p>Quer saber sobre mais eventos que envolveu o projeto e conhecer a equipe por trás
+                                        dos
+                                        óculos?</p>
+                                    <button id="midia-btn">
+                                        <a href="pages/news.html">Leia Mais</a>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="glide__slide">
+                                <div class="midiaImage2"></div>
+                                <div class="desc-event">
+                                    <h3>Oficinas ingrediente X 2022</h3>
+                                    <p>A oficina ingrediente X visou desenvolver o interesse de estudantes dos anos
+                                        finais do
+                                        ensino fundamental II pela programação de computadores.</p>
+                                    <p>Quer saber sobre mais eventos que envolveu o projeto e conhecer a equipe por trás
+                                        dos
+                                        óculos?</p>
+                                    <button id="midia-btn">
+                                        <a href="pages/news.html">Leia Mais</a>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="glide__slide">
+                                <div class="midiaImage3"></div>
+                                <div class="desc-event">
+                                    <h3>Oficinas Synesthesia Vision 2022</h3>
+                                    <p>No dia 29/06/2022 a equipe do projeto Oficinas Synesthesia Vision, do
+                                        Grendes&Labgeo
+                                        ministrou a oficina "Utilização de Arduíno para desenvolver tecnologias para o
+                                        meio
+                                        ambiente", como parte do evento que contempla a Semana do Meio Ambiente do IFPE
+                                        - Campus
+                                        Cabo de Santo Agostinho.</p>
+                                    <p>Quer saber sobre mais eventos que envolveu o projeto e conhecer a equipe por trás
+                                        dos
+                                        óculos?</p>
+                                    <button id="midia-btn">
+                                        <a href="pages/news.html">Leia Mais</a>
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Botões pra passar as imagens / apenas pro processo de desenvolvimento -->
+                    <!-- <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+                    </div> -->
                 </div>
             </div>
         </div>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script>
+        const config = {
+            type: 'slider',
+            autoplay: 4000,
+            focusAt: 'center',
+            gap: 70,
+            perView: 1
+        }
+        new Glide('.glide', config).mount()
+    </script>
 
     <footer>
         <p><i class="fa-regular fa-copyright" style="color: #ffffff;"></i>
