@@ -40,6 +40,7 @@ p {
   color: white;
 }
 
+
 /* Responsividade */
 /* Celulares e Telas menores */
 @media (min-width: 320px) and (max-width: 480px) {
