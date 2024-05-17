@@ -1,0 +1,573 @@
+/* INTRODUÇÃO */
+/* iframe {
+    border-radius: 5px;
+    border: none;
+} */
+
+#voltarTopo {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  background: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#voltarTopo i {
+  font-size: 3em;
+}
+
+.descBengala,
+.descConcept,
+.descContext,
+.descSynesthesia {
+  user-select: none;
+}
+
+/* IDEIA */
+.descContext {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.5em;
+  height: 100vh;
+}
+
+.descContext p {
+  font-size: 1.2em;
+}
+
+.descContext p:last-of-type {
+  font-size: 1em;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.descContext h3 {
+  font-size: 1.5em;
+}
+
+.descSynesthesia {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin: 0.5em;
+}
+
+/* BENGALA */
+.descBengala {
+  display: flex;
+  border-top: 2px solid #cf5084;
+  border-bottom: 2px solid #cf5084;
+}
+
+.descBengala > .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 50%;
+}
+
+.descBengala p {
+  width: 34em;
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  font-size: 1.5em;
+}
+
+.descBengala p:first-of-type {
+  font-size: 1.2em;
+}
+
+.descBengala p:last-of-type {
+  font-size: 1.4em;
+}
+
+.imgBengala {
+  width: 50em;
+  background-color: #cf5084;
+  display: flex;
+  justify-content: center;
+}
+
+/* CONCEITOS */
+.descConcept {
+  margin: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.descConcept a {
+  color: #cf5084;
+}
+
+.h6Concepts {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5em;
+  gap: 1em;
+  margin: 1em;
+  color: #9a92fb;
+}
+
+.h6Concepts h6:first-of-type {
+  color: #b837a2;
+}
+
+.h6Concepts h6:last-of-type {
+  color: #eb8576;
+}
+
+/* MARKS */
+.marks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+}
+
+.marks h3 {
+  font-size: 1.8em;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.marks h4 {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #cf5084;
+}
+
+.marks img {
+  margin: 2em;
+}
+
+.slide-container {
+  display: flex;
+  justify-content: center !important;
+}
+
+.slide-container:nth-child(1) {
+  background-image: url("../../assets/img/backgroundMarkI.png");
+  width: 100%;
+  height: 500px;
+  color: white;
+}
+
+.slide-container:nth-child(2) {
+  background-image: url("../../assets/img/backgroundMarkII.png");
+  width: 100%;
+  height: 500px;
+  color: white;
+}
+
+.slide-container:nth-child(3) {
+  background-image: url("../../assets/img/backgroundMarkIII.png");
+  width: 100%;
+  height: 500px;
+  color: white;
+}
+
+.descMark {
+  width: 45%;
+  margin-right: 5em;
+}
+
+.containerMarkI {
+  border-radius: 4px;
+  gap: 1em;
+  width: 55%;
+}
+
+.markI,
+.markII,
+.markIII {
+  margin: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.markI h5,
+.markII h5,
+.markIII h5 {
+  font-size: 1.3em;
+}
+
+.markI p,
+.markII p,
+.markIII p {
+  font-size: 0.9em;
+  text-align: justify;
+}
+
+.containerMarkI,
+.containerMarkII,
+.containerMarkIII {
+  display: none;
+}
+
+.containerMarkI.active,
+.containerMarkII.active,
+.containerMarkIII.active {
+  display: block;
+}
+
+/* Slide do Mark I */
+.containerMarkI:nth-child(1) {
+  background: url("../../assets/img/markI.png");
+}
+
+.containerMarkI:nth-child(2) {
+  background: url("../../assets/img/carlos_markI.png");
+}
+
+.containerMarkI:nth-child(3) {
+  background: url("../../assets/img/usuarioTesteOculos.jpg");
+}
+
+/* Slide do Mark II */
+.containerMarkII:nth-child(1) {
+  background: url("../../assets/img/markII.png");
+}
+
+.containerMarkII:nth-child(2) {
+  background: url("../../assets/img/markII_v2.jpg");
+}
+
+/* Slide do Mark III */
+.containerMarkIII:nth-child(1) {
+  background: url("../../assets/img/markIII.png");
+}
+
+.containerMarkIII:nth-child(2) {
+  background: url("../../assets/img/markIII_v2.jpg");
+}
+
+.containerMarkIII:nth-child(3) {
+  background: url("../../assets/img/markIII_v3.jpg");
+}
+
+/* Padronização da estilização das imagens nos slides (marks I, II e III) */
+.containerMarkI:nth-child(1),
+.containerMarkI:nth-child(2),
+.containerMarkI:nth-child(3),
+.containerMarkII:nth-child(1),
+.containerMarkII:nth-child(2),
+.containerMarkIII:nth-child(1),
+.containerMarkIII:nth-child(2),
+.containerMarkIII:nth-child(3) {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 25em;
+  height: 14em;
+}
+
+#prev,
+#next {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+#prev:hover,
+#next:hover {
+  opacity: 0.6;
+  transition: 1s;
+  font-size: 1.1em;
+}
+
+/* Equipe do projeto */
+.desc-team p:first-of-type {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.descTeam {
+  padding: 3em 5em 3em 5em;
+  border-top: 2px solid #b837a2;
+}
+
+.team h4 {
+  font-size: 1.5em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+.team h5 {
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.teachers {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5em;
+}
+
+.title-team {
+  display: flex;
+  font-size: 1.3em;
+  gap: 0.7em;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 0.5em;
+}
+
+.cardC {
+  width: 340px;
+  height: 460px;
+  border-radius: 10px;
+}
+
+.containerCardC,
+.containerCardS {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.containerCardC h5:last-of-type,
+.containerCardS h5:last-of-type {
+  font-size: 1em;
+  width: 80%;
+}
+
+.imgTeacher,
+.imgStudent,
+.imgXStudent {
+  width: 280px;
+  height: 300px;
+  border-radius: 5px;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  object-fit: cover;
+}
+
+/* .imgXStudent {
+  filter: grayscale(100%);
+} */
+
+.students {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  justify-items: center;
+  gap: 2em;
+}
+
+.cardS,
+.cardXS {
+  width: 340px;
+  height: 460px;
+  border-radius: 5px;
+  background-color: #2f4858;
+}
+
+.cardXS {
+  background-color: #3b3b3b !important;
+  height: 420px !important;
+  opacity: 0.8;
+}
+
+.centerLastCards {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2em;
+}
+
+.socialC,
+.socialS {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.socialC {
+  margin-top: 1em;
+}
+
+.socialS {
+  margin-top: 0.4em;
+}
+
+.btnLattes,
+.btnInstagram,
+.btnEmail {
+  background: none;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.btnEmail {
+  background-color: #fff;
+}
+/* IDEIAS */
+.black-screen {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 80px);
+  justify-content: center;
+  align-items: center;
+  color: #eeeeee;
+}
+
+.black-screen h2 {
+  color: #eeeeee;
+}
+
+.black-screen button {
+  border: none;
+  background: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.black-screen i {
+  font-size: 2em;
+  margin: 1em;
+}
+
+/* Responsividade */
+/* Celulares e Telas menores */
+@media (min-width: 320px) and (max-width: 767px) {
+  .descSynesthesia h3 {
+    font-size: 1.2em;
+  }
+
+  .descSynesthesia img {
+    display: none;
+  }
+
+  .descBengala > .desc {
+    width: 100%;
+  }
+
+  .desc p {
+    width: 100%;
+  }
+
+  .imgBengala {
+    display: none;
+  }
+
+  .descConcept {
+    margin: 1em;
+    text-align: justify;
+  }
+
+  .h6Concepts {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2em;
+  }
+
+  .descConcept p {
+    text-align: center;
+  }
+
+  .marks h3 {
+    font-size: 1.7em;
+    text-align: center;
+  }
+
+  .marks h4 {
+    font-size: 1.2em;
+  }
+
+  .marks img {
+    width: 70%;
+  }
+
+  .markI .slide,
+  .markII .slide,
+  .markIII .slide,
+  #next,
+  #prev {
+    display: none;
+  }
+
+  .slide-container:nth-child(1) {
+    width: 100%;
+  }
+
+  .descMark h5 {
+    font-size: 1em;
+  }
+
+  .descMark {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .coord {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .prof {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  .collab {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .descSynesthesia img {
+    display: none;
+  }
+
+  .imgBengala {
+    display: none;
+  }
+
+  .descBengala > .desc {
+    width: 100%;
+  }
+
+  .desc p {
+    width: 100%;
+  }
+
+  .markI .slide,
+  .markII .slide,
+  .markIII .slide,
+  #next,
+  #prev {
+    display: none;
+  }
+
+  .collab {
+    display: flex;
+    justify-content: center;
+  }
+
+  .prof {
+    height: 25em;
+    width: 30%;
+  }
+}
