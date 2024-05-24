@@ -307,6 +307,11 @@
   text-align: center;
 }
 
+.team h4:last-of-type {
+  margin-top: 1.5em;
+  margin-bottom: -20px !important;
+}
+
 .team h5 {
   color: #fff;
   font-size: 1.2em;
@@ -315,7 +320,7 @@
 .teachers {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 5em;
+  margin-bottom: 2em;
 }
 
 .title-team {
@@ -390,6 +395,15 @@
   margin: 2em;
 }
 
+.center {
+  margin: 0 auto;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+}
+
 .socialC,
 .socialS {
   display: flex;
@@ -404,6 +418,16 @@
 
 .socialS {
   margin-top: 0.4em;
+}
+
+.tag {
+  margin: 1em;
+  width: 7em;
+  height: 1.3em;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
 }
 
 .btnLattes,
