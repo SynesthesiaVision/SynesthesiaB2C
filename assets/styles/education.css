@@ -1,7 +1,8 @@
 .ebook1,
 .ebook2,
 .ebook3,
-.ebook4 {
+.ebook4,
+.ebook5 {
   margin: 3em;
   display: flex;
   justify-content: center;
@@ -11,7 +12,8 @@
 .desc-ebook1,
 .desc-ebook2,
 .desc-ebook3,
-.desc-ebook4 {
+.desc-ebook4,
+.desc-ebook5 {
   display: flex;
   flex-direction: column;
   width: 30%;
@@ -39,7 +41,6 @@ p {
 .btnView a {
   color: white;
 }
-
 
 /* Responsividade */
 /* Celulares e Telas menores */
