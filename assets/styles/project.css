@@ -290,6 +290,27 @@
 }
 
 /* Equipe do projeto */
+.gradient-text-coord {
+  background: linear-gradient(120deg, #ff5757, #8c52ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-colab {
+  background: linear-gradient(120deg, #8c52ff, #2f4858);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-ex {
+  background: linear-gradient(60deg, #000000, #cccccc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .desc-team p:first-of-type {
   font-size: 1.5em;
   font-weight: bold;
@@ -302,14 +323,14 @@
 
 .team h4 {
   font-size: 1.5em;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
+  margin: 1.5em;
   text-align: center;
+  opacity: 0.9;
+  user-select: none;
 }
 
 .team h4:last-of-type {
-  margin-top: 1.5em;
-  margin-bottom: -20px !important;
+  margin-top: 2em;
 }
 
 .team h5 {
@@ -336,6 +357,11 @@
   width: 340px;
   height: 460px;
   border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+
+.cardC:hover {
+  transform: scale(1.1);
 }
 
 .containerCardC,
@@ -364,10 +390,6 @@
   object-fit: cover;
 }
 
-/* .imgXStudent {
-  filter: grayscale(100%);
-} */
-
 .students {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
@@ -378,15 +400,21 @@
 .cardS,
 .cardXS {
   width: 340px;
-  height: 460px;
+  height: 500px;
   border-radius: 5px;
   background-color: #2f4858;
+  transition: transform 0.5s ease;
 }
 
 .cardXS {
   background-color: #3b3b3b !important;
-  height: 420px !important;
   opacity: 0.8;
+  transition: transform 0.5s ease;
+}
+
+.cardS:hover,
+.cardXS:hover {
+  transform: scale(1.1);
 }
 
 .centerLastCards {
@@ -402,6 +430,7 @@
 .social {
   display: flex;
   align-items: center;
+  gap: 0.5em;
 }
 
 .socialC,
@@ -431,7 +460,7 @@
 }
 
 .btnLattes,
-.btnInstagram,
+.btnLinkedin,
 .btnEmail {
   background: none;
   border: none;
