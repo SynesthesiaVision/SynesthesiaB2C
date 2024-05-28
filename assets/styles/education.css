@@ -1,19 +1,22 @@
-.ebook1,
-.ebook2,
-.ebook3,
-.ebook4,
-.ebook5 {
+h2 {
+  opacity: 0.9;
+}
+
+.gradient-text-apostila {
+  background: linear-gradient(90deg, #d6d6d6, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ebook {
   margin: 3em;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.desc-ebook1,
-.desc-ebook2,
-.desc-ebook3,
-.desc-ebook4,
-.desc-ebook5 {
+.desc-ebook {
   display: flex;
   flex-direction: column;
   width: 30%;

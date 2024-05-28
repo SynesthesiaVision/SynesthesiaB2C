@@ -19,6 +19,22 @@ body {
   --cinzaTxt: #3b3b3b;
 }
 
+.roxo:hover {
+  color: #a432a6 !important;
+}
+
+.rosaEscuro:hover {
+  color: #d96277 !important;
+}
+
+.azulClaro:hover {
+  color: #977ef2 !important;
+}
+
+.rosaClaro:hover {
+  color: #c7614b !important;
+}
+
 .lato-light {
   font-family: "Lato", sans-serif;
   font-weight: 300;
