@@ -1,0 +1,460 @@
+/* UNIVERSAL */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+body {
+  background-color: #fcfcfc;
+}
+
+:root {
+  --rosaEscuro: #d96277;
+  --rosaClaro: #f29580;
+  --roxo: #a432a6;
+  --rosaRoxeado: #bf4594;
+  --azulClaro: #977ef2;
+  --preto: #0d0d0d;
+  --cinzaTxt: #3b3b3b;
+}
+
+.roxo:hover {
+  color: #a432a6 !important;
+}
+
+.rosaEscuro:hover {
+  color: #d96277 !important;
+}
+
+.azulClaro:hover {
+  color: #977ef2 !important;
+}
+
+.rosaClaro:hover {
+  color: #c7614b !important;
+}
+
+.lato-light {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.fira-sans-light {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.fira-sans-regular {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fira-sans-bold {
+  font-family: "Fira Sans", sans-serif !important;
+  font-weight: 700;
+  font-style: normal;
+}
+
+#nav-bar,
+#menu-op {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  min-height: 5em;
+}
+
+#nav-bar {
+  padding-left: 5em;
+  padding-right: 5em;
+  user-select: none;
+  background-image: linear-gradient(1turn, #fcfcfc, #00000046);
+}
+
+a:hover {
+  transition: 0.5s;
+  color: var(--rosaEscuro);
+}
+
+#menu-op {
+  gap: 3em;
+}
+
+ul,
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+  color: var(--cinzaTxt);
+
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2em;
+  color: var(--preto);
+  user-select: none;
+}
+
+main h2 {
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+img {
+  pointer-events: none;
+  user-select: none;
+}
+
+main {
+  min-height: 30em;
+}
+
+.center {
+  text-align: center;
+}
+
+/* RODAPÉ */
+footer {
+  background-color: var(--preto);
+  height: 10em;
+  color: white;
+  font-weight: lighter;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  gap: 0.5em;
+
+  position: relative;
+
+  left: 0;
+  bottom: 0;
+}
+
+footer a {
+  color: white;
+}
+
+.inverse {
+  order: 3;
+}
+
+/* CSS do Index */
+/* Padrão dos Cards */
+.presentation,
+.characteristics,
+.buy,
+.midia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  margin-bottom: 10em;
+}
+
+/* Header */
+.presentation {
+  margin: 5em;
+}
+
+/* Direcionamento pra descrição do projeto */
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.desc-project {
+  text-align: center;
+}
+
+.desc-project h2 {
+  margin-bottom: 0.5em;
+}
+
+.desc-project p {
+  font-size: 1.1em;
+  width: 40em;
+  margin-bottom: 0.5em;
+}
+
+.desc-project p:last-of-type {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/* Botão do Saiba Mais */
+.about-project-btn {
+  background-color: var(--rosaEscuro);
+  color: white;
+  border-radius: 4px;
+  border: none;
+  margin: 1em;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1em;
+  padding: 1em;
+}
+
+.about-project-btn:hover {
+  color: white;
+  opacity: 0.9;
+  transition: 0.5s;
+}
+
+.characteristics {
+  gap: 2em;
+}
+
+.characteristics h2 {
+  font-size: 2.5em;
+}
+
+.card-characteristics {
+  display: flex;
+  align-items: center;
+  gap: 3em;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.card-desc-chara {
+  order: 2;
+}
+
+.card-desc-chara p {
+  font-size: 1.1em;
+  width: 26em;
+}
+
+.conf h3 {
+  color: #b7569d;
+}
+
+.perso h3 {
+  color: #3e977f;
+}
+
+.tecIno h3 {
+  color: #e14a4f;
+}
+
+/* Compra dos óculos */
+.buy {
+  gap: 5em;
+}
+
+#buy-btn {
+  background-color: var(--rosaRoxeado);
+  color: white;
+  border-radius: 4px;
+  border: none;
+  margin: 1em;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1em;
+
+  padding: 1em;
+}
+
+/*  sobre o projeto */
+
+/* Novo midia */
+.desc-event {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  text-align: center;
+  align-items: center;
+  width: 40em;
+  color: #000;
+}
+
+/* Imagens do slide */
+.midiaImage1,
+.midiaImage2,
+.midiaImage3 {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 400px;
+}
+
+.midiaImage1 {
+  background-image: url("../img/img_Febrace2023.png");
+}
+
+.midiaImage2 {
+  background-image: url("../img/img_ingredienteX.png");
+}
+
+.midiaImage3 {
+  background-image: url("../img/img_synesthesiaOficina.png");
+}
+
+.desc-event p:first-of-type {
+  font-size: 1em;
+  width: 30em;
+}
+
+.desc-event p:last-of-type {
+  font-size: 0.9em;
+  width: 25em;
+}
+
+#midia-btn {
+  background-color: var(--roxo);
+  border-radius: 4px;
+  border: none;
+  margin: 1em;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1em;
+
+  padding: 1em;
+  width: 10em;
+  cursor: pointer;
+}
+
+#midia-btn a {
+  color: white;
+}
+
+.midia {
+  margin: 0 auto;
+  padding: 2em;
+  width: 60vw;
+}
+
+.glide__slide {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* Responsividade */
+/* Celulares e Telas menores */
+@media screen and (max-width: 480px) {
+  #nav-bar img {
+    display: none;
+  }
+
+  #nav-bar {
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+  }
+
+  p {
+    text-overflow: ellipsis;
+  }
+
+  .card {
+    margin-bottom: 5em;
+  }
+
+  .presentation img:first-of-type {
+    width: 300px;
+  }
+
+  .presentation img:last-of-type {
+    width: 350px;
+  }
+
+  .project img {
+    display: none;
+  }
+
+  .project {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .desc-project p {
+    font-size: 0.9em;
+    width: 100%;
+  }
+
+  .card-characteristics {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .card-characteristics img {
+    order: 0 !important;
+  }
+
+  .conf p,
+  .perso p,
+  .tecIno p {
+    font-size: 0.8em;
+    width: 100%;
+  }
+
+  .midia {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .desc-event {
+    width: 100%;
+  }
+
+  .desc-event p {
+    font-size: 1em;
+    width: 80%;
+  }
+}
+
+/* Estilos para tablets */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .project {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-characteristics {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .card-characteristics img {
+    order: 0 !important;
+  }
+
+  .midia {
+    display: flex;
+    flex-direction: column;
+  }
+}
