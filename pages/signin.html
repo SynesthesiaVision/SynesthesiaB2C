@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../assets/img/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../assets/styles/login.css" />
+    <link rel="stylesheet" href="../assets/styles/style.css" />
+    <link rel="stylesheet" href="../assets/styles/glide.core.min.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600;700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ICONS -->
+    <script
+      src="https://kit.fontawesome.com/e2bd8765fe.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Synesthesia Vision</title>
+  </head>
+
+  <body>
+    <h1 hidden>Synesthesia Vision</h1>
+
+    <main>
+      <div class="left"></div>
+      <div class="right">
+        <form action="" onsubmit="submitForm(event)">
+          <h2>Entre com sua conta</h2>
+
+          <label for="email">
+            <span>Email</span>
+            <input type="email" name="email" id="email" required />
+          </label>
+
+          <label for="password">
+            <span>Senha</span>
+            <input type="password" name="password" id="password" required />
+          </label>
+
+          <button type="submit" class="btnSignIn">Entrar</button>
+        </form>
+
+        <button class="forgot-password btnStyleSignIn">
+          <a href="#">Esqueceu sua senha?</a>
+        </button>
+
+        <span> </span>
+
+        <button class="btnStyleSignIn">
+          <a href="signup.html">Não tem uma conta? Cadastre-se</a>
+        </button>
+      </div>
+    </main>
+  </body>
+</html>

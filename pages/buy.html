@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../assets/styles/style.css" />
+    <link rel="stylesheet" href="../assets/styles/buy.css" />
+    <link rel="stylesheet" href="../assets/styles/contact.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,700&display=swap"
+        rel="stylesheet" />
+
+    <!-- ICONS -->
+    <script src="https://kit.fontawesome.com/e2bd8765fe.js" crossorigin="anonymous"></script>
+
+    <title>Synesthesia Vision</title>
+</head>
+
+<body class="body-content">
+    <h1 hidden>Synesthesia Vision</h1>
+    <header>
+        <div id="nav-bar">
+            <img src="../assets/img/logo.png" width="50" alt="Logo Synesthesia Vision" />
+            <ul id="menu-op">
+                <li>
+                    <a href="../index.html" class="roxo">INÍCIO</a>
+                </li>
+                <li>
+                    <a href="project.html" class="rosaEscuro">PROJETO</a>
+                </li>
+                <li>
+                    <a href="education.html" class="azulClaro">EDUCAÇÃO</a>
+                </li>
+                <li>
+                    <a href="news.html" class="rosaClaro">NOTÍCIAS</a>
+                </li>
+                <li hidden>
+                    <a href="contact.html">CONTATO</a>
+                </li>
+            </ul>
+            <a href="#"></a>
+        </div>
+    </header>
+
+    <main>
+        <h2>PERSONALIZE SEUS ÓCULOS</h2>
+        <div id="containerBuy">
+            <div class="iconGlasses">
+                <i id="iconClass" class="fa-solid fa-glasses" style=""></i>
+            </div>
+            <form id="formBuy" onsubmit="enviarFormulario(event)">
+                <div class="labelFormBuy">
+                    <label for="model">Modelo</label><br>
+                    <div class="opLabel">
+                        <button class="modelOption" onclick="selectModel(event, 'mark III')" id="defaultModel">Mark
+                            III</button>
+                    </div>
+                </div>
+                <p id="selectedModelText">Modelo selecionado: Nenhum</p>
+                <p>Temos apenas um modelo por enquanto! <br> Há mais vindo em breve, fique atento às nossas novidades!
+                </p>
+
+                <div class="labelFormBuy">
+                    <label for="size">Tamanho</label><br>
+                    <div class="opLabel">
+                        <button class="sizeOption" onclick="selectSize(event, 'P')" id="defaultSize">Pequeno</button>
+                        <button class="sizeOption" onclick="selectSize(event, 'M')">Médio</button>
+                        <button class="sizeOption" onclick="selectSize(event, 'G')">Grande</button>
+                        <button class="sizeOption" onclick="selectSize(event, 'GG')">Extra Grande</button>
+                    </div>
+                </div>
+                <p id="selectedSizeText">Tamanho selecionado: Nenhum</p>
+
+                <div class="labelFormBuy">
+                    <label for="color">Cor</label><br>
+                    <div class="opLabel">
+                        <button class="colorOption" onclick="selectColor(event, 'black')"
+                            style="background-color: black; color: white;" id="defaultColor">Preto</button>
+                        <button class="colorOption" onclick="selectColor(event, 'white')"
+                            style="background-color: #d0d0d0; color: black;">Branco</button>
+                        <button class="colorOption" onclick="selectColor(event, 'blue')"
+                            style="background-color: #0869c9;">Azul</button>
+                        <button class="colorOption" onclick="selectColor(event, 'red')"
+                            style="background-color: #9f2020;">Vermelho</button>
+                        <button class="colorOption" onclick="selectColor(event, 'pink')"
+                            style="background-color: #e0169d;">Rosa</button>
+                    </div>
+                </div>
+                <p id="selectedColorText">Cor selecionada: Nenhuma</p>
+
+                <input type="hidden" name="userId" id="userId" value="2">
+
+                <button type="submit" id="btnSubmit">CONTINUAR</button>
+            </form>
+        </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            <i class="fa-regular fa-copyright" style="color: #ffffff"></i> 2023
+            Synesthesia Vision. All rights reserved
+        </p>
+        <br />
+        <a href="mailto:synesthesiavision@recife.ifpe.edu.br">
+            <i class="fa-regular fa-envelope" style="color: #ffffff"></i>
+            Entre em contato</a>
+    </footer>
+
+    <script>
+        function selectModel(event, model) {
+            event.preventDefault();
+            document.getElementById('selectedModelText').textContent = 'Modelo selecionado: ' + model;
+            localStorage.setItem('selectedModel', model);
+            updateSelectedClass('.modelOption', event.target);
+        }
+
+        function selectSize(event, size) {
+            event.preventDefault();
+            const sizeText = event.target.textContent;
+            document.getElementById('selectedSizeText').textContent = 'Tamanho selecionado: ' + sizeText;
+            localStorage.setItem('selectedSize', size);
+            updateSelectedClass('.sizeOption', event.target);
+            updateIconSize(size);
+        }
+
+        function selectColor(event, color) {
+            event.preventDefault();
+            const colorText = event.target.textContent;
+            document.getElementById('selectedColorText').textContent = 'Cor selecionada: ' + colorText;
+            localStorage.setItem('selectedColor', color);
+            updateSelectedClass('.colorOption', event.target);
+            updateIconColor(event.target);
+        }
+
+        function updateSelectedClass(buttonClass, selectedButton) {
+            const buttons = document.querySelectorAll(buttonClass);
+            buttons.forEach(button => {
+                button.classList.remove('selected');
+            });
+            selectedButton.classList.add('selected');
+        }
+
+        function enviarFormulario(event) {
+            event.preventDefault();
+            const userId = document.getElementById('userId').value;
+            localStorage.setItem('userId', userId);
+            window.location.href = 'revision.html';
+        }
+
+        function updateButtonColors() {
+            const colorOptions = document.querySelectorAll('.colorOption');
+            colorOptions.forEach(button => {
+                const color = button.getAttribute('onclick').match(/'([^']+)'/)[1];
+                button.style.color = (color === 'black' || color === 'blue' || color === 'red');
+            });
+        }
+
+        function initializeSelections() {
+            const defaultModelButton = document.getElementById('defaultModel');
+            defaultModelButton.classList.add('selected');
+            document.getElementById('selectedModelText').textContent = 'Modelo selecionado: Mark III';
+            localStorage.setItem('selectedModel', 'mark III');
+
+            const defaultSizeButton = document.getElementById('defaultSize');
+            defaultSizeButton.classList.add('selected');
+            document.getElementById('selectedSizeText').textContent = 'Tamanho selecionado: Pequeno';
+            localStorage.setItem('selectedSize', 'P');
+            updateIconSize('P');
+
+            const defaultColorButton = document.getElementById('defaultColor');
+            defaultColorButton.classList.add('selected');
+            document.getElementById('selectedColorText').textContent = 'Cor selecionada: Preto';
+            localStorage.setItem('selectedColor', 'black');
+            updateIconColor(defaultColorButton);
+        }
+
+        function updateIconSize(size) {
+            const icon = document.getElementById('iconClass');
+            switch (size) {
+                case 'P':
+                    icon.style.fontSize = '5em';
+                    break;
+                case 'M':
+                    icon.style.fontSize = '7em';
+                    break;
+                case 'G':
+                    icon.style.fontSize = '10em';
+                    break;
+                case 'GG':
+                    icon.style.fontSize = '12em';
+                    break;
+                default:
+                    icon.style.fontSize = '5em';
+            }
+        }
+
+        function updateIconColor(button) {
+            const icon = document.getElementById('iconClass');
+            const bgColor = window.getComputedStyle(button).backgroundColor;
+            icon.style.color = bgColor;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateButtonColors();
+            initializeSelections();
+        });
+    </script>
+</body>
+
+</html>

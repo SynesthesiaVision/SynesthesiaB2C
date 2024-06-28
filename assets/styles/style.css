@@ -110,6 +110,11 @@ a {
   font-weight: 700;
 }
 
+a:hover {
+  transition: 0.5s;
+  color: var(--rosaEscuro);
+}
+
 h2 {
   font-size: 2em;
   color: var(--preto);
@@ -135,6 +140,10 @@ main {
 
 .center {
   text-align: center;
+}
+
+.inverse {
+  order: 3;
 }
 
 /* RODAPÉ */
