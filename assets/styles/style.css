@@ -91,7 +91,7 @@ body {
   background-image: linear-gradient(1turn, #fcfcfc, #00000046);
 }
 
-a:hover {
+#nav-bar a:hover {
   transition: 0.5s;
   color: var(--rosaEscuro);
 }
@@ -137,6 +137,28 @@ main {
   text-align: center;
 }
 
+button {
+  background: linear-gradient(90deg, var(--roxo), var(--rosaEscuro));
+  transition: 2s;
+  border-radius: 4px;
+  border: none;
+  margin: 1em;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1em;
+  padding: 1em;
+  width: 10em;
+  cursor: pointer;
+  opacity: 1;
+}
+
+button a {
+  color: white;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
 /* RODAPÉ */
 footer {
   background-color: var(--preto);
@@ -179,7 +201,7 @@ footer a {
 }
 
 .card {
-  margin-bottom: 10em;
+  margin-bottom: 5em;
 }
 
 /* Header */
@@ -199,13 +221,14 @@ footer a {
 }
 
 .desc-project h2 {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.7em;
 }
 
 .desc-project p {
-  font-size: 1.1em;
-  width: 40em;
+  font-size: 1.2em;
+  width: 33em;
   margin-bottom: 0.5em;
+  opacity: 0.7;
 }
 
 .desc-project p:last-of-type {
@@ -213,26 +236,18 @@ footer a {
   text-align: center;
 }
 
-/* Botão do Saiba Mais */
-.about-project-btn {
-  background-color: var(--rosaEscuro);
-  color: white;
-  border-radius: 4px;
-  border: none;
-  margin: 1em;
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 1em;
-  padding: 1em;
+.gradient-text-projeto {
+  background: linear-gradient(90deg, var(--roxo), var(--azulClaro));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.about-project-btn:hover {
-  color: white;
-  opacity: 0.9;
-  transition: 0.5s;
-}
-
-.characteristics {
-  gap: 2em;
+.gradient-text-caracteristica {
+  background: linear-gradient(90deg, var(--azulClaro), var(--rosaRoxeado));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .characteristics h2 {
@@ -242,7 +257,6 @@ footer a {
 .card-characteristics {
   display: flex;
   align-items: center;
-  gap: 3em;
   text-align: center;
   font-size: 1.2em;
 }
@@ -252,8 +266,8 @@ footer a {
 }
 
 .card-desc-chara p {
-  font-size: 1.1em;
-  width: 26em;
+  width: 30em;
+  margin-top: 0.5em;
 }
 
 .conf h3 {
@@ -286,78 +300,141 @@ footer a {
 }
 
 /*  sobre o projeto */
-
-/* Novo midia */
-.desc-event {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  text-align: center;
-  align-items: center;
-  width: 40em;
-  color: #000;
-}
-
-/* Imagens do slide */
-.midiaImage1,
-.midiaImage2,
-.midiaImage3 {
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 400px;
-  height: 400px;
-}
-
-.midiaImage1 {
-  background-image: url("../img/img_Febrace2023.png");
-}
-
-.midiaImage2 {
-  background-image: url("../img/img_ingredienteX.png");
-}
-
-.midiaImage3 {
-  background-image: url("../img/img_synesthesiaOficina.png");
-}
-
-.desc-event p:first-of-type {
-  font-size: 1em;
-  width: 30em;
-}
-
-.desc-event p:last-of-type {
-  font-size: 0.9em;
-  width: 25em;
-}
-
-#midia-btn {
-  background-color: var(--roxo);
-  border-radius: 4px;
-  border: none;
-  margin: 1em;
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 1em;
-
-  padding: 1em;
-  width: 10em;
-  cursor: pointer;
-}
-
-#midia-btn a {
-  color: white;
-}
-
-.midia {
+.slideNews {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: white;
+  border-radius: 15px;
   margin: 0 auto;
-  padding: 2em;
-  width: 60vw;
 }
 
-.glide__slide {
+.cardNews {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: left 1s ease;
+  opacity: 0;
+}
+
+.cardNews.active {
+  left: 0;
+  opacity: 1;
+}
+
+.cardNews p {
+  width: 100%;
+  margin: 1em;
+}
+
+.cardNews img {
+  margin: 0.5em;
+}
+
+.descNews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 1em;
+  width: 4em;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+button.prev:hover,
+button.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.inviteNews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.inviteNews p {
+  font-size: 1.2em;
+  width: 40%;
+  text-align: center;
+}
+
+.gradient-text-novidadesHome {
+  background: linear-gradient(90deg, var(--cinzaTxt), var(--azulClaro));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1em;
+}
+
+#gradientBox {
+  position: relative;
+  width: 80%;
+  border-radius: 15px;
+  background-color: #fcfcfc;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
 }
+
+#gradientBox::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, var(--rosaEscuro), var(--azulClaro));
+  background-size: 400% 400%;
+  animation: gradientAnimation 5s ease infinite;
+  z-index: -1;
+  border-radius: 20px;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* FINAL */
 
 /* Responsividade */
 /* Celulares e Telas menores */
