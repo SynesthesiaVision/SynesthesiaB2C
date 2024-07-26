@@ -1,0 +1,97 @@
+.gradient-text-buy {
+  background: linear-gradient(90deg, #d6d6d6, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 2em;
+}
+
+#containerBuy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#formBuy {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+#formBuy button {
+  margin: 1em;
+}
+
+#formBuy label {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #000;
+}
+
+#formBuy p {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+#formBuy p:nth-child(3) {
+  font-weight: bold;
+}
+
+.iconGlasses {
+  padding: 7em;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 10em;
+}
+
+.fa-glasses {
+  transition: color 0.3s, font-size 0.3s;
+  position: absolute;
+  margin-top: -0.5em;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #fff;
+  background-color: var(--azulClaro);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 8em;
+  transition: 1s;
+}
+
+#btnSubmit {
+  background-color: var(--rosaRoxeado) !important;
+  font-weight: bold;
+  font-size: 0.9em !important;
+  width: 100% !important;
+}
+
+#btnSubmit a {
+  color: #fff;
+}
+
+#btnSubmit:hover {
+  opacity: 0.9;
+}
+
+.selected {
+  background-color: var(--rosaRoxeado);
+  color: #fff;
+  width: 10em;
+}
+
+.opLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.labelFormBuy {
+  width: 100%;
+}

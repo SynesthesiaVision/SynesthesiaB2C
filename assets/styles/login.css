@@ -1,0 +1,109 @@
+html,
+.raizLogin {
+  height: 100%;
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.raizLogin {
+  display: flex;
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+}
+
+.left {
+  height: 100vh;
+  width: 50%;
+  background-image: url("../../assets/img/content/backgroundLogin.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.right {
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.right a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 2em;
+}
+
+.right > span {
+  font-weight: bold;
+  display: flex;
+  background-image: url("../../assets/img/content/imgFormLogin.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20em;
+  height: 3em;
+  user-select: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form h2 {
+  text-align: center;
+  font-size: 2em;
+  margin: 0;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+label span {
+  font-weight: bold;
+  margin-bottom: 0.3em;
+  margin-top: 1.5em;
+  font-size: 1.4em;
+}
+
+label input {
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 3px;
+  width: 25em;
+  padding: 0.6em;
+  font-size: 1.1em;
+}
+
+.btnSignIn {
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1em;
+  padding: 0.7em;
+  width: 100%;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.btnStyleSignIn {
+  background: none;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  font-size: 1.1em;
+}
+
+.btnStyleSignIn:hover {
+  opacity: 0.8;
+  transition: 0.9s;
+}

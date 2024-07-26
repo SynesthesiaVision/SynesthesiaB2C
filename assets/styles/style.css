@@ -139,7 +139,7 @@ main {
 }
 
 button {
-  background: linear-gradient(90deg, var(--roxo), var(--rosaEscuro));
+  /* background: linear-gradient(90deg, var(--roxo), var(--rosaEscuro)); */
   transition: 2s;
   border-radius: 4px;
   border: none;
@@ -147,7 +147,7 @@ button {
   font-family: "Nunito Sans", sans-serif;
   font-size: 1em;
   padding: 1em;
-  width: 10em;
+  /* width: 10em; */
   cursor: pointer;
   opacity: 1;
 }
@@ -168,6 +168,7 @@ button:hover {
 footer {
   background-color: var(--preto);
   height: 10em;
+  margin-top: 5em;
   color: white !important;
   font-weight: lighter;
 
