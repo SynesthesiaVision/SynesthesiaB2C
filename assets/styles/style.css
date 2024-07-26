@@ -139,7 +139,7 @@ main {
 }
 
 button {
-  /* background: linear-gradient(90deg, var(--roxo), var(--rosaEscuro)); */
+  background: linear-gradient(90deg, var(--roxo), var(--rosaEscuro));
   transition: 2s;
   border-radius: 4px;
   border: none;
