@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="../assets/styles/style.css" />
+  <link rel="stylesheet" href="../assets/styles/project.css" />
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,700&display=swap"
+    rel="stylesheet" />
+
+  <!-- ICONS -->
+  <script src="https://kit.fontawesome.com/e2bd8765fe.js" crossorigin="anonymous"></script>
+  <script src="../assets/scripts/project.js" defer></script>
+  <script src="../assets/scripts/slide.js" defer></script>
+
+  <title>Synesthesia Vision</title>
+
+  <style>
+    #nav-bar,
+    #menu-op {
+      /* border: 1px solid black; */
+      display: flex;
+      flex-direction: row;
+
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+
+      min-height: 5em;
+    }
+
+    li a {
+      color: #eeeeee;
+    }
+
+    #nav-bar {
+      padding-left: 5em;
+      padding-right: 5em;
+      user-select: none;
+      background: #000 !important;
+    }
+
+    #menu-op {
+      gap: 3em;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 hidden>Synesthesia Vision</h1>
+  <header>
+    <div id="nav-bar">
+      <img src="../assets/img/logo.png" width="50" alt="Logo Synesthesia Vision" />
+      <ul id="menu-op">
+        <li>
+          <a href="../index.html" class="roxo">INÍCIO</a>
+        </li>
+        <li>
+          <a href="project.html" class="rosaEscuro" style="color: #d96277">PROJETO</a>
+        </li>
+        <li>
+          <a href="education.html" class="azulClaro">EDUCAÇÃO</a>
+        </li>
+        <li>
+          <a href="news.html" class="rosaClaro">NOTÍCIAS</a>
+        </li>
+        <li hidden>
+          <a href="contact.html">CONTATO</a>
+        </li>
+      </ul>
+      <a href="#"></a>
+    </div>
+  </header>
+
+  <main>
+    <div class="black-screen">
+      <h2>
+        Como seriam suas vidas se tudo que enxergassem <br />
+        do mundo fosse apenas uma tela preta?
+      </h2>
+      <button onclick="scrollToSection()">
+        <i class="fa-solid fa-arrow-down"></i>
+      </button>
+    </div>
+    <button id="voltarTopo" onclick="voltarAoTopo()">
+      <i class="fa-solid fa-arrow-up" style="color: #000000"></i>
+    </button>
+
+    <div class="descIdea">
+      <div id="idea" class="descContext">
+        <p>Pensando nessa situação, os</p>
+        <div class="descSynesthesia">
+          <h3>Óculos Sensoriais para Cegos - Synesthesia Vision</h3>
+          <img src="../assets/img/logo.png" width="50" />
+        </div>
+        <p>
+          buscam proporcionar ao cego autonomia e segurança no seu
+          deslocamento, através do desenvolvimento de uma tecnologia, que é
+          complementar às bengalas, tornando assim sua experiência de vida
+          mais independente e confortável.
+        </p>
+      </div>
+
+      <div class="descProblem">
+        <div class="title-problem">
+          <img src="../assets/img/icons/iconDor.png" width="50" />
+          <h3>Dor</h3>
+        </div>
+
+        <div class="desc-problem">
+          <p>
+            A bengala é a tecnologia assistiva mais utilizada pelos cegos por
+            ser segura, barata e também sinalizadora da cegueira. Porém tem uma limitação:
+          </p>
+          <p>
+            Não conseguir localizar obstáculos acima da linha da cintura.</b>
+          </p>
+        </div>
+
+        <div class="imgBengala">
+          <img src="../assets/img/content/bengala.png" alt="Bengala" width="600" />
+        </div>
+      </div>
+
+      <div class="descConcept">
+        <div class="title-concept">
+          <img src="../assets/img/icons/iconConceito.png" width="50">
+          <h3>Conceito</h3>
+        </div>
+
+        <div class="desc-concept">
+          <p>
+            Diante de tudo isso, buscamos investigar o uso da
+            <a style="color: #b837a2">Ecolocalização</a> e do
+            <a style="color: #9a92fb">Som Binaural</a> como princípios para o
+            desenvolvimento de óculos sensoriais que possibilitem uma espécie de
+            visão <a style="color: #eb8576">Sinestésica</a> do mundo, ou seja,
+            que permita que a audição seja os olhos de um cego.
+          </p>
+        </div>
+
+        <div class="detail-concept">
+          <div class="concepts">
+            <div class="eco">
+              <div class="btnEco" id="btnEco" onclick="trocarConceito()">
+                <h3>Ecolocalização</h3>
+              </div>
+            </div>
+
+            <div class="somB">
+              <div class="btnSomB" id="btnSomB" onclick="trocarConceito()">
+                <h3>Som Binaural</h3>
+              </div>
+            </div>
+
+            <div class="sines">
+              <div class="btnSines" id="btnSines" onclick="trocarConceito()">
+                <h3>Sinestesia</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="descConcepts">
+            <div id="desc-eco" class="desc-eco">
+              <div class="txt-eco">
+                <p>É um fenômeno que consiste na emissão de ondas sonoras para obter informações sobre o ambiente. Ao
+                  emitir um som, ele ecoa pelo local até que retorne para o ponto inicial. Assim, realizamos cálculos
+                  para saber a distância aproximada de um canto ao outro.</p>
+              </div>
+              <div class="img-eco">
+                <img src="../assets/img/content/ecolocalizacao.png" width="300">
+              </div>
+            </div>
+
+            <div id="desc-binaural" class="desc-binaural">
+              <div class="txt-binaural">
+                <p>É um recurso imersivo que localiza o áudio em volta de quem está ouvindo, simulando como um humano
+                  consegue captar os sons naturalmente e saber sua origem.</p>
+              </div>
+              <div class="img-binaural">
+                <img src="../assets/img/content/sombinaural.png" width="275">
+              </div>
+            </div>
+
+            <div id="desc-sinestesia" class="desc-sinestesia">
+              <div class="txt-sinestesia">
+                <p>É a relação de planos sensoriais diferentes: por exemplo, o gosto com o cheiro, ou a visão com o
+                  tato. O termo é usado para descrever uma figura de linguagem e uma série de fenômenos provocados por
+                  uma condição neurológica.</p>
+              </div>
+              <div class="img-sinestesia">
+                <img src="../assets/img/content/sinestesia.png" width="250">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- 
+    <div class="descProgress">
+      <div class="title-progress">
+        <img src="../assets/img/icons/iconEvolucao.png" width="50">
+        <h3>Evolução</h3>
+      </div>
+
+      <div class="desc-progress">
+        <p>O projeto tem vivenciado até então 4 fases.</p>
+      </div>
+
+      <div class="detail-progress">
+     
+    
+      </div>
+
+    </div> -->
+
+    <div class="descTeam">
+      <div class="title-team">
+        <img src="../assets/img/icons/iconTime.png" width="50" />
+        <h3>Equipe</h3>
+      </div>
+
+      <div class="desc-team">
+        <p>Conheça a equipe por trás do projeto!</p>
+      </div>
+
+      <div class="team">
+        <h4 class="fira-sans-bold gradient-text-coord">Coordenadora</h4>
+        <div class="teachers">
+          <div class="cardC center" style="background: linear-gradient(90deg, #ff5757, #8c52ff)">
+            <!-- Prof Aida -->
+
+            <div class="containerCardC">
+              <img src="../assets/img/team/Aida.jpg" class="imgTeacher" />
+
+              <h5>Aida Araújo Ferreira</h5>
+              <h5>Doutora em Ciência da Computação</h5>
+            </div>
+
+            <div class="socialC">
+                <a href="http://lattes.cnpq.br/8515798754882166" target="_blank">
+                  <img src="../assets/img/icons/lattes.png" width="30" />
+                </a>
+                <a href="https://www.linkedin.com/in/aida-ferreira-a9317777/" target="_blank">
+                  <img src="../assets/img/icons/linkedin.png" width="30" />
+                </a>
+                <a href="mailto:aidaferreira@recife.ifpe.edu.br" target="_blank">
+                  <img class="btnEmail" src="../assets/img/icons/gmail.png" width="30" />
+                </a>
+            </div>
+          </div>
+        </div>
+
+        <h4 class="fira-sans-bold gradient-text-colab">
+          Bolsistas e Pesquisadores
+        </h4>
+        <div class="students">
+          <div class="cardS">
+            <!-- Bolsista Allamy Monteiro -->
+
+            <div class="containerCardS">
+              <img src="../assets/img/team/Allamy.jpg" class="imgStudent" />
+
+              <h5>Allamy Monteiro</h5>
+              <h5>Estudante de ADS</h5>
+              <div class="tag" style="background: linear-gradient(90deg, #cf5084, #8c52ff)">
+                Bolsista
+              </div>
+              <div class="social">
+                <a href="http://lattes.cnpq.br/5312722335707245" target="_blank">
+                  <img src="../assets/img/icons/lattes.png" width="30" />
+                </a>
+                <a href="https://www.linkedin.com/in/allamy-m-pereira/" target="_blank">
+                  <img src="../assets/img/icons/linkedin.png" width="30" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cardS">
+            <!-- Bolsista Carlos Barros -->
+            <div class="containerCardS">
+              <img src="../assets/img/team/Carlos.jpg" class="imgStudent" />
+
+              <h5>Carlos Barros</h5>
+              <h5>Bacharel em Jogos Digitais</h5>
+
+              <div class="tag" style="background: linear-gradient(90deg, #cf5084, #8c52ff)">
+                Bolsista
+              </div>
+              <div class="social">
+                <a href="http://lattes.cnpq.br/7211765528797544" target="_blank">
+                  <img src="../assets/img/icons/lattes.png" width="30" />
+                </a>
+                <a href="https://www.linkedin.com/in/carlos-barros-28653421/?originalSubdomain=br" target="_blank">
+                  <img src="../assets/img/icons/linkedin.png" width="30" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cardS">
+            <!-- Bolsista Caroline Medeiros -->
+            <div class="containerCardS">
+              <img src="../assets/img/team/Caroline.png" class="imgStudent" />
+
+              <h5>Caroline Medeiros</h5>
+              <h5>Estudante de ADS</h5>
+              <div class="tag" style="background: linear-gradient(90deg, #cf5084, #8c52ff)">
+                Bolsista
+              </div>
+              <div class="social">
+                <a href="http://lattes.cnpq.br/6551102195068962" target="_blank">
+                  <img src="../assets/img/icons/lattes.png" width="30" />
+                </a>
+                <a href="https://www.linkedin.com/in/cmnascimento/" target="_blank">
+                  <img src="../assets/img/icons/linkedin.png" width="30" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cardS">
+            <!-- Bolsista Maria Francielly -->
+            <div class="containerCardS">
+              <img src="../assets/img/team/Francielly.jpg" class="imgStudent" />
+
+              <h5>Maria Francielly</h5>
+              <h5>Estudante de Eletrônica</h5>
+              <div class="tag" style="background: linear-gradient(90deg, #cf5084, #8c52ff)">
+                Bolsista
+              </div>
+            </div>
+          </div>
+
+          <div class="cardS">
+            <!-- Bolsista Felipe Oliveira -->
+            <div class="containerCardS">
+              <img src="../assets/img/team/Felipe.png" class="imgStudent" />
+
+              <h5>Felipe Oliveira</h5>
+              <h5>Estudante de Eletrônica</h5>
+              <div class="tag" style="background: linear-gradient(90deg, #cf5084, #8c52ff)">
+                Bolsista
+              </div>
+              <div class="social">
+                <a href="https://www.linkedin.com/in/felipe-santana-de-oliveira-4251a8230/" target="_blank">
+                  <img src="../assets/img/icons/linkedin.png" width="30" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cardS">
+            <!-- Pesquisador Gilmar Brito -->
+            <div class="containerCardS">
+              <img src="../assets/img/team/Gilmar.jpg" class="imgStudent" />
+
+              <h5>Gilmar Brito</h5>
+              <h5>Doutor em Geotécnica</h5>
+              <div class="tag" style="background: linear-gradient(90deg, #9a92fb, #8c52ff)">
+                Pesquisador
+              </div>
+              <div class="social">
+                <a href="http://lattes.cnpq.br/3706711468701771" target="_blank">
+                  <img src="../assets/img/icons/lattes.png" width="30" />
+                </a>
+                <a href="https://www.linkedin.com/in/gilmar-gon%C3%A7alves-de-brito-a9997252/" target="_blank">
+                  <img src="../assets/img/icons/linkedin.png" width="30" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cardS">
+            <!-- Pesquisadora Ioná Beltrão -->
+            <div class="containerCardS">
+              <img src="../assets/img/team/IonáBeltrão.jpeg.jpg" class="imgStudent" />
+
+              <h5>Ioná Beltrão</h5>
+              <h5>Doutora em Engenharia Civil</h5>
+
+              <div class="tag" style="background: linear-gradient(90deg, #9a92fb, #8c52ff)">
+                Pesquisadora
+              </div>
+              <div class="social">
+                <a href="http://lattes.cnpq.br/3171196198128324" target="_blank">
+                  <img src="../assets/img/icons/lattes.png" width="30" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cardS">
+            <!-- Bolsista Isaque Domingos -->
+            <div class="containerCardS">
+              <img src="../assets/img/team/Isaque.png" class="imgStudent" />
+
+              <h5>Isaque Domingos</h5>
+              <h5>Estudante de Eletrônica</h5>
+              <div class="tag" style="background: linear-gradient(90deg, #cf5084, #8c52ff)">
+                Bolsista
+              </div>
+              <div class="social">
+                <a href="http://lattes.cnpq.br/0308688789533941" target="_blank">
+                  <img src="../assets/img/icons/lattes.png" width="30" />
+                </a>
+                <a href="https://www.linkedin.com/in/isaque-domingos-0935a8235/" target="_blank">
+                  <img src="../assets/img/icons/linkedin.png" width="30" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cardS">
+            <!-- Bolsista Jailson Pessoa -->
+            <div class="containerCardS">
+              <img src="../assets/img/team/JailsonPessoa.jpg" class="imgStudent" />
+
+              <h5>Jailson Pessoa</h5>
+              <h5>Estudante de Eletrônica</h5>
+              <div class="tag" style="background: linear-gradient(90deg, #cf5084, #8c52ff)">
+                Bolsista
+              </div>
+              <div class="social">
+                <a href="http://lattes.cnpq.br/2633047950343845" target="_blank">
+                  <img src="../assets/img/icons/lattes.png" width="30" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cardS">
+            <!-- Pesquisador Ronaldo Aquino -->
+            <div class="containerCardS">
+              <img src="../assets/img/team/RonaldoAquino.jpg" class="imgStudent" />
+
+              <h5>Ronaldo Aquino</h5>
+              <h5>Doutor em Engenharia Elétrica</h5>
+              <div class="tag" style="background: linear-gradient(90deg, #9a92fb, #8c52ff)">
+                Pesquisador
+              </div>
+              <div class="social">
+                <a href="http://lattes.cnpq.br/0731639653204720" target="_blank">
+                  <img src="../assets/img/icons/lattes.png" width="30" />
+                </a>
+                <a href="https://www.linkedin.com/in/ronaldo-aquino-05372235/" target="_blank">
+                  <img src="../assets/img/icons/linkedin.png" width="30" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cardS">
+            <!-- Pesquisador Thiago Ewerton -->
+            <div class="containerCardS">
+              <img src="../assets/img/team/ThiagoEwerton.png" class="imgStudent" />
+
+              <h5>Thiago Ewerton</h5>
+              <h5>Estudante de Eletrônica</h5>
+              <div class="tag" style="background: linear-gradient(90deg, #cf5084, #8c52ff)">
+                Bolsista
+              </div>
+            </div>
+          </div>
+
+          <div class="cardS">
+            <!-- Pesquisadora Vânia Carvalho -->
+            <div class="containerCardS">
+              <img src="../assets/img/team/VaniaCarvalho.jpg" class="imgStudent" />
+
+              <h5>Vânia Carvalho</h5>
+              <h5>Doutora em Agronomia</h5>
+              <div class="tag" style="background: linear-gradient(90deg, #9a92fb, #8c52ff)">
+                Pesquisadora
+              </div>
+              <div class="social">
+                <a href="http://lattes.cnpq.br/0773387660250730" target="_blank">
+                  <img src="../assets/img/icons/lattes.png" width="30" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cardS" style="opacity: 0">
+
+          </div>
+
+          <div class="cardS">
+            <!-- Colaborador Ryan Morais -->
+            <div class="containerCardS">
+              <img src="../assets/img/team/RyanMorais.png" class="imgStudent" />
+
+              <h5>Ryan Morais</h5>
+              <h5>Estudante de Eletrônica</h5>
+              <div class="tag" style="background: linear-gradient(90deg, #8c52ff, #cf5084)">
+                Colaborador
+              </div>
+              <div class="social">
+                <a href="http://lattes.cnpq.br/8528789370577660" target="_blank">
+                  <img src="../assets/img/icons/lattes.png" width="30" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+                    <div class="cardS" style="opacity: 0">
+            
+          </div>
+        </div>
+
+        <h4 class="fira-sans-bold gradient-text-ex">
+          Ex-Bolsistas, Pesquisadores E Colaboradores
+        </h4>
+        <div class="Xstudents centerLastCards">
+          <div class="cardXS student3">
+            <!-- Ex-Bolsista Estevão Pereira -->
+            <div class="containerCardS">
+              <img src="../assets/img/team/EstevaoPereira.png" class="imgXStudent" />
+
+              <h5>Estevão Pereira</h5>
+              <h5>Estudante de Mecânica</h5>
+              <div class="tag" style="background: linear-gradient(90deg, #272727, #cacaca)">
+                Ex-Bolsista
+              </div>
+              <div class="social">
+                <a href="https://www.linkedin.com/in/estev%C3%A3o-silva-10a296204/" target="_blank">
+                  <img src="../assets/img/icons/linkedin.png" width="30" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cardXS student7">
+            <!-- Ex-Colaborador Externo Michael Barney -->
+            <div class="containerCardS">
+              <img src="../assets/img/team/MichaelBarney.png" class="imgXStudent" />
+
+              <h5>Michael Barney</h5>
+              <h5>Especialista em IA</h5>
+              <div class="tag" style="
+                    background: linear-gradient(90deg, #cacaca, #272727);
+                    width: 9em;
+                  ">
+                Ex-Colaborador
+              </div>
+              <div class="social">
+                <a href="https://www.linkedin.com/in/michaelbarneyjr/" target="_blank">
+                  <img src="../assets/img/icons/linkedin.png" width="30" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      <i class="fa-regular fa-copyright" style="color: #ffffff"></i> 2023
+      Synesthesia Vision. All rights reserved
+    </p>
+    <br />
+    <a href="mailto:synesthesiavision@recife.ifpe.edu.br">
+      <i class="fa-regular fa-envelope" style="color: #ffffff"></i>
+      Entre em contato</a>
+  </footer>
+</body>
+
+</html>

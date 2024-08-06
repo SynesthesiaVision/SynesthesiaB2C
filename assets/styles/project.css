@@ -1,0 +1,513 @@
+/* INTRODUÇÃO */
+/* iframe {
+    border-radius: 5px;
+    border: none;
+} */
+
+#voltarTopo {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  background: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#voltarTopo i {
+  font-size: 3em;
+}
+
+.descProblem,
+.descConcept,
+.descContext,
+.descSynesthesia {
+  user-select: none;
+}
+
+/* IDEIA */
+.descContext {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.5em;
+  height: 100vh;
+}
+
+.descContext p {
+  font-size: 1.2em;
+}
+
+.descContext p:last-of-type {
+  font-size: 1em;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.descContext h3 {
+  font-size: 1.5em;
+}
+
+.descSynesthesia {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin: 0.5em;
+}
+
+/* PROBLEMA */
+.descProblem {
+  border-top: 2px solid #9a92fb;
+  padding: 3em 5em 3em 5em;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.imgBengala {
+  margin: 0 auto;
+}
+
+.desc-problem img {
+  display: flex;
+  margin: 0 auto;
+}
+
+.desc-problem p:last-of-type {
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: center;
+  padding: 1em;
+}
+
+/* CONCEITOS */
+.descConcept {
+  padding: 3em 5em 3em 5em;
+  border-top: 2px solid #eb8576;
+}
+
+.concepts h3 {
+  padding: 0;
+  color: #fff;
+}
+
+.btnEco,
+.btnSomB,
+.btnSines {
+  padding: 1.5em 5em 1.5em 5em;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.95em;
+  border-radius: 5px 5px 0 0;
+}
+
+.btnEco {
+  background-color: var(--rosaRoxeado);
+}
+
+.btnSomB {
+  background-color: var(--azulClaro);
+}
+
+.btnSines {
+  background-color: var(--rosaClaro);
+}
+
+.concepts {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
+.eco,
+.somB,
+.sines {
+  display: flex;
+  flex-direction: column;
+}
+
+.desc-eco,
+.desc-binaural,
+.desc-sinestesia {
+  border: 5px solid var(--rosaRoxeado);
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1.5em;
+  height: 50vh;
+  display: none;
+}
+
+.desc-binaural {
+  border: 5px solid var(--azulClaro) !important;
+}
+
+.desc-sinestesia {
+  border: 5px solid var(--rosaClaro) !important;
+}
+
+.txt-eco,
+.txt-binaural,
+.txt-sinestesia {
+  width: 45%;
+  text-align: justify;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.active {
+  display: flex;
+}
+
+/* MARKS */
+.descProgress {
+  padding: 3em 5em 3em 5em;
+  border-top: 2px solid #cf5084;
+}
+
+/* Equipe do projeto */
+.gradient-text-coord {
+  background: linear-gradient(120deg, #ff5757, #8c52ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-colab {
+  background: linear-gradient(120deg, #8c52ff, #2f4858);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-ex {
+  background: linear-gradient(60deg, #000000, #cccccc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.desc-team p:first-of-type {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.descTeam {
+  padding: 3em 5em 3em 5em;
+  border-top: 2px solid #b837a2;
+}
+
+.team h4 {
+  font-size: 1.5em;
+  margin: 1.5em;
+  text-align: center;
+  opacity: 0.9;
+  user-select: none;
+}
+
+.team h4:last-of-type {
+  margin-top: 2em;
+}
+
+.team h5 {
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.teachers {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+
+.title-problem,
+.title-concept,
+.title-progress,
+.title-team {
+  display: flex;
+  font-size: 1.3em;
+  gap: 0.7em;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 0.5em;
+}
+
+.desc-problem p:first-of-type,
+.desc-concept p:first-of-type,
+.desc-progress p:first-of-type,
+.desc-team p:first-of-type {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.cardC {
+  width: 340px;
+  height: 460px;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+
+.cardC:hover {
+  transform: scale(1.1);
+}
+
+.containerCardC,
+.containerCardS {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.containerCardC h5:last-of-type,
+.containerCardS h5:last-of-type {
+  font-size: 1em;
+  width: 80%;
+}
+
+.imgTeacher,
+.imgStudent,
+.imgXStudent {
+  width: 280px;
+  height: 300px;
+  border-radius: 5px;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  object-fit: cover;
+}
+
+.students {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  justify-items: center;
+  gap: 2em;
+}
+
+.cardS,
+.cardXS {
+  width: 340px;
+  height: 500px;
+  border-radius: 5px;
+  background-color: #2f4858;
+  transition: transform 0.5s ease;
+}
+
+.cardXS {
+  background-color: #3b3b3b !important;
+  opacity: 0.8;
+  transition: transform 0.5s ease;
+}
+
+.cardS:hover,
+.cardXS:hover {
+  transform: scale(1.1);
+}
+
+.centerLastCards {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2em;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.socialC,
+.socialS {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialS {
+  margin-top: 0.4em;
+}
+
+.socialC {
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.tag {
+  margin: 1em;
+  width: 7em;
+  height: 1.3em;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.btnLattes,
+.btnLinkedin,
+.btnEmail {
+  border-radius: 50%;
+}
+
+.btnEmail {
+  background-color: #fff;
+}
+
+/* IDEIAS */
+.black-screen {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 80px);
+  justify-content: center;
+  align-items: center;
+  color: #eeeeee;
+}
+
+.black-screen h2 {
+  color: #eeeeee;
+}
+
+.black-screen button {
+  border: none;
+  background: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.black-screen i {
+  font-size: 2em;
+  margin: 1em;
+}
+
+/* Responsividade */
+/* Celulares e Telas menores */
+@media (min-width: 320px) and (max-width: 767px) {
+  .descSynesthesia h3 {
+    font-size: 1.2em;
+  }
+
+  .descSynesthesia img {
+    display: none;
+  }
+
+  .descProblem > .desc {
+    width: 100%;
+  }
+
+  .desc p {
+    width: 100%;
+  }
+
+  .imgBengala {
+    display: none;
+  }
+
+  .descConcept {
+    margin: 1em;
+    text-align: justify;
+  }
+
+  .h6Concepts {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2em;
+  }
+
+  .descConcept p {
+    text-align: center;
+  }
+
+  .marks h3 {
+    font-size: 1.7em;
+    text-align: center;
+  }
+
+  .marks h4 {
+    font-size: 1.2em;
+  }
+
+  .marks img {
+    width: 70%;
+  }
+
+  .markI .slide,
+  .markII .slide,
+  .markIII .slide,
+  #next,
+  #prev {
+    display: none;
+  }
+
+  .slide-container:nth-child(1) {
+    width: 100%;
+  }
+
+  .descMark h5 {
+    font-size: 1em;
+  }
+
+  .descMark {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .coord {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .prof {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  .collab {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .descSynesthesia img {
+    display: none;
+  }
+
+  .imgBengala {
+    display: none;
+  }
+
+  .descProblem > .desc {
+    width: 100%;
+  }
+
+  .desc p {
+    width: 100%;
+  }
+
+  .markI .slide,
+  .markII .slide,
+  .markIII .slide,
+  #next,
+  #prev {
+    display: none;
+  }
+
+  .collab {
+    display: flex;
+    justify-content: center;
+  }
+
+  .prof {
+    height: 25em;
+    width: 30%;
+  }
+}
