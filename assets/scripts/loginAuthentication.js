@@ -5,41 +5,55 @@ document
     login();
   });
 
+function decodeJwt(token) {
+  const base64Url = token.split('.')[1];
+  const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+  const jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {
+    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+  }).join(''));
+  return JSON.parse(jsonPayload);
+}
+
 function login() {
   const email = document.getElementById("email").value;
-  // const password = document.getElementById("password").value;
+  const password = document.getElementById("password").value;
 
   const fixedUsername = "adminSV";
   const fixedPassword = "123";
 
   const headers = new Headers();
+  headers.append("Content-Type", "application/json");
   headers.append(
     "Authorization",
     "Basic " + btoa(fixedUsername + ":" + fixedPassword)
   );
-  headers.append("Content-Type", "application/json");
 
-  fetch(`http://localhost:18080/api-V1/user/findByEmail?email=${email}`, {
-    method: "GET",
+  const body = JSON.stringify({
+    email: email,
+    password: password,
+  });
+
+  fetch(`http://localhost:18080/api-V1/authenticate`, {
+    method: "POST",
     headers: headers,
+    body: body,
   })
     .then((response) => {
       if (!response.ok) {
-        throw new Error(
-          "A resposta da rede não foi ok: " + response.statusText
-        );
+        throw new Error("A resposta da rede não foi ok: " + response.statusText);
       }
-      return response.json();
+      return response.text();
     })
-    .then((user) => {
-      // if (user && user.email === email && user.password === password) {
-      if (user && user.email === email) {
-        console.log("Login successful for user ID:", user.id);
-        localStorage.setItem("userId", user.id);
-        window.location.href = "buy.html";
-      } else {
-        alert("Credenciais inválidas. Tente novamente.");
-      }
+    .then((token) => {
+      const payload = decodeJwt(token);
+      const userEmail = payload.email;
+
+      console.log(payload)
+
+      localStorage.setItem('authToken', token);
+      localStorage.setItem('userEmail', userEmail);
+
+      window.location.href = "buy.html";
     })
     .catch((error) => {
       console.error("Erro:", error);

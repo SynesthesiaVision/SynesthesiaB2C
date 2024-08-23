@@ -52,7 +52,7 @@
         <h2 class="gradient-text-buy">PERSONALIZE SEUS ÓCULOS</h2>
         <div id="containerBuy">
             <div class="iconGlasses">
-                <i id="iconClass" class="fa-solid fa-glasses" style=""></i>
+                <i id="iconClass" class="fa-solid fa-glasses"></i>
             </div>
             <form id="formBuy" onsubmit="enviarFormulario(event)">
                 <div class="labelFormBuy">
@@ -94,7 +94,20 @@
                 </div>
                 <p id="selectedColorText">Cor selecionada: Nenhuma</p>
 
-                <input type="hidden" name="userId" id="userId">
+                <script>
+                    window.addEventListener('load', function () {
+                        const userEmail = localStorage.getItem('userEmail');
+
+                        if (userEmail) {
+                            document.getElementById('userEmail').value = userEmail;
+                            console.log(userEmail)
+                        } else {
+                            window.location.href = "signin.html";
+                        }
+                    });
+                </script>
+
+                <input type="hidden" name="userEmail" id="userEmail">
 
                 <button type="submit" id="btnSubmit">CONTINUAR</button>
             </form>
@@ -151,7 +164,7 @@
             event.preventDefault();
 
             const userId = document.getElementById('userId').value;
-            // localStorage.setItem('userId', userId);
+
             window.location.href = 'revision.html';
         }
 
@@ -208,18 +221,14 @@
             icon.style.color = bgColor;
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            updateButtonColors();
-            initializeSelections();
+        window.addEventListener('load', function () {
+            const token = localStorage.getItem('authToken');
+            if (!token) {
+                alert("Faça login primeiro!!")
+                window.location.href = "signin.html";
+            }
+        });
 
-        const userId = localStorage.getItem('userId');
-      if (userId) {
-        document.getElementById('userId').value = userId;
-      } else {
-        alert("Usuário não logado. Por favor, faça o login primeiro.");
-        window.location.href = "signin.html";
-      }
-    });
     </script>
 </body>
 
