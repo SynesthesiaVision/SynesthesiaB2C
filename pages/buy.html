@@ -98,6 +98,9 @@
                     window.addEventListener('load', function () {
                         const userEmail = localStorage.getItem('userEmail');
 
+                        console.log(localStorage.getItem("userEmail"));
+
+
                         if (userEmail) {
                             document.getElementById('userEmail').value = userEmail;
                             console.log(userEmail)
@@ -163,7 +166,7 @@
         function enviarFormulario(event) {
             event.preventDefault();
 
-            const userId = document.getElementById('userId').value;
+            const userEmail = document.getElementById('userEmail').value;
 
             window.location.href = 'revision.html';
         }

@@ -18,25 +18,16 @@ function login() {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
-  const fixedUsername = "adminSV";
-  const fixedPassword = "123";
-
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
   headers.append(
     "Authorization",
-    "Basic " + btoa(fixedUsername + ":" + fixedPassword)
+    "Basic " + btoa(email + ":" + password)
   );
-
-  const body = JSON.stringify({
-    email: email,
-    password: password,
-  });
 
   fetch(`http://localhost:18080/api-V1/authenticate`, {
     method: "POST",
-    headers: headers,
-    body: body,
+    headers: headers
   })
     .then((response) => {
       if (!response.ok) {
@@ -46,9 +37,11 @@ function login() {
     })
     .then((token) => {
       const payload = decodeJwt(token);
-      const userEmail = payload.email;
-
       console.log(payload)
+      const userEmail = payload.sub;
+
+      // console.log(payload)
+      // console.log(userEmail)
 
       localStorage.setItem('authToken', token);
       localStorage.setItem('userEmail', userEmail);
