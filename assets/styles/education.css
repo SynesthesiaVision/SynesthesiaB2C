@@ -30,20 +30,18 @@ p {
 }
 
 .btnView {
-  background-color: var(--roxo);
+  background: linear-gradient(90deg, var(--roxo), var(--rosaEscuro));
   border-radius: 4px;
   border: none;
   font-family: "Nunito Sans", sans-serif;
   font-size: 1em;
-
+  text-align: center;
   padding: 1em;
   width: 10em;
   cursor: pointer;
+  color: #fff;
 }
 
-.btnView a {
-  color: white;
-}
 
 /* Responsividade */
 /* Celulares e Telas menores */

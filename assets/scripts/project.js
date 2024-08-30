@@ -11,7 +11,14 @@ window.onscroll = function () {
   exibirBotao();
 };
 
-function scrollToSection() {
+function voltarAoTopo() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+function direcionarInicio() {
   var ideaSection = document.getElementById("idea");
   if (ideaSection) {
     ideaSection.scrollIntoView({ behavior: "smooth" });
