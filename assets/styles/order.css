@@ -1,0 +1,7 @@
+.gradient-text-order {
+    background: linear-gradient(90deg, #d6d6d6, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 2em;
+}

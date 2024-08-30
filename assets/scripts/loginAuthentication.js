@@ -37,11 +37,7 @@ function login() {
     })
     .then((token) => {
       const payload = decodeJwt(token);
-      console.log(payload)
       const userEmail = payload.sub;
-
-      // console.log(payload)
-      // console.log(userEmail)
 
       localStorage.setItem('authToken', token);
       localStorage.setItem('userEmail', userEmail);

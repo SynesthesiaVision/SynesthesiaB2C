@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const model = localStorage.getItem("selectedModel");
   const size = localStorage.getItem("selectedSize");
   const color = localStorage.getItem("selectedColor");
+  const price = localStorage.getItem("price");
   const userEmail = localStorage.getItem("userEmail");
 
   function fetchUserIdAndSubmitOrder(userEmail) {
@@ -25,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
           throw new Error("Erro ao recuperar o ID do usuário.");
         }
         return data.id; // Retorne o ID do usuário
+        
       })
       .catch(error => {
         console.error("Erro:", error.message);
@@ -56,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!response.ok) {
           throw new Error("Ocorreu um erro ao enviar a solicitação.");
         }
+        window.location.href = "order.html";
         console.log("Solicitação enviada com sucesso!");
       })
       .catch((error) => {
@@ -67,6 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("model").textContent = model || "Nenhum";
   document.getElementById("size").textContent = size || "Nenhum";
   document.getElementById("color").textContent = color || "Nenhuma";
+  document.getElementById("price").textContent = price || "R$ 999,00";
 
   document.getElementById("revision").addEventListener("submit", submitOrder);
 });
