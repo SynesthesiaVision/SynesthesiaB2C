@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../assets/styles/style.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,700&display=swap"
+        rel="stylesheet" />
+
+    <!-- ICONS -->
+    <script src="https://kit.fontawesome.com/e2bd8765fe.js" crossorigin="anonymous"></script>
+
+    <style>
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main a {
+            padding: 1em;
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+    <title>Synesthesia Vision</title>
+</head>
+
+<body>
+    <h1 hidden>Synesthesia Vision</h1>
+
+    <header>
+        <div id="nav-bar">
+            <img src="../assets/img/logo.png" width="50" alt="Logo Synesthesia Vision" />
+            <ul id="menu-op">
+                <li>
+                    <a href="../index.html" class="roxo">INÍCIO</a>
+                </li>
+                <li>
+                    <a href="project.html" class="rosaEscuro">PROJETO</a>
+                </li>
+                <li>
+                    <a href="education.html" class="azulClaro">EDUCAÇÃO</a>
+                </li>
+                <li>
+                    <a href="news.html" class="rosaClaro">NOTÍCIAS</a>
+                </li>
+                <li hidden>
+                    <a href="contact.html">CONTATO</a>
+                </li>
+            </ul>
+            <a href="#"></a>
+        </div>
+    </header>
+
+    <main>
+        <a href="order.html">GERAR BOLETO PRA PAGAR</a>
+
+        <button id="updateButton">GERAR BOLETO PRA PAGAR</button>
+    </main>
+
+    <footer>
+        <p>
+            <i class="fa-regular fa-copyright" style="color: #ffffff"></i> 2023
+            Synesthesia Vision. All rights reserved
+        </p>
+        <br />
+        <a href="mailto:synesthesiavision@recife.ifpe.edu.br">
+            <i class="fa-regular fa-envelope" style="color: #ffffff"></i>
+            Entre em contato</a>
+    </footer>
+
+    <script>
+        document.getElementById('updateButton').addEventListener('click', function () {
+            // Objeto principal (substitua isto pela sua fonte de dados real)
+            // obterDadosUsuario()
+            async function obterDadosUsuario() {
+                try {
+                    const userEmail = localStorage.getItem("userEmail");
+                    const response = await fetch(`http://localhost:18080/api-V1/user/findByEmail?email=${userEmail}`, {
+                        method: 'GET',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    });
+
+                    if (response.ok) {
+                        const usuario = await response.json();
+                        console.log(usuario)
+                        return usuario;
+                    } else {
+                        alert(`Erro ao buscar dados do usuário: ${response.statusText}`);
+                        return null;
+                    }
+                } catch (error) {
+                    console.error('Erro ao buscar dados do usuário:', error);
+                    alert('Ocorreu um erro ao tentar buscar os dados do usuário.');
+                    return null;
+                }
+            }
+
+            user = obterDadosUsuario();
+            // console.log(user)
+            if (user && Array.isArray(user.ordersList)) {
+                if (user.ordersList.length > 0) {
+                    // Recuperar o ID do primeiro pedido
+                    const orderId = user.ordersList[0].id;
+
+                    console.log('ID do pedido:', orderId); // Mensagem de depuração
+
+                    // Configurações para o fetch
+                    const requestOptions = {
+                        method: 'PATCH', // ou 'PUT' dependendo da sua API
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            id: orderId,
+                            orderPaymentStatus: "PAID"
+                        })
+                    };
+
+                    // Enviar o fetch para atualizar o pedido
+                    fetch('https://api.seuservidor.com/pedidos', requestOptions)
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log('Pedido atualizado com sucesso:', data);
+                        })
+                        .catch(error => {
+                            console.error('Erro ao atualizar o pedido:', error);
+                        });
+                } else {
+                    console.error('ordersList está vazio.');
+                }
+            } else {
+                console.error('user.ordersList não é um array ou está undefined.');
+                console.log('Dados do usuário:', user); // Mensagem de depuração para verificar estrutura
+            }
+        });
+    </script>
+</body>
+
+</html>

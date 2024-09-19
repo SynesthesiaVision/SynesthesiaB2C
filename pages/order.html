@@ -15,9 +15,36 @@
         href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,700&display=swap"
         rel="stylesheet" />
 
-            <!-- ICONS -->
+    <!-- ICONS -->
     <script src="https://kit.fontawesome.com/e2bd8765fe.js" crossorigin="anonymous"></script>
 
+    <script>
+        obterDadosUsuario()
+        async function obterDadosUsuario() {
+            try {
+                const userEmail = localStorage.getItem("userEmail");
+                const response = await fetch(`http://localhost:18080/api-V1/user/findByEmail?email=${userEmail}`, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    const usuario = await response.json();
+                    console.log(usuario)
+                    return usuario;
+                } else {
+                    alert(`Erro ao buscar dados do usuário: ${response.statusText}`);
+                    return null;
+                }
+            } catch (error) {
+                console.error('Erro ao buscar dados do usuário:', error);
+                alert('Ocorreu um erro ao tentar buscar os dados do usuário.');
+                return null;
+            }
+        }
+    </script>
     <title>Synesthesia Vision</title>
 </head>
 

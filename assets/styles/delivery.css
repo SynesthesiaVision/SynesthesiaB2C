@@ -1,0 +1,53 @@
+.gradient-text-delivery {
+  background: linear-gradient(90deg, #d6d6d6, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.7em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+label span {
+  font-weight: bold;
+  margin-bottom: 0.1em;
+  margin-top: 0.3em;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+}
+
+label input {
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 3px;
+  padding: 0.3em;
+  font-size: 1.1em;
+}
+
+#deliveryForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnDelivery {
+  background-color: #000;
+  color: white;
+  border: none;
+  margin: 0;
+  border-radius: 5px;
+  padding: 0.7em;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.btnDelivery:hover {
+  font-weight: bold;
+}

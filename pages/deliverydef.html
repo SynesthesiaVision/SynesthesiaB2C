@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="../assets/styles/style.css" />
+    <link rel="stylesheet" href="../assets/styles/delivery.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,700&display=swap"
+        rel="stylesheet" />
+
+    <!-- ICONS -->
+    <script src="https://kit.fontawesome.com/e2bd8765fe.js" crossorigin="anonymous"></script>
+
+    <script src="../assets/scripts/delivery.js" defer></script>
+
+    <title>Synesthesia Vision</title>
+</head>
+
+<body>
+    <h1 hidden>Synesthesia Vision</h1>
+    <header>
+        <div id="nav-bar">
+            <img src="../assets/img/logo.png" width="50" alt="Logo Synesthesia Vision" />
+            <ul id="menu-op">
+                <li><a href="../index.html" class="roxo">INÍCIO</a></li>
+                <li><a href="project.html" class="rosaEscuro">PROJETO</a></li>
+                <li><a href="education.html" class="azulClaro">EDUCAÇÃO</a></li>
+                <li><a href="news.html" class="rosaClaro">NOTÍCIAS</a></li>
+                <li hidden><a href="contact.html">CONTATO</a></li>
+            </ul>
+            <a href="#"></a>
+        </div>
+    </header>
+
+    <main>
+        <h2 class="gradient-text-delivery">DEFINA O LOCAL DE ENTREGA</h2>
+
+        <div id="deliveryForm">
+            <form method="get" action="." onsubmit="atualizarUsuario(event);">
+                <label><span>CEP:</span>
+                    <input name="cep" type="text" id="cep" value="zipCodeBR" size="10" maxlength="9"
+                        onblur="pesquisacep(this.value);" oninput="formatarCEP(this);" />
+                </label><br />
+                <label><span>Estado:</span>
+                    <input name="uf" type="text" id="uf" size="2" maxlength="2" required />
+                </label><br />
+                <label><span>Cidade:</span>
+                    <input name="cidade" type="text" id="cidade" size="40" required />
+                </label><br />
+                <label><span>Bairro:</span>
+                    <input name="bairro" type="text" id="bairro" size="40" required />
+                </label><br />
+                <label><span>Rua:</span>
+                    <input name="rua" type="text" id="rua" size="60" required />
+                </label><br />
+                <label><span>Número:</span>
+                    <input name="numero" type="text" id="numero" size="100" max="5" required />
+                </label><br />
+                <label><span>Complemento:</span>
+                    <input name="complemento" type="text" id="complemento" maxlength="300" />
+                </label><br />
+                <label>
+                    <input hidden name="concat" type="text" id="concat" value="address" readonly required />
+                </label><br />
+                <button type="submit" class="btnDelivery">DEFINIR</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            <i class="fa-regular fa-copyright" style="color: #ffffff"></i> 2023
+            Synesthesia Vision. All rights reserved
+        </p>
+        <br />
+        <a href="mailto:synesthesiavision@recife.ifpe.edu.br">
+            <i class="fa-regular fa-envelope" style="color: #ffffff"></i>
+            Entre em contato</a>
+    </footer>
+</body>
+
+</html>

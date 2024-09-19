@@ -1,91 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="../assets/img/favicon.png"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="../assets/styles/style.css" />
-    <link rel="stylesheet" href="../assets/styles/register.css" />
 
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600;700&family=Lato:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="../assets/styles/style.css" />
+  <link rel="stylesheet" href="../assets/styles/register.css" />
 
-    <!-- ICONS -->
-    <script
-      src="https://kit.fontawesome.com/e2bd8765fe.js"
-      crossorigin="anonymous"
-    ></script>
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600;700&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet" />
 
-    <script src="../assets/scripts/registerAuthentication.js" defer></script>
+  <!-- ICONS -->
+  <script src="https://kit.fontawesome.com/e2bd8765fe.js" crossorigin="anonymous"></script>
 
-    <title>Synesthesia Vision</title>
-  </head>
+  <script src="../assets/scripts/registerAuthentication.js" defer></script>
 
-  <body>
-    <h1 hidden>Synesthesia Vision</h1>
+  <title>Synesthesia Vision</title>
+</head>
 
-    <main>
-      <div class="left">
-        <img src="../assets/img/logoAlt.png" width="320px" />
+<body>
+  <h1 hidden>Synesthesia Vision</h1>
 
-        <form action="" id="registrationForm">
-          <label for="name">
-            <span>Nome</span>
-            <input type="text" name="name" id="name" required />
-          </label>
+  <main>
+    <div class="left">
+      <img src="../assets/img/logoAlt.png" width="320px" />
 
-          <label for="cpf">
-            <span>CPF</span>
-            <input type="text" name="cpf" id="cpf" required />
-          </label>
+      <form action="" id="registrationForm">
+        <label for="name">
+          <span>Nome</span>
+          <input type="text" name="name" id="name" required />
+        </label>
 
-          <label for="phone">
-            <span>Número de Celular</span>
-            <input type="tel" name="phone" id="phone" />
-          </label>
+        <label for="cpf">
+          <span>CPF</span>
+          <input type="text" name="cpf" id="cpf" required />
+        </label>
 
-          <label for="zipCodeBR">
-            <span>CEP</span>
-            <input type="text" name="zipCodeBR" id="zipCodeBR" />
-          </label>
+        <label for="phone">
+          <span>Número de Celular</span>
+          <input type="tel" name="phone" id="phone" />
+        </label>
 
-          <label for="address">
+        <!-- <label for="zipCodeBR">
+          <span>CEP</span>
+          <input type="text" name="zipCodeBR" id="zipCodeBR" />
+        </label> -->
+
+        <!-- <label for="address">
             <span>Endereço</span>
             <input type="text" name="address" id="address" />
-          </label>
+          </label> -->
 
-          <label for="email">
-            <span>Email</span>
-            <input type="email" name="email" id="email" required />
-          </label>
+        <label for="email">
+          <span>Email</span>
+          <input type="email" name="email" id="email" required />
+        </label>
 
-          <label for="password">
-            <span>Senha</span>
-            <input type="password" name="password" id="password" required />
-          </label>
+        <label for="password">
+          <span>Senha</span>
+          <input type="password" name="password" id="password" required />
+        </label>
 
-          <button type="submit" class="btnSignUp">Cadastre-se</button>
-        </form>
-      </div>
+        <button type="submit" class="btnSignUp">Cadastre-se</button>
+      </form>
+    </div>
 
-      <div class="right"></div>
-    </main>
-  </body>
+    <div class="right"></div>
+  </main>
+</body>
+
 </html>

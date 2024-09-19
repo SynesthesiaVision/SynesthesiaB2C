@@ -3,11 +3,11 @@ main {
   height: 100%;
   margin: 0;
   font-family: "Nunito Sans", sans-serif;
+  overflow: hidden;
 }
 
 main {
   display: flex;
-  overflow: hidden;
 }
 
 .left {

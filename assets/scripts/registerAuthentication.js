@@ -11,8 +11,8 @@ function enviarFormulario() {
     name: document.getElementById("name").value,
     cpf: document.getElementById("cpf").value,
     phone: document.getElementById("phone").value,
-    zipCodeBR: document.getElementById("zipCodeBR").value,
-    address: document.getElementById("address").value,
+    // zipCodeBR: document.getElementById("zipCodeBR").value,
+    // address: document.getElementById("address").value,
     email: document.getElementById("email").value,
     password: document.getElementById("password").value,
   };

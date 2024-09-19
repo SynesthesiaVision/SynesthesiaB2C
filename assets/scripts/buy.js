@@ -52,9 +52,9 @@ function updateSelectedClass(buttonClass, selectedButton) {
 function enviarFormulario(event) {
   event.preventDefault();
 
-  const userEmail = document.getElementById("userEmail").value;
+  // const userEmail = document.getElementById("userEmail").value;
 
-  window.location.href = "revision.html";
+  window.location.href = "deliverydef.html";
 }
 
 function updateButtonColors() {
@@ -86,6 +86,8 @@ function initializeSelections() {
     "Cor selecionada: Preto";
   localStorage.setItem("selectedColor", "black");
   updateIconColor(defaultColorButton);
+
+  localStorage.setItem("selectedPrice", "999,00");
 }
 
 function updateIconSize(size) {

@@ -12,11 +12,12 @@
   justify-content: center;
   margin: 0 auto;
   height: 55vh;
-  width: 50%;
+  width: 70%;
 }
 
 .opDef {
   display: flex;
+  margin: 0.5em;
 }
 
 p {
@@ -27,6 +28,7 @@ p {
 span {
   margin-left: 0.5em;
   font-size: 1.3em;
+  font-weight: 400;
 }
 
 button {
