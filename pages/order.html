@@ -18,31 +18,72 @@
     <!-- ICONS -->
     <script src="https://kit.fontawesome.com/e2bd8765fe.js" crossorigin="anonymous"></script>
 
-    <script>
-        obterDadosUsuario()
-        async function obterDadosUsuario() {
-            try {
-                const userEmail = localStorage.getItem("userEmail");
-                const response = await fetch(`http://localhost:18080/api-V1/user/findByEmail?email=${userEmail}`, {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                });
+    <style>
+        #user-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
 
-                if (response.ok) {
-                    const usuario = await response.json();
-                    console.log(usuario)
-                    return usuario;
-                } else {
-                    alert(`Erro ao buscar dados do usuário: ${response.statusText}`);
-                    return null;
+    <script defer>
+        document.addEventListener("DOMContentLoaded", function () {
+            obterDadosUsuario()
+        });
+
+        function obterDadosUsuario() {
+            const userEmail = localStorage.getItem("userEmail");
+
+            fetch(`http://localhost:18080/api-V1/user/findByEmail?email=${userEmail}`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
                 }
-            } catch (error) {
-                console.error('Erro ao buscar dados do usuário:', error);
-                alert('Ocorreu um erro ao tentar buscar os dados do usuário.');
-                return null;
-            }
+            })
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        alert(`Erro ao buscar dados do usuário: ${response.statusText}`);
+                        return null;
+                    }
+                })
+                .then(usuario => {
+                    if (usuario) {
+                        console.log('Dados do usuário:', usuario);
+
+                        const userInfoDiv = document.getElementById('user-info');
+
+                        userInfoDiv.innerHTML += `<h2>Informações do Usuário</h2>`;
+                        userInfoDiv.innerHTML += `<p><strong>ID:</strong> ${usuario.id}</p>`;
+                        userInfoDiv.innerHTML += `<p><strong>Nome:</strong> ${usuario.name}</p>`;
+                        userInfoDiv.innerHTML += `<p><strong>Email:</strong> ${usuario.email}</p>`;
+                        userInfoDiv.innerHTML += `<p><strong>CPF:</strong> ${usuario.cpf}</p>`;
+                        userInfoDiv.innerHTML += `<p><strong>Endereço:</strong> ${usuario.address}</p>`;
+                        userInfoDiv.innerHTML += `<p><strong>CEP:</strong> ${usuario.zipCodeBR}</p>`;
+                        userInfoDiv.innerHTML += `<p><strong>Telefone:</strong> ${usuario.phone}</p>`;
+                        userInfoDiv.innerHTML += `<p><strong>Necessidades Especiais:</strong> ${usuario.specialNecessities ? 'Sim' : 'Não'}</p>`;
+                        userInfoDiv.innerHTML += `<p><strong>Função:</strong> ${usuario.role || 'Não especificado'}</p>`;
+
+                        // Exibir lista de pedidos
+                        userInfoDiv.innerHTML += `<h3>Pedidos</h3>`;
+                        usuario.ordersList.forEach(pedido => {
+                            userInfoDiv.innerHTML += `<p><strong>ID do Pedido:</strong> ${pedido.id}</p>`;
+                            userInfoDiv.innerHTML += `<p><strong>Preço:</strong> R$ ${pedido.price}</p>`;
+                            userInfoDiv.innerHTML += `<p><strong>Status do Pagamento:</strong> ${pedido.orderPaymentStatus}</p>`;
+                            userInfoDiv.innerHTML += `<p><strong>Status da Produção:</strong> ${pedido.orderBuildStatus}</p>`;
+                            userInfoDiv.innerHTML += `<p><strong>Cor:</strong> ${pedido.color.name}</p>`;
+                            userInfoDiv.innerHTML += `<p><strong>Tamanho:</strong> ${pedido.size}</p>`;
+                            userInfoDiv.innerHTML += `<p><strong>Modelo:</strong> ${pedido.model.name} (R$ ${pedido.model.price})</p>`;
+                            userInfoDiv.innerHTML += `</div>`;
+                        });
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro ao buscar dados do usuário:', error);
+                    alert('Ocorreu um erro ao tentar buscar os dados do usuário.');
+                });
         }
     </script>
     <title>Synesthesia Vision</title>
@@ -76,7 +117,9 @@
 
     <main>
         <h2 class="gradient-text-order">ACOMPANHE SEU PEDIDO</h2>
-        <i class="fa-solid fa-check" style="color: green; font-size: 10em"></i>
+        <!-- <i class="fa-solid fa-check" style="color: green; font-size: 10em"></i> -->
+
+        <div id="user-info"></div>
     </main>
 
     <footer>

@@ -62,8 +62,6 @@
     </header>
 
     <main>
-        <a href="order.html">GERAR BOLETO PRA PAGAR</a>
-
         <button id="updateButton">GERAR BOLETO PRA PAGAR</button>
     </main>
 
@@ -79,9 +77,7 @@
     </footer>
 
     <script>
-        document.getElementById('updateButton').addEventListener('click', function () {
-            // Objeto principal (substitua isto pela sua fonte de dados real)
-            // obterDadosUsuario()
+        document.getElementById('updateButton').addEventListener('click', async function () {
             async function obterDadosUsuario() {
                 try {
                     const userEmail = localStorage.getItem("userEmail");
@@ -94,7 +90,7 @@
 
                     if (response.ok) {
                         const usuario = await response.json();
-                        console.log(usuario)
+                        console.log(usuario);
                         return usuario;
                     } else {
                         alert(`Erro ao buscar dados do usuário: ${response.statusText}`);
@@ -107,44 +103,41 @@
                 }
             }
 
-            user = obterDadosUsuario();
-            // console.log(user)
-            if (user && Array.isArray(user.ordersList)) {
-                if (user.ordersList.length > 0) {
-                    // Recuperar o ID do primeiro pedido
-                    const orderId = user.ordersList[0].id;
+            const user = await obterDadosUsuario(); 
+            console.log('Dados do usuário:', user); 
 
-                    console.log('ID do pedido:', orderId); // Mensagem de depuração
+            if (user && user.ordersList !== undefined) {
+                console.log('Tipo de ordersList:', typeof user.ordersList); 
 
-                    // Configurações para o fetch
-                    const requestOptions = {
-                        method: 'PATCH', // ou 'PUT' dependendo da sua API
+                if (Array.isArray(user.ordersList) && user.ordersList.length > 0) {
+                    const firstOrder = user.ordersList[0]; 
+                    const orderId = firstOrder.id;
+                    console.log('ID do pedido:', orderId);
+
+                    const url = `http://localhost:18080/api-V1/order/updateStatus?id=${orderId}&orderPaymentStatus=PAID&orderBuildStatus=PRODUCE`;
+
+                    fetch(url, {
+                        method: 'PUT',
                         headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            id: orderId,
-                            orderPaymentStatus: "PAID"
-                        })
-                    };
-
-                    // Enviar o fetch para atualizar o pedido
-                    fetch('https://api.seuservidor.com/pedidos', requestOptions)
-                        .then(response => response.json())
+                            'Content-Type': 'application/json',
+                        }
+                    }).then(response => response.json())
                         .then(data => {
                             console.log('Pedido atualizado com sucesso:', data);
+                            window.location.href = "order.html";
                         })
                         .catch(error => {
                             console.error('Erro ao atualizar o pedido:', error);
                         });
                 } else {
-                    console.error('ordersList está vazio.');
+                    console.error('ordersList está vazio ou não é um array.');
                 }
             } else {
-                console.error('user.ordersList não é um array ou está undefined.');
-                console.log('Dados do usuário:', user); // Mensagem de depuração para verificar estrutura
+                console.error('user.ordersList está undefined.');
             }
         });
+
+
     </script>
 </body>
 

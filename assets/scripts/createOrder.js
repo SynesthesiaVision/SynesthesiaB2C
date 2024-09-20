@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   async function obterDadosUsuario() {
     try {
       const userEmail = localStorage.getItem("userEmail");
-      console.log(userEmail);
+      //console.log(userEmail);
       const response = await fetch(`http://localhost:18080/api-V1/user/findByEmail?email=${userEmail}`, {
         method: 'GET',
         headers: {
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (response.ok) {
         const usuario = await response.json();
-        console.log(usuario);
+        //console.log(usuario);
 
         return usuario;
       } else {
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!model || !size || !color) {
           throw new Error("Um ou mais valores de pedido estão ausentes.");
         }
-        console.log(model, size, color, price)
+        //console.log(model, size, color, price)
 
         const url = `http://localhost:18080/api-V1/order/create?model=${model}&size=${size}&color=${color}&userId=${userId}`;
 
