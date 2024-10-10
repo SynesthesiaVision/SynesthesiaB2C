@@ -38,7 +38,7 @@ main {
   margin: 2em;
 }
 
-.right > span {
+.right > .orImg {
   font-weight: bold;
   display: flex;
   background-image: url("../../assets/img/content/imgFormLogin.png");

@@ -25,13 +25,20 @@ function login() {
     "Basic " + btoa(email + ":" + password)
   );
 
+  const errorMessageElement = document.getElementById("error-message");
+  errorMessageElement.style.display = "none";
+  errorMessageElement.textContent = "";
+
   fetch(`http://localhost:18080/api-V1/authenticate`, {
     method: "POST",
     headers: headers
   })
     .then((response) => {
       if (!response.ok) {
-        throw new Error("A resposta da rede não foi ok: " + response.statusText);
+        if (response.status === 401) {
+          throw new Error("Email ou senha inválidos.");
+        }
+        throw new Error("Erro na rede: " + response.statusText);
       }
       return response.text();
     })
@@ -46,6 +53,12 @@ function login() {
     })
     .catch((error) => {
       console.error("Erro:", error);
-      alert("Servidor fora do ar. Por favor, tente novamente mais tarde.");
+
+      errorMessageElement.style.display = "block";
+      errorMessageElement.textContent = error.message;
+
+      if (error.message.includes("Servidor fora do ar")) {
+        alert("Servidor fora do ar. Por favor, tente novamente mais tarde.");
+      }
     });
 }
