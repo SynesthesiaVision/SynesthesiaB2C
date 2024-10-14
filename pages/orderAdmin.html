@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon" />
   <link rel="stylesheet" href="../assets/styles/style.css" />
+  <link rel="stylesheet" href="../assets/styles/orderAdmin.css" />
 
   <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,12 +22,117 @@
   <!-- ICONS -->
   <script src="https://kit.fontawesome.com/e2bd8765fe.js" crossorigin="anonymous"></script>
 
+  <script src="../assets/scripts/orderAdmin.js" defer></script>
   <title>Synesthesia | ADMIN</title>
 </head>
 
 <body>
   <h1 hidden>Synesthesia Vision</h1>
+  <header>
+    <div id="nav-bar">
+      <img src="../assets/img/logo.png" width="50" alt="Logo Synesthesia Vision" />
+      <ul id="menu-op">
+        <li></li>
+        <li>
+          <a href="#" style="color: var(--roxo)">PEDIDOS</a>
+        </li>
+        <li>
+          <a href="../pages/storageAdmin.html" class="azulClaro">ESTOQUE</a>
+        </li>
+      </ul>
+      <li>
+        <a href="project.html" class="rosaEscuro">
+          <i class="fa-regular fa-user" style="color: var(--preto); font-size: 1.5em; margin: 0.3em"></i> CONTA
+        </a>
+      </li>
+    </div>
+  </header>
 
+  <main>
+    <h2 class="lato-bold gradient-text-orderAdmin">PEDIDOS</h2>
+    <div id="filters">
+      <div id="filterId">
+        <input type="number" id="pedidoIdInput" placeholder="Digite o ID do pedido" />
+        <button id="buscarID">Buscar por ID</button>
+      </div>
+      <div id="filterCPF">
+        <input type="text" id="cpfInput" placeholder="Digite o CPF do cliente" />
+        <button id="buscarCPF">Buscar por CPF</button>
+      </div>
+    </div>
+    <div class="category">
+      <div class="orderCategory openOrders">
+        <div class="header">
+          <i class="fa-solid fa-door-open"></i> <span>Em aberto</span>
+          <div class="line" style="border-color: var(--rosaEscuro) !important"></div>
+        </div>
+        <div class="content">
+          <table>
+            <thead>
+              <tr>
+                <th class="headerTable" style="background: var(--rosaEscuro);">ID</th>
+                <th class="headerTable" style="background: var(--rosaEscuro);">Status</th>
+                <th class="headerTable" style="background: var(--rosaEscuro);">Data</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="orderCategory progressOrders">
+        <div class="header">
+          <i class="fa-solid fa-clock"></i> <span>Em produção</span>
+          <div class="line" style="border-color: var(--azulClaro) !important"></div>
+        </div>
+        <div class="content">
+          <table>
+            <thead>
+              <tr>
+                <th class="headerTable" style="background: var(--azulClaro);">ID</th>
+                <th class="headerTable" style="background: var(--azulClaro);">Status</th>
+                <th class="headerTable" style="background: var(--azulClaro);">Data</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="orderCategory finishOrders">
+        <div class="header">
+          <i class="fa-solid fa-circle-check"></i> <span>Finalizado</span>
+          <div class="line" style="border-color: var(--preto) !important"></div>
+        </div>
+        <div class="content">
+          <table>
+            <thead>
+              <tr>
+                <th class="headerTable" style="background: var(--preto);">ID</th>
+                <th class="headerTable" style="background: var(--preto);">Status</th>
+                <th class="headerTable" style="background: var(--preto);">Data</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      <i class="fa-regular fa-copyright" style="color: #ffffff"></i> 2023
+      Synesthesia Vision. All rights reserved
+    </p>
+    <br />
+    <a href="mailto:synesthesiavision@recife.ifpe.edu.br">
+      <i class="fa-regular fa-envelope" style="color: #ffffff"></i>
+      Entre em contato</a>
+  </footer>
 </body>
 
 </html>

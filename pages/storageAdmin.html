@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../assets/styles/style.css" />
+    <link rel="stylesheet" href="../assets/styles/storageAdmin.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600;700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- ICONS -->
+    <script src="https://kit.fontawesome.com/e2bd8765fe.js" crossorigin="anonymous"></script>
+
+    <script src="../assets/scripts/storageAdmin.js" defer></script>
+
+    <title>Synesthesia | ADMIN</title>
+</head>
+
+<body>
+    <header>
+        <div id="nav-bar">
+            <img src="../assets/img/logo.png" width="50" alt="Logo Synesthesia Vision" />
+            <ul id="menu-op">
+                <li></li>
+                <li>
+                    <a href="../pages/orderAdmin.html" class="roxo">PEDIDOS</a>
+                </li>
+                <li>
+                    <a href="#" style="color: var(--azulClaro)">ESTOQUE</a>
+                </li>
+            </ul>
+            <li>
+                <a href="project.html" class="rosaEscuro">
+                    <i class="fa-regular fa-user" style="color: var(--preto); font-size: 1.5em; margin: 0.3em"></i>
+                    CONTA
+                </a>
+            </li>
+        </div>
+    </header>
+
+    <main>
+        <h2 class="lato-bold gradient-text-storageAdmin">CONTROLE DE ESTOQUE</h2>
+
+        <div class="add-color">
+            <input type="text" id="colorNameInput" placeholder="Defina uma Cor" />
+            <button id="addColorButton">Adicionar Cor</button>
+        </div>
+
+        <div class="colorCategory">
+            <div class="header">
+                <span class="txtDesc">Cores cadastradas e disponíveis no momento</span>
+                <div class="line" style="border-color: var(--azulClaro) !important"></div>
+            </div>
+            <div class="content">
+                <table class="coresTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- As linhas serão preenchidas aqui -->
+                    </tbody>
+                </table>                
+            </div>
+            <div class="footer">
+                <div class="line" style="border-color: var(--rosaRoxeado) !important"></div>
+                <span class="txtDesc">Caso deseje excluir, clique em uma das cores.</span>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            <i class="fa-regular fa-copyright" style="color: #ffffff"></i> 2023
+            Synesthesia Vision. All rights reserved
+        </p>
+        <br />
+        <a href="mailto:synesthesiavision@recife.ifpe.edu.br">
+            <i class="fa-regular fa-envelope" style="color: #ffffff"></i>
+            Entre em contato</a>
+    </footer>
+</body>
+
+</html>

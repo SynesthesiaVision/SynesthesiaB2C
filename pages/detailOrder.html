@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../assets/styles/detailOrder.css" />
+    <link rel="stylesheet" href="../assets/styles/style.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600;700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- ICONS -->
+    <script src="https://kit.fontawesome.com/e2bd8765fe.js" crossorigin="anonymous"></script>
+
+    <script src="../assets/scripts/detailorder.js" defer></script>
+
+    <title>Synesthesia | ADMIN</title>
+</head>
+
+<body>
+    <h1 hidden>Synesthesia Vision</h1>
+    <header>
+        <div id="nav-bar">
+            <img src="../assets/img/logo.png" width="50" alt="Logo Synesthesia Vision" />
+            <ul id="menu-op">
+                <li></li>
+                <li>
+                    <a href="#" style="color: var(--roxo)">PEDIDOS</a>
+                </li>
+                <li>
+                    <a href="education.html" class="azulClaro">ESTOQUE</a>
+                </li>
+            </ul>
+            <li>
+                <a href="project.html" class="rosaEscuro">
+                    <i class="fa-regular fa-user" style="color: var(--preto); font-size: 1.5em; margin: 0.3em"></i>
+                    CONTA
+                </a>
+            </li>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="gradient-text-orderAdmin">Detalhes do Pedido</h1>
+            <div id="detalhesPedido">
+            </div>
+
+            <div id="statusOrder">
+                <label for="orderPaymentStatus">Status de Pagamento:</label>
+                <select id="orderPaymentStatus">
+                    <option value="WAITING_PAYMENT">Aguardando Pagamento</option>
+                    <option value="PAID">Pago</option>
+                    <option value="SHIPPED">Enviado</option>
+                    <option value="DELIVERED">Entregue</option>
+                    <option value="CANCELED">Cancelado</option>
+                </select>
+
+                <label for="orderBuildStatus">Status de Produção:</label>
+                <select id="orderBuildStatus">
+                    <option value="PRODUCE">Em Produção</option>
+                    <option value="DESIGNATED">Designado</option>
+                    <option value="CONCLUDED">Concluído</option>
+                </select>
+
+                <button id="atualizarPedido" class="btnUpdate">Atualizar Status</button>
+            </div>
+
+            <div id="statusTecnician">
+                <label for="technicianSelect">Técnico Responsável:</label>
+                <select id="technicianSelect">
+                    <option value="">Nenhum técnico selecionado</option>
+                </select>
+
+                <button id="atualizarTecnico" class="btnUpdate">Atualizar Técnico</button>
+            </div>
+
+            <div id="statusMonitor">
+                <label for="salesMonitorSelect">Sales Monitor Responsável:</label>
+                <select id="salesMonitorSelect">
+                    <option value="">Nenhum sales monitor selecionado</option>
+                </select>
+
+                <button id="atualizarSalesMonitor" class="btnUpdate">Atualizar Sales Monitor</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            <i class="fa-regular fa-copyright" style="color: #ffffff"></i> 2023
+            Synesthesia Vision. All rights reserved
+        </p>
+        <br />
+        <a href="mailto:synesthesiavision@recife.ifpe.edu.br">
+            <i class="fa-regular fa-envelope" style="color: #ffffff"></i>
+            Entre em contato</a>
+    </footer>
+
+</body>
+
+</html>
