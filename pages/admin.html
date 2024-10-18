@@ -20,6 +20,8 @@
     <!-- ICONS -->
     <script src="https://kit.fontawesome.com/e2bd8765fe.js" crossorigin="anonymous"></script>
 
+    <script src="../assets/scripts/loginAdmin.js" defer></script>
+
     <style>
         body,
         html {
@@ -76,24 +78,25 @@
         }
     </style>
 
-    <title>Synesthesia Vision</title>
+    <title>Synesthesia Vision | ADMIN</title>
 </head>
 
 <body>
     <main>
         <div class="container">
-            <form class="login-form">
-                <h2>Login</h2>
+            <form id="loginForm" class="login-form">
+                <h2 style="text-align: center;">ADMIN</h2>
                 <div class="input-group">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="text" id="email" />
                 </div>
                 <div class="input-group">
                     <label for="password">Senha:</label>
-                    <input type="password" id="password" name="password" required>
+                    <input type="password" id="password" required />
                 </div>
-                <button type="submit">Entrar</button>
-            </form>
+                <button type="submit">ENTRAR</button>
+                <div id="error-message" style="color: red; display: none;"></div>
+            </form>            
         </div>
     </main>
 </body>

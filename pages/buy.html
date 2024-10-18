@@ -18,7 +18,7 @@
 
     <!-- ICONS -->
     <script src="https://kit.fontawesome.com/e2bd8765fe.js" crossorigin="anonymous"></script>
-    
+
     <script src="../assets/scripts/buy.js" defer></script>
 
     <title>Synesthesia Vision</title>
@@ -42,13 +42,21 @@
                 <li>
                     <a href="news.html" class="rosaClaro">NOTÍCIAS</a>
                 </li>
-                <li hidden>
-                    <a href="contact.html">CONTATO</a>
+                <li>
+                    <a href="project.html" class="rosaEscuro">CONTA</a>
                 </li>
             </ul>
-            <a href="#"></a>
+            <button id="logoutButton">SAIR</button>
         </div>
     </header>
+
+    <script>
+        document.getElementById("logoutButton").addEventListener("click", function () {
+            localStorage.clear();
+
+            window.location.href = "signin.html";
+        });
+    </script>
 
     <main>
         <h2 class="gradient-text-buy">PERSONALIZE SEUS ÓCULOS</h2>

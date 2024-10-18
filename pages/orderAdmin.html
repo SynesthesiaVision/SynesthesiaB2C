@@ -23,6 +23,17 @@
   <script src="https://kit.fontawesome.com/e2bd8765fe.js" crossorigin="anonymous"></script>
 
   <script src="../assets/scripts/orderAdmin.js" defer></script>
+
+  <script defer>
+    window.addEventListener("load", function () {
+      const userEmail = localStorage.getItem("userEmail");
+      if (userEmail) {
+        console.log(userEmail)
+      } else {
+        window.location.href = "admin.html";
+      }
+    });
+  </script>
   <title>Synesthesia | ADMIN</title>
 </head>
 
@@ -37,16 +48,21 @@
           <a href="#" style="color: var(--roxo)">PEDIDOS</a>
         </li>
         <li>
-          <a href="../pages/storageAdmin.html" class="azulClaro">ESTOQUE</a>
+          <a href="storageAdmin.html" class="azulClaro">ESTOQUE</a>
         </li>
+        <a href="accountAdmin.html" class="rosaEscuro">CONTA</a>
       </ul>
-      <li>
-        <a href="project.html" class="rosaEscuro">
-          <i class="fa-regular fa-user" style="color: var(--preto); font-size: 1.5em; margin: 0.3em"></i> CONTA
-        </a>
-      </li>
+      <button id="logoutButton">SAIR</button>
     </div>
   </header>
+
+  <script>
+    document.getElementById("logoutButton").addEventListener("click", function () {
+      localStorage.clear();
+
+      window.location.href = "admin.html";
+    });
+  </script>
 
   <main>
     <h2 class="lato-bold gradient-text-orderAdmin">PEDIDOS</h2>

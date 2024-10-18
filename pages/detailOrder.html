@@ -24,6 +24,17 @@
 
     <script src="../assets/scripts/detailorder.js" defer></script>
 
+    <script defer>
+        window.addEventListener("load", function () {
+            const userEmail = localStorage.getItem("userEmail");
+            if (userEmail) {
+                console.log(userEmail)
+            } else {
+                window.location.href = "admin.html";
+            }
+        });
+    </script>
+
     <title>Synesthesia | ADMIN</title>
 </head>
 
@@ -31,24 +42,28 @@
     <h1 hidden>Synesthesia Vision</h1>
     <header>
         <div id="nav-bar">
-            <img src="../assets/img/logo.png" width="50" alt="Logo Synesthesia Vision" />
-            <ul id="menu-op">
-                <li></li>
-                <li>
-                    <a href="#" style="color: var(--roxo)">PEDIDOS</a>
-                </li>
-                <li>
-                    <a href="education.html" class="azulClaro">ESTOQUE</a>
-                </li>
-            </ul>
+          <img src="../assets/img/logo.png" width="50" alt="Logo Synesthesia Vision" />
+          <ul id="menu-op">
+            <li></li>
             <li>
-                <a href="project.html" class="rosaEscuro">
-                    <i class="fa-regular fa-user" style="color: var(--preto); font-size: 1.5em; margin: 0.3em"></i>
-                    CONTA
-                </a>
+                <a href="orderAdmin.html" class="roxo">PEDIDOS</a>
             </li>
+            <li>
+              <a href="storageAdmin.html" class="azulClaro">ESTOQUE</a>
+            </li>
+            <a href="accountAdmin.html" class="rosaEscuro">CONTA</a>
+          </ul>
+          <button id="logoutButton">SAIR</button>
         </div>
-    </header>
+      </header>
+
+    <script>
+        document.getElementById("logoutButton").addEventListener("click", function () {
+            localStorage.clear();
+
+            window.location.href = "admin.html";
+        });
+    </script>
 
     <main>
         <div class="container">

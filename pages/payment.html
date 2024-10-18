@@ -53,13 +53,21 @@
                 <li>
                     <a href="news.html" class="rosaClaro">NOTÍCIAS</a>
                 </li>
-                <li hidden>
-                    <a href="contact.html">CONTATO</a>
+                <li>
+                    <a href="project.html" class="rosaEscuro">CONTA</a>
                 </li>
             </ul>
-            <a href="#"></a>
+            <button id="logoutButton">SAIR</button>
         </div>
     </header>
+
+    <script>
+        document.getElementById("logoutButton").addEventListener("click", function () {
+            localStorage.clear();
+
+            window.location.href = "signin.html";
+        });
+    </script>
 
     <main>
         <button id="updateButton">GERAR BOLETO PRA PAGAR</button>
@@ -103,14 +111,14 @@
                 }
             }
 
-            const user = await obterDadosUsuario(); 
-            console.log('Dados do usuário:', user); 
+            const user = await obterDadosUsuario();
+            console.log('Dados do usuário:', user);
 
             if (user && user.ordersList !== undefined) {
-                console.log('Tipo de ordersList:', typeof user.ordersList); 
+                console.log('Tipo de ordersList:', typeof user.ordersList);
 
                 if (Array.isArray(user.ordersList) && user.ordersList.length > 0) {
-                    const firstOrder = user.ordersList[0]; 
+                    const firstOrder = user.ordersList[0];
                     const orderId = firstOrder.id;
                     console.log('ID do pedido:', orderId);
 

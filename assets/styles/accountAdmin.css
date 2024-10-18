@@ -1,0 +1,6 @@
+#logoutButton {
+    font-size: 0.9em;
+    background-color: var(--roxo);
+    color: #fff;
+    font-weight: bold;
+}

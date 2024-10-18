@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../assets/styles/accountAdmin.css" />
     <link rel="stylesheet" href="../assets/styles/style.css" />
-    <link rel="stylesheet" href="../assets/styles/storageAdmin.css" />
 
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,8 +21,6 @@
 
     <!-- ICONS -->
     <script src="https://kit.fontawesome.com/e2bd8765fe.js" crossorigin="anonymous"></script>
-
-    <script src="../assets/scripts/storageAdmin.js" defer></script>
 
     <script defer>
         window.addEventListener("load", function () {
@@ -49,9 +47,9 @@
                     <a href="orderAdmin.html" class="roxo">PEDIDOS</a>
                 </li>
                 <li>
-                    <a href="#" style="color: var(--azulClaro)">ESTOQUE</a>
+                    <a href="storageAdmin.html" class="azulClaro">ESTOQUE</a>
                 </li>
-                <a href="accountAdmin.html" class="rosaEscuro">CONTA</a>
+                <a href="#" style="color: var(--rosaEscuro)">CONTA</a>
             </ul>
             <button id="logoutButton">SAIR</button>
         </div>
@@ -66,36 +64,7 @@
     </script>
 
     <main>
-        <h2 class="lato-bold gradient-text-storageAdmin">CONTROLE DE ESTOQUE</h2>
 
-        <div class="add-color">
-            <input type="text" id="colorNameInput" placeholder="Defina uma Cor" />
-            <button id="addColorButton">Adicionar Cor</button>
-        </div>
-
-        <div class="colorCategory">
-            <div class="header">
-                <span class="txtDesc">Cores cadastradas e disponíveis no momento</span>
-                <div class="line" style="border-color: var(--azulClaro) !important"></div>
-            </div>
-            <div class="content">
-                <table class="coresTable">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nome</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- As linhas serão preenchidas aqui -->
-                    </tbody>
-                </table>
-            </div>
-            <div class="footer">
-                <div class="line" style="border-color: var(--rosaRoxeado) !important"></div>
-                <span class="txtDesc">Caso deseje excluir, clique em uma das cores.</span>
-            </div>
-        </div>
     </main>
 
     <footer>
@@ -108,6 +77,7 @@
             <i class="fa-regular fa-envelope" style="color: #ffffff"></i>
             Entre em contato</a>
     </footer>
+
 </body>
 
 </html>
