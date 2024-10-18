@@ -31,6 +31,31 @@ function selectSize(event, size) {
   updateIconSize(size);
 }
 
+async function fetchAndRenderColors() {
+  try {
+    const response = await fetch('http://localhost:18080/api-V1/color/all');
+    const colors = await response.json();
+
+    const colorOptionsContainer = document.getElementById('colorOptionsContainer');
+
+    colors.forEach((color) => {
+      const button = document.createElement('button');
+      button.classList.add('colorOption');
+      button.setAttribute('onclick', `selectColor(event, '${color.name}')`);
+      button.textContent = capitalizeFirstLetter(color.name);
+
+      colorOptionsContainer.appendChild(button);
+    });
+
+  } catch (error) {
+    console.error('Failed to fetch colors:', error);
+  }
+}
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 function selectColor(event, color) {
   event.preventDefault();
   const colorText = event.target.textContent;
@@ -38,32 +63,19 @@ function selectColor(event, color) {
     "Cor selecionada: " + colorText;
   localStorage.setItem("selectedColor", color);
   updateSelectedClass(".colorOption", event.target);
-  updateIconColor(event.target);
 }
 
-function updateSelectedClass(buttonClass, selectedButton) {
-  const buttons = document.querySelectorAll(buttonClass);
-  buttons.forEach((button) => {
-    button.classList.remove("selected");
+function updateSelectedClass(selector, selectedElement) {
+  document.querySelectorAll(selector).forEach((elem) => {
+    elem.classList.remove("selected");
   });
-  selectedButton.classList.add("selected");
+  selectedElement.classList.add("selected");
 }
 
 function enviarFormulario(event) {
   event.preventDefault();
 
-  // const userEmail = document.getElementById("userEmail").value;
-
   window.location.href = "deliverydef.html";
-}
-
-function updateButtonColors() {
-  const colorOptions = document.querySelectorAll(".colorOption");
-  colorOptions.forEach((button) => {
-    const color = button.getAttribute("onclick").match(/'([^']+)'/)[1];
-    button.style.color =
-      color === "black" || color === "blue" || color === "red";
-  });
 }
 
 function initializeSelections() {
@@ -85,7 +97,6 @@ function initializeSelections() {
   document.getElementById("selectedColorText").textContent =
     "Cor selecionada: Preto";
   localStorage.setItem("selectedColor", "black");
-  updateIconColor(defaultColorButton);
 
   localStorage.setItem("selectedPrice", "999,00");
 }
@@ -110,16 +121,4 @@ function updateIconSize(size) {
   }
 }
 
-function updateIconColor(button) {
-  const icon = document.getElementById("iconClass");
-  const bgColor = window.getComputedStyle(button).backgroundColor;
-  icon.style.color = bgColor;
-}
-
-// window.addEventListener('load', function () {
-//     const token = localStorage.getItem('authToken');
-//     if (!token) {
-//         alert("Faça login primeiro!!")
-//         window.location.href = "signin.html";
-//     }
-// });
+window.onload = fetchAndRenderColors;

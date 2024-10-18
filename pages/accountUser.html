@@ -32,63 +32,60 @@
         });
     </script>
 
-    <script defer>
-        obterDadosUsuario()
-        async function obterDadosUsuario() {
-            try {
-                const userEmail = localStorage.getItem("userEmail");
-                const response = await fetch(`http://localhost:18080/api-V1/user/findByEmail?email=${userEmail}`, {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                });
-
-                if (response.ok) {
-                    const usuario = await response.json();
-
-                    return usuario;
-                } else {
-                    alert(`Erro ao buscar dados do usuário: ${response.statusText}`);
-                    return null;
+<script defer>
+    obterDadosUsuario()
+    async function obterDadosUsuario() {
+        try {
+            const userEmail = localStorage.getItem("userEmail");
+            const response = await fetch(`http://localhost:18080/api-V1/user/findByEmail?email=${userEmail}`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
                 }
-            } catch (error) {
-                console.error('Erro ao buscar dados do usuário:', error);
-                alert('Ocorreu um erro ao tentar buscar os dados do usuário.');
+            });
+
+            if (response.ok) {
+                const usuario = await response.json();
+
+                return usuario;
+            } else {
+                alert(`Erro ao buscar dados do usuário: ${response.statusText}`);
                 return null;
             }
+        } catch (error) {
+            console.error('Erro ao buscar dados do usuário:', error);
+            alert('Ocorreu um erro ao tentar buscar os dados do usuário.');
+            return null;
         }
+    }
 
-        atualizarSaudacao()
-        async function atualizarSaudacao() {
-            const usuario = await obterDadosUsuario();
-            if (usuario) {
-                const saudacaoElement = document.getElementById('user-greeting');
-                saudacaoElement.textContent = `Confira as informações da sua conta, ${usuario.name}!`;
-            }
+    atualizarSaudacao()
+    async function atualizarSaudacao() {
+        const usuario = await obterDadosUsuario();
+        if (usuario) {
+            const saudacaoElement = document.getElementById('user-greeting');
+            saudacaoElement.textContent = `Confira as informações da sua conta, ${usuario.name}!`;
         }
+    }
 
-        async function contaInfos() {
-            const usuario = await obterDadosUsuario();
-            if (usuario) {
-                document.getElementById('name').value = usuario.name || 'Nenhuma informação fornecida';
-                document.getElementById('email').value = usuario.email || 'Nenhuma informação fornecida';
-                document.getElementById('cpf').value = usuario.cpf || 'Nenhuma informação fornecida';
-                document.getElementById('zipCode').value = usuario.zipCodeBR || 'Nenhuma informação fornecida';
-                document.getElementById('address').value = usuario.address || 'Nenhuma informação fornecida';
-                document.getElementById('phone').value = usuario.phone || 'Nenhuma informação fornecida';
-                document.getElementById('specialNecessities').value = usuario.specialNecessities ? 'Sim' : 'Não';
-                document.getElementById('role').value = usuario.role || 'Nenhuma informação fornecida';
-
-                // document.getElementById('ordersList').value = usuario.ordersList.length > 0 ? JSON.stringify(usuario.ordersList, null, 2) : 'Sem pedidos';
-                document.getElementById('supportCalls').value = usuario.supportCalls.length > 0 ? JSON.stringify(usuario.supportCalls, null, 2) : 'Sem pedidos';
-            }
+    async function contaInfos() {
+        const usuario = await obterDadosUsuario();
+        if (usuario) {
+            document.getElementById('name').value = usuario.name || 'Nenhuma informação fornecida';
+            document.getElementById('email').value = usuario.email || 'Nenhuma informação fornecida';
+            document.getElementById('cpf').value = usuario.cpf || 'Nenhuma informação fornecida';
+            document.getElementById('zipCode').value = usuario.zipCodeBR || 'Nenhuma informação fornecida';
+            document.getElementById('address').value = usuario.address || 'Nenhuma informação fornecida';
+            document.getElementById('phone').value = usuario.phone || 'Nenhuma informação fornecida';
+            document.getElementById('ordersList').value = usuario.ordersList.length > 0 ? JSON.stringify(usuario.ordersList, null, 2) : 'Sem pedidos';
+            document.getElementById('supportCalls').value = usuario.supportCalls.length > 0 ? JSON.stringify(usuario.supportCalls, null, 2) : 'Sem pedidos';
         }
+    }
 
-        window.onload = contaInfos;
-    </script>
+    window.onload = contaInfos;
+</script>
 
-    <title>Synesthesia | ADMIN</title>
+    <title>Synesthesia Vision</title>
 </head>
 
 <body>
@@ -97,14 +94,21 @@
         <div id="nav-bar">
             <img src="../assets/img/logo.png" width="50" alt="Logo Synesthesia Vision" />
             <ul id="menu-op">
-                <li></li>
                 <li>
-                    <a href="orderAdmin.html" class="roxo">PEDIDOS</a>
+                    <a href="../index.html" class="roxo">INÍCIO</a>
                 </li>
                 <li>
-                    <a href="storageAdmin.html" class="azulClaro">ESTOQUE</a>
+                    <a href="project.html" class="rosaEscuro">PROJETO</a>
                 </li>
-                <a href="#" style="color: var(--rosaEscuro)">CONTA</a>
+                <li>
+                    <a href="education.html" class="azulClaro">EDUCAÇÃO</a>
+                </li>
+                <li>
+                    <a href="news.html" class="rosaClaro">NOTÍCIAS</a>
+                </li>
+                <li>
+                    <a href="#" style="color: var(--rosaEscuro)">CONTA</a>
+                </li>
             </ul>
             <button id="logoutButton">SAIR</button>
         </div>
@@ -114,13 +118,12 @@
         document.getElementById("logoutButton").addEventListener("click", function () {
             localStorage.clear();
 
-            window.location.href = "admin.html";
+            window.location.href = "index.html";
         });
     </script>
 
     <main>
         <h2 id="user-greeting" class="gradient-text-account"></h2>
-
         <div id="infoAccount">
             <form>
                 <label for="name">Nome</label>
@@ -140,21 +143,14 @@
         
                 <label for="phone">Numero de Celular</label>
                 <input type="text" id="phone" disabled><br>
-        
-                <label for="specialNecessities">Há alguma necessidade especial?</label>
-                <input type="text" id="specialNecessities" disabled><br>
-        
-                <label for="role">Tipo de Usuário</label>
-                <input type="text" id="role" disabled><br>
                 
-                <!-- <label for="ordersList">Lista de Pedidos</label>
-                <textarea id="ordersList" disabled></textarea><br> -->
+                <label for="ordersList">Lista de Pedidos</label>
+                <textarea id="ordersList" disabled></textarea><br>
                 
                 <label for="supportCalls">Chamados</label>
                 <textarea id="supportCalls" disabled></textarea><br>
             </form>
         </div>
-        
     </main>
 
     <footer>
@@ -167,7 +163,6 @@
             <i class="fa-regular fa-envelope" style="color: #ffffff"></i>
             Entre em contato</a>
     </footer>
-
 </body>
 
 </html>

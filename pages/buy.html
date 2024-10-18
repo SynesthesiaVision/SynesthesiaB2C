@@ -43,7 +43,7 @@
                     <a href="news.html" class="rosaClaro">NOTÍCIAS</a>
                 </li>
                 <li>
-                    <a href="project.html" class="rosaEscuro">CONTA</a>
+                    <a href="accountUser.html" class="rosaEscuro">CONTA</a>
                 </li>
             </ul>
             <button id="logoutButton">SAIR</button>
@@ -54,7 +54,7 @@
         document.getElementById("logoutButton").addEventListener("click", function () {
             localStorage.clear();
 
-            window.location.href = "signin.html";
+            window.location.href = "../index.html";
         });
     </script>
 
@@ -89,17 +89,7 @@
 
                 <div class="labelFormBuy">
                     <label for="color">Cor</label><br>
-                    <div class="opLabel">
-                        <button class="colorOption" onclick="selectColor(event, 'black')"
-                            style="background-color: black; color: white;" id="defaultColor">Preto</button>
-                        <button class="colorOption" onclick="selectColor(event, 'white')"
-                            style="background-color: #d0d0d0; color: black;">Branco</button>
-                        <button class="colorOption" onclick="selectColor(event, 'blue')"
-                            style="background-color: #0869c9;">Azul</button>
-                        <button class="colorOption" onclick="selectColor(event, 'red')"
-                            style="background-color: #9f2020;">Vermelho</button>
-                        <button class="colorOption" onclick="selectColor(event, 'pink')"
-                            style="background-color: #e0169d;">Rosa</button>
+                    <div class="opLabel" id="colorOptionsContainer">
                     </div>
                 </div>
                 <p id="selectedColorText">Cor selecionada: Nenhuma</p>

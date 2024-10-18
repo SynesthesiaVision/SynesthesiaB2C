@@ -25,6 +25,10 @@
             justify-content: center;
             align-items: center;
         }
+
+        h3 {
+            margin-top: 3em
+        }
     </style>
 
     <script defer>
@@ -51,31 +55,23 @@
                 })
                 .then(usuario => {
                     if (usuario) {
-                        console.log('Dados do usuário:', usuario);
-
                         const userInfoDiv = document.getElementById('user-info');
 
-                        userInfoDiv.innerHTML += `<h2>Informações do Usuário</h2>`;
-                        userInfoDiv.innerHTML += `<p><strong>ID:</strong> ${usuario.id}</p>`;
-                        userInfoDiv.innerHTML += `<p><strong>Nome:</strong> ${usuario.name}</p>`;
-                        userInfoDiv.innerHTML += `<p><strong>Email:</strong> ${usuario.email}</p>`;
-                        userInfoDiv.innerHTML += `<p><strong>CPF:</strong> ${usuario.cpf}</p>`;
-                        userInfoDiv.innerHTML += `<p><strong>Endereço:</strong> ${usuario.address}</p>`;
+                        userInfoDiv.innerHTML += `<p><strong>Pedido criado para:</strong> ${usuario.name}</p>`;
+                        userInfoDiv.innerHTML += `<p><strong>Email de contato:</strong> ${usuario.email}</p>`;
+                        userInfoDiv.innerHTML += `<p><strong>Endereço definido:</strong> ${usuario.address}</p>`;
                         userInfoDiv.innerHTML += `<p><strong>CEP:</strong> ${usuario.zipCodeBR}</p>`;
-                        userInfoDiv.innerHTML += `<p><strong>Telefone:</strong> ${usuario.phone}</p>`;
-                        userInfoDiv.innerHTML += `<p><strong>Necessidades Especiais:</strong> ${usuario.specialNecessities ? 'Sim' : 'Não'}</p>`;
-                        userInfoDiv.innerHTML += `<p><strong>Função:</strong> ${usuario.role || 'Não especificado'}</p>`;
 
                         // Exibir lista de pedidos
-                        userInfoDiv.innerHTML += `<h3>Pedidos</h3>`;
+                        userInfoDiv.innerHTML += `<h3>Pedidos feitos</h3>`;
                         usuario.ordersList.forEach(pedido => {
                             userInfoDiv.innerHTML += `<p><strong>ID do Pedido:</strong> ${pedido.id}</p>`;
-                            userInfoDiv.innerHTML += `<p><strong>Preço:</strong> R$ ${pedido.price}</p>`;
                             userInfoDiv.innerHTML += `<p><strong>Status do Pagamento:</strong> ${pedido.orderPaymentStatus}</p>`;
-                            userInfoDiv.innerHTML += `<p><strong>Status da Produção:</strong> ${pedido.orderBuildStatus}</p>`;
+                            userInfoDiv.innerHTML += `<p><strong>Status de Produção:</strong> ${pedido.orderBuildStatus}</p>`;
                             userInfoDiv.innerHTML += `<p><strong>Cor:</strong> ${pedido.color.name}</p>`;
                             userInfoDiv.innerHTML += `<p><strong>Tamanho:</strong> ${pedido.size}</p>`;
                             userInfoDiv.innerHTML += `<p><strong>Modelo:</strong> ${pedido.model.name} (R$ ${pedido.model.price})</p>`;
+                            userInfoDiv.innerHTML += `<p><strong>Preço:</strong> R$ ${pedido.price}</p>`;
                             userInfoDiv.innerHTML += `</div>`;
                         });
                     }
@@ -108,7 +104,7 @@
                     <a href="news.html" class="rosaClaro">NOTÍCIAS</a>
                 </li>
                 <li>
-                    <a href="project.html" class="rosaEscuro">CONTA</a>
+                    <a href="accountUser.html" class="rosaEscuro">CONTA</a>
                 </li>
             </ul>
             <button id="logoutButton">SAIR</button>
@@ -119,13 +115,12 @@
         document.getElementById("logoutButton").addEventListener("click", function () {
             localStorage.clear();
 
-            window.location.href = "signin.html";
+            window.location.href = "../index.html";
         });
     </script>
 
     <main>
-        <h2 class="gradient-text-order">ACOMPANHE SEU PEDIDO</h2>
-        <!-- <i class="fa-solid fa-check" style="color: green; font-size: 10em"></i> -->
+        <h2 class="gradient-text-order">PEDIDO FEITO COM SUCESSO!!</h2>
 
         <div id="user-info"></div>
     </main>

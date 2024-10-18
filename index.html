@@ -21,6 +21,37 @@
   <!-- ICONS -->
   <script src="https://kit.fontawesome.com/e2bd8765fe.js" crossorigin="anonymous"></script>
 
+  <script defer>
+    window.addEventListener("load", function () {
+      const userEmail = localStorage.getItem("userEmail");
+      console.log(userEmail)
+
+      const buyGlassesLink = document.createElement("a");
+      buyGlassesLink.href = "pages/signin.html";
+      buyGlassesLink.textContent = "COMPRE OS ÓCULOS";
+
+      const logoutButton = document.createElement("button");
+      logoutButton.id = "logoutButton";
+      logoutButton.textContent = "SAIR";
+
+      const actionContainer = document.getElementById("actionContainer");
+      const optionAccount = document.getElementById("accountMenuItem");
+
+      if (userEmail) {
+        document.getElementById("userEmail").value = userEmail;
+        actionContainer.appendChild(logoutButton);
+
+        logoutButton.addEventListener("click", function () {
+          localStorage.removeItem("userEmail");
+          window.location.reload(); 
+        });
+      } else {
+        actionContainer.appendChild(buyGlassesLink);
+        optionAccount.style.display = "none";
+      }
+    });
+  </script>
+
   <title>Synesthesia Vision</title>
 </head>
 
@@ -30,7 +61,6 @@
     <div id="nav-bar">
       <img src="assets/img/logo.png" width="50" alt="Logo Synesthesia Vision" />
       <ul id="menu-op">
-        <li></li>
         <li></li>
         <li></li>
         <li>
@@ -45,12 +75,13 @@
         <li>
           <a href="pages/news.html" class="rosaClaro">NOTÍCIAS</a>
         </li>
-        <li hidden>
-          <a href="pages/contact.html">CONTATO</a>
+        <li id="accountMenuItem">
+          <a href="pages/accountUser.html" class="rosaEscuro">CONTA</a>
         </li>
       </ul>
-      <a href="pages/signin.html">COMPRE OS ÓCULOS</a>
-      <!-- <li></li> -->
+      <div id="actionContainer">
+        <div id="userEmail" hidden></div>
+      </div>
     </div>
   </header>
 
