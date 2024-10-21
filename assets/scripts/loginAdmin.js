@@ -43,17 +43,32 @@ function login() {
       return response.text();
     })
     .then((token) => {
-      const payload = decodeJwt(token);
-      const userEmail = payload.sub;
-
       localStorage.setItem('authToken', token);
-      localStorage.setItem('userEmail', userEmail);
+      localStorage.setItem('userEmail', email);
+      return fetch(`http://localhost:18080/api-V1/user/findByEmail?email=${email}`, {
+        method: "GET",
+        headers: {
+          "Authorization": "Bearer " + token 
+        }
+      });
+    })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Erro ao recuperar as informações do usuário.");
+      }
+      return response.json();
+    })
+    .then((user) => {
+      const userRole = user.role; 
 
-      window.location.href = "buy.html";
+      if (userRole && (userRole === 'ADMIN' || userRole === 'SALES_MONITOR' || userRole === 'TECHNICIAN')) {
+        window.location.href = "orderAdmin.html"; 
+      } else {
+        throw new Error("Clientes não têm acesso a essa tela.");
+      }
     })
     .catch((error) => {
       console.error("Erro:", error);
-
       errorMessageElement.style.display = "block";
       errorMessageElement.textContent = error.message;
 

@@ -20,7 +20,37 @@
 
   <title>Synesthesia Vision</title>
 
-  <style></style>
+  <!-- <script defer>
+    window.addEventListener("load", function () {
+      const userEmail = localStorage.getItem("userEmail");
+      console.log(userEmail)
+
+      const buyGlassesLink = document.createElement("a");
+      buyGlassesLink.href = "pages/signin.html";
+      buyGlassesLink.textContent = "COMPRE O DISPOSITIVO";
+
+      const logoutButton = document.createElement("button");
+      logoutButton.id = "logoutButton";
+      logoutButton.textContent = "SAIR";
+
+      const actionContainer = document.getElementById("actionContainer");
+      const optionAccount = document.getElementById("accountMenuItem");
+
+      if (userEmail) {
+        document.getElementById("userEmail").value = userEmail;
+        actionContainer.appendChild(logoutButton);
+
+        logoutButton.addEventListener("click", function () {
+          localStorage.removeItem("userEmail");
+          window.location.reload(); 
+        });
+      } else {
+        actionContainer.appendChild(buyGlassesLink);
+        optionAccount.style.display = "none";
+      }
+    });
+  </script> -->
+
 </head>
 
 <body>
@@ -41,15 +71,46 @@
         <li>
           <span class="rosaClaro" style="color: #c7614b">NOTÍCIAS</span>
         </li>
+        <!-- <li id="accountMenuItem">
+          <a href="accountUser.html" class="rosaEscuro">CONTA</a>
+        </li> -->
       </ul>
-      <a href="#"></a>
+      <li></li>
+      <!-- <div id="actionContainer">
+        <div id="userEmail" hidden></div>
+      </div> -->
     </div>
   </header>
+
+  <script>
+    document.getElementById("logoutButton").addEventListener("click", function () {
+      localStorage.clear();
+
+      window.location.href = "../index.html";
+    });
+  </script>
 
   <main>
     <h2 class="lato-bold gradient-text-news">SYNESTHESIA NA MÍDIA</h2>
 
     <div class="container">
+      <div class="color-box ajusteRight" style="background-color: #bf4594">
+        <div class="card">
+          <img src="../assets/img/content/lisboa.jpg" width="320" height="305" />
+          <div class="container-card">
+            <h3>Web Summit Lisboa 2024</h3>
+            <p>
+              O  projeto, coordenado desde 2015 pela professora do IFPE Recife Aida Araújo, desenvolveu uma versão comercial dos óculos sensoriais para pessoas com deficiência e foi selecionado para participar do Web Summit, em Lisboa.
+            </p>
+            <a href="https://www.instagram.com/p/DBRC_0RJDkr/"
+              target="_blank" class="confira-btn">
+              <i class="fa-solid fa-globe" style="color: #ffffff"></i>
+              CONFIRA
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- / -->
       <div class="color-box ajusteLeft" style="background-color: #d96277">
         <div class="card">
           <img src="../assets/img/content/img_InstitudoDosCegos_Synesthesia2024.png" width="320" height="305" />
@@ -61,10 +122,10 @@
               Queiroz. Foi uma experiência emocionante onde conectamos
               tecnologia e empatia para abrir novas perspectivas!
             </p>
-              <a href="https://www.instagram.com/p/C0UfisiJMzM/?img_index=1" target="_blank" class="confira-btn">
-                <i class="fa-solid fa-globe" style="color: #ffffff"></i>
-                CONFIRA
-              </a>
+            <a href="https://www.instagram.com/p/C0UfisiJMzM/?img_index=1" target="_blank" class="confira-btn">
+              <i class="fa-solid fa-globe" style="color: #ffffff"></i>
+              CONFIRA
+            </a>
           </div>
         </div>
       </div>
@@ -79,10 +140,11 @@
               encontrados na execução de um projeto focado em desenvolvimento
               de tecnologia assistiva para a locomoção segura de cegos.
             </p>
-              <a href="https://sol.sbc.org.br/index.php/sbsc_estendido/article/view/28144" target="_blank" class="confira-btn">
-                <i class="fa-solid fa-globe" style="color: #ffffff"></i>
-                CONFIRA
-              </a>
+            <a href="https://sol.sbc.org.br/index.php/sbsc_estendido/article/view/28144" target="_blank"
+              class="confira-btn">
+              <i class="fa-solid fa-globe" style="color: #ffffff"></i>
+              CONFIRA
+            </a>
           </div>
         </div>
       </div>
@@ -98,10 +160,11 @@
               de Circuito Impresso para Bengala Sensorial" para avaliadores da
               FEBRACE.
             </p>
-              <a href="https://www.instagram.com/p/Cnjn_eVuiQU/?igshid=YmMyMTA2M2Y%3D" target="_blank" class="confira-btn">
-                <i class="fa-solid fa-globe" style="color: #ffffff"></i>
-                CONFIRA
-              </a>
+            <a href="https://www.instagram.com/p/Cnjn_eVuiQU/?igshid=YmMyMTA2M2Y%3D" target="_blank"
+              class="confira-btn">
+              <i class="fa-solid fa-globe" style="color: #ffffff"></i>
+              CONFIRA
+            </a>
           </div>
         </div>
       </div>
@@ -118,10 +181,11 @@
               parte do evento que contempla a Semana do Meio Ambiente do IFPE
               - Campus Cabo de Santo Agostinho.
             </p>
-              <a href="https://www.instagram.com/p/Cfjw2tNrLzq/?igshid=MDJmNzVkMjY%3D" target="_blank" class="confira-btn">
-                <i class="fa-solid fa-globe" style="color: #ffffff"></i>
-                CONFIRA
-              </a>
+            <a href="https://www.instagram.com/p/Cfjw2tNrLzq/?igshid=MDJmNzVkMjY%3D" target="_blank"
+              class="confira-btn">
+              <i class="fa-solid fa-globe" style="color: #ffffff"></i>
+              CONFIRA
+            </a>
           </div>
         </div>
       </div>
@@ -136,10 +200,11 @@
               estudantes dos anos finais do ensino fundamental II pela
               programação de computadores.
             </p>
-              <a href="https://www.instagram.com/p/Caz9vzGLMB2/?igshid=MDJmNzVkMjY%3D" target="_blank" class="confira-btn">
-                <i class="fa-solid fa-globe" style="color: #ffffff"></i>
-                CONFIRA
-              </a>
+            <a href="https://www.instagram.com/p/Caz9vzGLMB2/?igshid=MDJmNzVkMjY%3D" target="_blank"
+              class="confira-btn">
+              <i class="fa-solid fa-globe" style="color: #ffffff"></i>
+              CONFIRA
+            </a>
           </div>
         </div>
       </div>
@@ -154,10 +219,10 @@
               Placa de Circuito Impresso para Bengala Sensorial". Foi evoluido
               o modelo da bengala sensorial trabalhada na versão de 2021.
             </p>
-              <a href="https://www.instagram.com/p/Ci7pmXXObUe/" target="_blank" class="confira-btn">
-                <i class="fa-solid fa-globe" style="color: #ffffff"></i>
-                CONFIRA
-              </a>
+            <a href="https://www.instagram.com/p/Ci7pmXXObUe/" target="_blank" class="confira-btn">
+              <i class="fa-solid fa-globe" style="color: #ffffff"></i>
+              CONFIRA
+            </a>
           </div>
         </div>
       </div>
@@ -174,11 +239,11 @@
               bengala sensorial que visa substituir o modelo tradicional algo
               menor e que ofereça mais recursos.
             </p>
-              <a href="https://mnr.robocup.org.br/wp-content/uploads/2024/01/MNR-Anais-2021-1_compressed.pdf"
-                target="_blank" class="confira-btn">
-                <i class="fa-solid fa-globe" style="color: #ffffff"></i>
-                CONFIRA
-              </a>
+            <a href="https://mnr.robocup.org.br/wp-content/uploads/2024/01/MNR-Anais-2021-1_compressed.pdf"
+              target="_blank" class="confira-btn">
+              <i class="fa-solid fa-globe" style="color: #ffffff"></i>
+              CONFIRA
+            </a>
           </div>
         </div>
       </div>
@@ -194,10 +259,11 @@
               DE LOCALIZAÇÃO" (pág. 239). Ambos trabalhos dão enfase em
               auxiliar a locomoção segura de pessoas cegas.
             </p>
-              <a href="https://mnr.robocup.org.br/wp-content/uploads/2024/01/MNR-Anais-2020.pdf" target="_blank" class="confira-btn">
-                <i class="fa-solid fa-globe" style="color: #ffffff"></i>
-                CONFIRA
-              </a>
+            <a href="https://mnr.robocup.org.br/wp-content/uploads/2024/01/MNR-Anais-2020.pdf" target="_blank"
+              class="confira-btn">
+              <i class="fa-solid fa-globe" style="color: #ffffff"></i>
+              CONFIRA
+            </a>
           </div>
         </div>
       </div>
@@ -213,10 +279,11 @@
               publicação do trabalho na MNR onde se iniciou o desenvolvimento
               dos óculos que viria a ser aprimorado nos anos seguintes.
             </p>
-              <a href="https://mnr.robocup.org.br/wp-content/uploads/2022/11/MNR-Anais2019.pdf" target="_blank" class="confira-btn">
-                <i class="fa-solid fa-globe" style="color: #ffffff"></i>
-                CONFIRA
-              </a>
+            <a href="https://mnr.robocup.org.br/wp-content/uploads/2022/11/MNR-Anais2019.pdf" target="_blank"
+              class="confira-btn">
+              <i class="fa-solid fa-globe" style="color: #ffffff"></i>
+              CONFIRA
+            </a>
           </div>
         </div>
       </div>
@@ -227,12 +294,14 @@
           <div class="container-card">
             <h3>Web for all 2017</h3>
             <p>
-              Em abril de 2017, Michael Barney, na época estudante integrante do projeto, esteve na Austrália para apresentar o protótipo dos óculos em um congresso de tecnologia.
+              Em abril de 2017, Michael Barney, na época estudante integrante do projeto, esteve na Austrália para
+              apresentar o protótipo dos óculos em um congresso de tecnologia.
             </p>
-              <a href="https://www.instagram.com/p/C92wKzqpA0P/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="confira-btn">
-                <i class="fa-solid fa-globe" style="color: #ffffff"></i>
-                CONFIRA
-              </a>
+            <a href="https://www.instagram.com/p/C92wKzqpA0P/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              target="_blank" class="confira-btn">
+              <i class="fa-solid fa-globe" style="color: #ffffff"></i>
+              CONFIRA
+            </a>
           </div>
         </div>
       </div>

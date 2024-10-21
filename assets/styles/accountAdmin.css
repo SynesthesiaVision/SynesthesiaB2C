@@ -1,0 +1,37 @@
+.gradient-text-account {
+    background: linear-gradient(320deg, #d6d6d6, #3b3b3b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.7em;
+}
+
+#infoAccount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+label {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+input, textarea {
+    border: none;
+    background: none;
+    font-size: 1.1em;
+    padding: 0.5em 0.5em 0.7em 0em;
+    border-bottom: 2px solid var(--roxo);
+    border-radius: 5px;
+    margin-bottom: 1em;
+    color: grey;
+}

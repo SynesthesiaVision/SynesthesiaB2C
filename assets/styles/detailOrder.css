@@ -1,0 +1,58 @@
+.gradient-text-orderAdmin {
+    background: linear-gradient(90deg, #d6d6d6, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.3em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4em;
+}
+
+select {
+    width: 80%;
+    text-align: center;
+}
+
+#detalhesPedido {
+    border: 2px solid var(--cinzaTxt);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    padding: 0.5em;
+    width: 450px;
+    gap: 5px;
+}
+
+#statusOrder, #statusTecnician, #statusMonitor {
+    border: 2px solid var(--azulClaro);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    padding: 0.5em;
+    width: 450px;
+    align-items: center;
+    gap: 10px;
+}
+
+#statusTecnician {
+    border: 2px solid var(--roxo) !important;
+}
+
+#statusMonitor {
+    border: 2px solid var(--rosaEscuro) !important;
+}
+
+.btnUpdate {
+    background-color: #000000;
+    color: #fff;
+    font-size: 0.7em !important;
+    width: 200px;
+}

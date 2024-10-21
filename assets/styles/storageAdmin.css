@@ -1,0 +1,58 @@
+.gradient-text-storageAdmin {
+    background: linear-gradient(90deg, #d6d6d6, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.3em;
+}
+
+.line {
+    border-bottom: 3px solid #000;
+    border-radius: 10px;
+}
+
+.txtDesc {
+    margin: 1em;
+    font-weight: bold;
+    font-size: 1.3em;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    font-size: 1.5em;
+}
+
+.add-color {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#colorNameInput {
+    width: 200px;
+    padding: 0.2em;
+}
+
+#addColorButton {
+    width: 210px;
+    background-color: #000;
+    color: #fff;
+}
+
+.bodyTable {
+    cursor: pointer;
+}
+
+#logoutButton {
+    font-size: 0.9em;
+    background-color: var(--roxo);
+    color: #fff;
+    font-weight: bold;
+}

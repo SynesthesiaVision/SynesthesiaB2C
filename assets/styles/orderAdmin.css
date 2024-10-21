@@ -1,0 +1,100 @@
+.gradient-text-orderAdmin {
+    background: linear-gradient(90deg, #d6d6d6, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.3em;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.orderCategory {
+    width: 80%;
+    margin: 2em;
+}
+
+.fa-solid {
+    font-size: 2.3em;
+    margin: 0px 10px 10px 0px
+}
+
+.fa-door-open {
+    color: var(--rosaEscuro);
+}
+
+.fa-clock {
+    color: var(--azulClaro)
+}
+
+.fa-circle-check {
+    color: var(--preto)
+}
+
+.header>span {
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+.line {
+    border-bottom: 3px solid #000;
+    border-radius: 10px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content > table {
+    width: 50%;
+    margin: 1em;
+}
+
+.headerTable {
+    border-radius: 10px;
+    padding: 0.4em;
+    color: #fff;
+    font-size: 1.3em;
+}
+
+.bodyTable {
+    text-align: center;
+    font-size: 1.2em;
+    cursor: pointer; 
+}
+
+#filters {
+    display: flex;
+    justify-content: center;
+}
+
+#filterId, #filterCPF {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#pedidoIdInput, #cpfInput {
+    width: 200px;
+    padding: 0.2em;
+}
+
+#buscarID, #buscarCPF {
+    width: 210px;
+    background-color: #000;
+    color: #fff;
+}
+
+#logoutButton {
+    font-size: 0.9em;
+    background-color: var(--roxo);
+    color: #fff;
+    font-weight: bold;
+}

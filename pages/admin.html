@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600;700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- ICONS -->
+    <script src="https://kit.fontawesome.com/e2bd8765fe.js" crossorigin="anonymous"></script>
+
+    <script src="../assets/scripts/loginAdmin.js" defer></script>
+
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('../assets/img/content/backgroundCadastro.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            width: 400px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            margin-bottom: 5px;
+        }
+
+        .input-group input {
+            width: 380px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 400px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+    <title>Synesthesia Vision | ADMIN</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <form id="loginForm" class="login-form">
+                <h2 style="text-align: center;">ADMIN</h2>
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" />
+                </div>
+                <div class="input-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" required />
+                </div>
+                <button type="submit">ENTRAR</button>
+                <div id="error-message" style="color: red; display: none;"></div>
+            </form>            
+        </div>
+    </main>
+</body>
+
+</html>

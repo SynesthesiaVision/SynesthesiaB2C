@@ -40,13 +40,21 @@
         <li>
           <a href="news.html" class="rosaClaro">NOTÍCIAS</a>
         </li>
-        <li hidden>
-          <a href="contact.html">CONTATO</a>
+        <li>
+          <a href="accountUser.html" class="rosaEscuro">CONTA</a>
         </li>
       </ul>
-      <a href="#"></a>
+      <button id="logoutButton">SAIR</button>
     </div>
   </header>
+
+  <script>
+    document.getElementById("logoutButton").addEventListener("click", function () {
+      localStorage.clear();
+
+      window.location.href = "../index.html";
+    });
+  </script>
 
   <main id="revision">
     <h2 id="user-greeting" class="gradient-text-revision"></h2>

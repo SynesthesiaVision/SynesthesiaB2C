@@ -239,9 +239,20 @@
 .desc-problem p:first-of-type,
 .desc-concept p:first-of-type,
 .desc-progress p:first-of-type,
-.desc-team p:first-of-type {
+.desc-team p:first-of-type,
+.detail-progress p {
   font-size: 1.5em;
   font-weight: bold;
+}
+
+.detail-progress p {
+  margin-top: 0.5em;
+  text-align: justify;
+}
+
+.detail-progress p:last-of-type {
+  margin: 1em 0 1em 0;
+  text-align: center;
 }
 
 .cardC {

@@ -21,6 +21,37 @@
   <!-- ICONS -->
   <script src="https://kit.fontawesome.com/e2bd8765fe.js" crossorigin="anonymous"></script>
 
+  <!-- <script defer>
+    window.addEventListener("load", function () {
+      const userEmail = localStorage.getItem("userEmail");
+      console.log(userEmail)
+
+      const buyGlassesLink = document.createElement("a");
+      buyGlassesLink.href = "pages/signin.html";
+      buyGlassesLink.textContent = "COMPRE O DISPOSITIVO";
+
+      const logoutButton = document.createElement("button");
+      logoutButton.id = "logoutButton";
+      logoutButton.textContent = "SAIR";
+
+      const actionContainer = document.getElementById("actionContainer");
+      const optionAccount = document.getElementById("accountMenuItem");
+
+      if (userEmail) {
+        document.getElementById("userEmail").value = userEmail;
+        actionContainer.appendChild(logoutButton);
+
+        logoutButton.addEventListener("click", function () {
+          localStorage.removeItem("userEmail");
+          window.location.reload(); 
+        });
+      } else {
+        actionContainer.appendChild(buyGlassesLink);
+        optionAccount.style.display = "none";
+      }
+    });
+  </script> -->
+
   <title>Synesthesia Vision</title>
 </head>
 
@@ -30,9 +61,6 @@
     <div id="nav-bar">
       <img src="assets/img/logo.png" width="50" alt="Logo Synesthesia Vision" />
       <ul id="menu-op">
-        <li></li>
-        <li></li>
-        <li></li>
         <li>
           <span class="roxo" style="color: #a432a6">INÍCIO</span>
         </li>
@@ -45,12 +73,14 @@
         <li>
           <a href="pages/news.html" class="rosaClaro">NOTÍCIAS</a>
         </li>
-        <li hidden>
-          <a href="pages/contact.html">CONTATO</a>
-        </li>
+        <!-- <li id="accountMenuItem">
+          <a href="pages/accountUser.html" class="rosaEscuro">CONTA</a>
+        </li> -->
       </ul>
-      <a href="pages/signin.html">COMPRE OS ÓCULOS</a>
-      <!-- <li></li> -->
+      <li></li>
+      <!-- <div id="actionContainer">
+        <div id="userEmail" hidden></div>
+      </div> -->
     </div>
   </header>
 
@@ -69,11 +99,7 @@
         <div class="desc-project">
           <h2 class="gradient-text-projeto lato-bold">ENTENDA O PROJETO</h2>
           <p class="lato-bold">
-            Esses óculos não são apenas um acessório! São uma visão de futuro
-            que coloca a independência e a mobilidade no centro das atenções.
-            Utilizando tecnologia de áudio binaural de ponta, é possível
-            proporcionar uma experiência sensorial única, assim permitindo que
-            pessoas cegas naveguem pelo mundo com confiança e facilidade.
+            Esse dispositivo não é apenas um acessório! É uma visão de futuro que coloca a independência e a mobilidade no centro das atenções. Utilizando tecnologia de áudio binaural de ponta, é possível proporcionar uma experiência sensorial única, assim permitindo que pessoas cegas naveguem pelo mundo com confiança e facilidade.
           </p>
 
           <p class="lato-bold">Quer entender mais sobre?</p>
@@ -93,9 +119,9 @@
           <div class="card-desc-chara conf">
             <h3>CONFIANÇA E INDEPENDÊNCIA</h3>
             <p class="fira-sans-regular">
-              Esses óculos não são apenas um acessório, são uma visão de
+              Esse dispostivo não é apenas um acessório, é uma visão de
               futuro que coloca a independência e a mobilidade no centro das
-              atenções. É oferecido uma experiência sensorial única,
+              atenções. É oferecida uma experiência sensorial única,
               permitindo que pessoas cegas naveguem pelo mundo com confiança e
               facilidade.
             </p>
@@ -103,38 +129,37 @@
           <img src="assets/img/content/independencia.png" width="300" />
         </div>
 
-        <div class="card-characteristics">
+        <!-- <div class="card-characteristics">
           <div class="card-desc-chara perso">
-            <h3>PERSONALIZAÇÃO</h3>
+            <h3>ADAPTÁVEL</h3>
             <p class="fira-sans-regular">
-              Além disso, esses óculos são totalmente personalizáveis,
+              Além disso, esse dispo são totalmente personalizáveis,
               adaptando-se às preferências individuais de cada usuário. <br />
               Escolha cor e tamanho conforme sua necessidade!
             </p>
           </div>
           <img class="inverse" src="assets/img/content/personalizacao.png" width="300" />
-        </div>
+        </div> -->
 
         <div class="card-characteristics">
           <div class="card-desc-chara tecIno">
             <h3>TECNOLOGIA INOVADORA</h3>
             <p class="fira-sans-regular">
               Imagine caminhar por ruas movimentadas, atravessar cruzamentos e
-              explorar ambientes desconhecidos sem depender de ninguém. Os
-              óculos audiobinaurais usam som tridimensional para criar uma
-              imagem sonora do ambiente ao seu redor, guiando-o com precisão
-              por obstáculos e direções. <br />
-              É como ter um guia pessoal invisível a cada passo!
+              explorar ambientes desconhecidos sem depender de ninguém. O dispositivo usa som tridimensional para criar uma
+              imagem sonora do ambiente ao seu redor, guiando-o com precisão para evitar
+              obstáculos. <br />
+              É como ter um radar pessoal a cada passo!
             </p>
           </div>
-          <img src="assets/img/content/tecnologiabinaural.png" width="300" />
+          <img src="assets/img/content/tecnologiabinaural.png" class="inverse" width="300" />
         </div>
       </div>
     </div>
 
     <div class="card" hidden>
       <div class="buy">
-        <h2>Adquira já os Óculos</h2>
+        <h2>Adquira já o Dispositivo</h2>
         <img src="assets/img/logoAlt.png" width="500" />
 
         <button id="buy-btn">
@@ -235,7 +260,7 @@
       <div class="inviteNews">
         <p class="lato-bold">
           Quer saber sobre mais eventos que envolveu o projeto e conhecer a
-          equipe por trás dos óculos?
+          equipe por trás do dispositivo?
         </p>
         <a href="pages/news.html" class="readNews">
           <i class="fa-solid fa-book-open" style="color: #ffffff"></i>

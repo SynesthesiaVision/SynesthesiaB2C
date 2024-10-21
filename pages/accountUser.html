@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../assets/styles/accountAdmin.css" />
+    <link rel="stylesheet" href="../assets/styles/style.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600;700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- ICONS -->
+    <script src="https://kit.fontawesome.com/e2bd8765fe.js" crossorigin="anonymous"></script>
+
+    <script defer>
+        window.addEventListener("load", function () {
+            const userEmail = localStorage.getItem("userEmail");
+            if (userEmail) {
+            } else {
+                window.location.href = "admin.html";
+            }
+        });
+    </script>
+
+<script defer>
+    obterDadosUsuario()
+    async function obterDadosUsuario() {
+        try {
+            const userEmail = localStorage.getItem("userEmail");
+            const response = await fetch(`http://localhost:18080/api-V1/user/findByEmail?email=${userEmail}`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                const usuario = await response.json();
+
+                return usuario;
+            } else {
+                alert(`Erro ao buscar dados do usuário: ${response.statusText}`);
+                return null;
+            }
+        } catch (error) {
+            console.error('Erro ao buscar dados do usuário:', error);
+            alert('Ocorreu um erro ao tentar buscar os dados do usuário.');
+            return null;
+        }
+    }
+
+    atualizarSaudacao()
+    async function atualizarSaudacao() {
+        const usuario = await obterDadosUsuario();
+        if (usuario) {
+            const saudacaoElement = document.getElementById('user-greeting');
+            saudacaoElement.textContent = `Confira as informações da sua conta, ${usuario.name}!`;
+        }
+    }
+
+    async function contaInfos() {
+        const usuario = await obterDadosUsuario();
+        if (usuario) {
+            document.getElementById('name').value = usuario.name || 'Nenhuma informação fornecida';
+            document.getElementById('email').value = usuario.email || 'Nenhuma informação fornecida';
+            document.getElementById('cpf').value = usuario.cpf || 'Nenhuma informação fornecida';
+            document.getElementById('zipCode').value = usuario.zipCodeBR || 'Nenhuma informação fornecida';
+            document.getElementById('address').value = usuario.address || 'Nenhuma informação fornecida';
+            document.getElementById('phone').value = usuario.phone || 'Nenhuma informação fornecida';
+            document.getElementById('ordersList').value = usuario.ordersList.length > 0 ? JSON.stringify(usuario.ordersList, null, 2) : 'Sem pedidos';
+            document.getElementById('supportCalls').value = usuario.supportCalls.length > 0 ? JSON.stringify(usuario.supportCalls, null, 2) : 'Sem pedidos';
+        }
+    }
+
+    window.onload = contaInfos;
+</script>
+
+    <title>Synesthesia Vision</title>
+</head>
+
+<body>
+    <h1 hidden>Synesthesia Vision</h1>
+    <header>
+        <div id="nav-bar">
+            <img src="../assets/img/logo.png" width="50" alt="Logo Synesthesia Vision" />
+            <ul id="menu-op">
+                <li>
+                    <a href="../index.html" class="roxo">INÍCIO</a>
+                </li>
+                <li>
+                    <a href="project.html" class="rosaEscuro">PROJETO</a>
+                </li>
+                <li>
+                    <a href="education.html" class="azulClaro">EDUCAÇÃO</a>
+                </li>
+                <li>
+                    <a href="news.html" class="rosaClaro">NOTÍCIAS</a>
+                </li>
+                <li>
+                    <a href="#" style="color: var(--rosaEscuro)">CONTA</a>
+                </li>
+            </ul>
+            <button id="logoutButton">SAIR</button>
+        </div>
+    </header>
+
+    <script>
+        document.getElementById("logoutButton").addEventListener("click", function () {
+            localStorage.clear();
+
+            window.location.href = "../index.html";
+        });
+    </script>
+
+    <main>
+        <h2 id="user-greeting" class="gradient-text-account"></h2>
+        <div id="infoAccount">
+            <form>
+                <label for="name">Nome</label>
+                <input type="text" id="name" disabled><br>
+        
+                <label for="email">Email</label>
+                <input type="text" id="email" disabled><br>
+        
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf" disabled><br>
+        
+                <label for="zipCode">CEP</label>
+                <input type="text" id="zipCode" disabled><br>
+        
+                <label for="address">Endereço</label>
+                <input type="text" id="address" disabled><br>
+        
+                <label for="phone">Numero de Celular</label>
+                <input type="text" id="phone" disabled><br>
+                
+                <label for="ordersList">Lista de Pedidos</label>
+                <textarea id="ordersList" disabled></textarea><br>
+                
+                <label for="supportCalls">Chamados</label>
+                <textarea id="supportCalls" disabled></textarea><br>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            <i class="fa-regular fa-copyright" style="color: #ffffff"></i> 2023
+            Synesthesia Vision. All rights reserved
+        </p>
+        <br />
+        <a href="mailto:synesthesiavision@recife.ifpe.edu.br">
+            <i class="fa-regular fa-envelope" style="color: #ffffff"></i>
+            Entre em contato</a>
+    </footer>
+</body>
+
+</html>
