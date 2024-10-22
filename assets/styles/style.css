@@ -273,6 +273,10 @@ footer p {
   font-size: 1.2em;
 }
 
+.card-characteristics p {
+  opacity: 0.7;
+}
+
 .card-desc-chara {
   order: 2;
 }
