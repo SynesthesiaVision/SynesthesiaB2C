@@ -428,6 +428,62 @@ button.next:hover {
   margin-bottom: 1em;
 }
 
+/* seção faq */
+.faq {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.faq > h2 {
+  margin-bottom: 1em;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 1em;
+  gap: 10px;
+}
+
+.faq-list li {
+  box-shadow: 1px 5px 8px 4px #e8e8e8;
+  padding: 1em 2em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.faq-list li .faq-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.faq-list li h3 {
+  font-size: 1em;
+}
+
+.faq-list li span {
+  font-weight: 800;
+  font-size: 1.2em;
+}
+
+.faq-list li p {
+  color: var(--cinzaTxt);
+  font-weight: 400;
+  transition: 200ms;
+  height: 0;
+  opacity: 0;
+  transition: 200ms;
+}
+
+.faq-list li p.open {
+  height: 100%;
+  opacity: 1;
+  margin-top: 1em;
+}
+
 #gradientBox {
   position: relative;
   width: 80%;
