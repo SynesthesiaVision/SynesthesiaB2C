@@ -32,6 +32,11 @@
   color: white;
 }
 
+.card img {
+  width: 100%;
+  object-fit: cover;
+}
+
 .container-card p {
   width: 25em;
   margin-top: 1em;
