@@ -371,6 +371,13 @@
   background-color: #fff;
 }
 
+.Xstudents {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  gap: 2em;
+}
+
 /* IDEIAS */
 .black-screen {
   background-color: #000;
