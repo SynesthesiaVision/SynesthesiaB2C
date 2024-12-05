@@ -17,7 +17,6 @@
   padding-right: 2em;
   transition: background-color 1s ease;
   border-radius: 10px;
-  width: 45em;
   height: 19em;
 }
 
@@ -33,9 +32,29 @@
 }
 
 .card img {
+  min-width: 300px;
   width: 100%;
   object-fit: cover;
+  border-radius: 10px 0 0 10px;
 }
+
+.card .links {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .links a {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+
 
 .container-card p {
   width: 25em;
