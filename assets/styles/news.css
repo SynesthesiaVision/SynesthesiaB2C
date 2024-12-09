@@ -17,7 +17,6 @@
   padding-right: 2em;
   transition: background-color 1s ease;
   border-radius: 10px;
-  width: 45em;
   height: 19em;
 }
 
@@ -33,12 +32,14 @@
 }
 
 .card img {
-  width: 100%;
+  min-width: 400px;
   object-fit: cover;
+  border-radius: 10px 0 0 10px;
 }
 
 .container-card p {
-  width: 25em;
+  min-width: 25em;
+  max-width: 45em;
   margin-top: 1em;
   margin-bottom: 2em;
   color: white;
@@ -46,6 +47,11 @@
 
 .container-card h3 {
   color: white;
+  max-width: 30em;
+}
+
+.container-card a {
+  margin-top: 40px;
 }
 
 h2 {
@@ -53,11 +59,16 @@ h2 {
 }
 
 .confira-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
   background: none;
   border: 1px solid #fff;
   border-radius: 4px;
   padding: 1em;
-  width: 10em;
+  width: min-content;
+  margin-top: auto;
 }
 
 .confira-btn,
