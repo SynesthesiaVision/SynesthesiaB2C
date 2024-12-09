@@ -47,7 +47,7 @@
     </nav>
   </header>
 
-  <main>
+  <main class="mainContent">
     <section class="card">
       <div class="presentation">
         <img src="assets/img/logoAlt.png" width="500" alt = "Logo do projeto Synesthesia Vision: Iluminando vidas" />
@@ -131,7 +131,7 @@
             <div class="descNews">
               <h3>Web Summit Lisboa 2024</h3>
               <p class="lato-regular">
-                A professora Aida Araújo marcou presença na Web Summit 2024 em Lisboa como destaque na área de tecnologias assistivas. O evento reuniu 400 empresas e 30 startups. O projeto SynesthesiaVision foi a primeira startup nascida do IFPE à participar de um evento internacional.
+                A professora Aida Araújo marcou presença na Web Summit 2024 em Lisboa como destaque na área de tecnologias assistivas.
               </p>
             </div>
           </div>
@@ -176,11 +176,10 @@
             <div class="descNews">
               <h3>Oficinas Synesthesia Vision 2022</h3>
               <p class="lato-regular">
-                No dia 29/06/2022 a equipe do projeto Oficinas Synesthesia
-                Vision, do Grendes&Labgeo ministrou a oficina "Utilização de
+                29/06/2022 a equipe do projeto Oficinas Synesthesia
+                Vision ministrou a oficina "Utilização de
                 Arduíno para desenvolver tecnologias para o meio ambiente",
-                como parte do evento que contempla a Semana do Meio Ambiente
-                do IFPE - Campus Cabo de Santo Agostinho.
+                na Semana do Meio Ambiente do IFPE - Cabo de Santo Agostinho.
               </p>
             </div>
           </div>
@@ -209,13 +208,13 @@
         }
 
         function startSlideshow() {
-          cards[currentIndex].classList.add("active");
-          slideshowInterval = setInterval(showNextCard, interval);
+          // cards[currentIndex].classList.add("active");
+          // slideshowInterval = setInterval(showNextCard, interval);
         }
 
         function resetSlideshow() {
-          clearInterval(slideshowInterval);
-          slideshowInterval = setInterval(showNextCard, interval);
+          // clearInterval(slideshowInterval);
+          // slideshowInterval = setInterval(showNextCard, interval);
         }
 
         document.querySelector(".next").addEventListener("click", () => {

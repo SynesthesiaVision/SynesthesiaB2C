@@ -130,8 +130,9 @@ img {
   user-select: none;
 }
 
-main {
+.mainContent {
   min-height: 30em;
+  padding: 0 8px;
 }
 
 .center {
@@ -160,13 +161,6 @@ button:hover {
 
 .inverse {
   order: 3;
-}
-
-#logoutButton {
-  font-size: 0.9em;
-  background-color: var(--roxo);
-  color: #fff;
-  font-weight: bold;
 }
 
 /* RODAPÉ */
@@ -319,7 +313,7 @@ footer p {
 .slideNews {
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 600px;
   overflow: hidden;
   border-radius: 10px;
   background-color: white;
@@ -329,6 +323,7 @@ footer p {
 
 .cardNews {
   position: absolute;
+  padding: 10px 0;
   top: 0;
   left: 100%;
   width: 100%;
@@ -339,6 +334,10 @@ footer p {
   text-align: center;
   transition: left 1s ease;
   opacity: 0;
+}
+
+.cardNews .descNews p {
+  text-align: justify;
 }
 
 .about-project-btn {
@@ -510,6 +509,11 @@ button.next:hover {
   border-radius: 20px;
 }
 
+#gradientBox .cardNews {
+  display: flex;
+  flex-direction: column;
+}
+
 @keyframes gradientAnimation {
   0% {
     background-position: 0% 50%;
@@ -602,6 +606,16 @@ button.next:hover {
 }
 
 /* Estilos para tablets */
+@media screen and (min-width: 768px) {
+  #gradientBox .cardNews {
+    flex-direction: row;
+  }
+
+  .slideNews {
+    height: 300px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .project {
     display: flex;
