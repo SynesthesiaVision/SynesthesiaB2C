@@ -208,13 +208,13 @@
         }
 
         function startSlideshow() {
-          // cards[currentIndex].classList.add("active");
-          // slideshowInterval = setInterval(showNextCard, interval);
+          cards[currentIndex].classList.add("active");
+          slideshowInterval = setInterval(showNextCard, interval);
         }
 
         function resetSlideshow() {
-          // clearInterval(slideshowInterval);
-          // slideshowInterval = setInterval(showNextCard, interval);
+          clearInterval(slideshowInterval);
+          slideshowInterval = setInterval(showNextCard, interval);
         }
 
         document.querySelector(".next").addEventListener("click", () => {
