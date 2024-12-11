@@ -29,6 +29,7 @@
   align-items: center;
   gap: 1em;
   color: white;
+  width: 100%;
 }
 
 .card img {
@@ -123,9 +124,24 @@ h2 {
 
   .card img {
     order: 0 !important;
+    border-radius: 10px;
   }
 
   .card p {
     width: 90%;
+  }
+
+  .ajusteRight {
+    margin-right: 0;
+  }
+  
+  .ajusteLeft {
+    margin-left: 0;
+  }
+
+  .color-box {
+    height: max-content;
+    padding-right: 0;
+    padding: 10px;
   }
 }
