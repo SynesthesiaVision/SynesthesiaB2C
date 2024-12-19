@@ -1,5 +1,5 @@
-h2 {
-  opacity: 0.9;
+* {
+  box-sizing: border-box;
 }
 
 .gradient-text-apostila {
@@ -7,26 +7,6 @@ h2 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-
-.ebook {
-  margin: 3em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.desc-ebook {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  margin: 1em;
-  gap: 1em;
-  align-items: center;
-}
-
-p {
-  text-align: justify;
 }
 
 .btnView {
@@ -42,46 +22,45 @@ p {
   color: #fff;
 }
 
-
-/* Responsividade */
-/* Celulares e Telas menores */
-@media (min-width: 320px) and (max-width: 480px) {
-  main h2 {
-    font-size: 1.5em;
-    margin: 1em;
-  }
-
-  .ebook1,
-  .ebook2 {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .desc-ebook1,
-  .desc-ebook2 {
-    width: 100%;
-    text-align: center;
-  }
-
-  .ebook2 img {
-    order: 0 !important;
-  }
+.ebooks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 0 auto;
+  max-width: 768px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .ebook1,
-  .ebook2 {
+.ebook {
+  padding: 20px;
+  width: 100%;
+}
+
+.ebook img {
+  margin: 0 auto;
+  border-radius: 10px
+}
+
+.ebook .desc-ebook {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ebook .desc-ebook h4 {
+  font-weight: 600;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.ebook .desc-ebook p {
+  text-align: justify;
+  font-weight: 400;
+}
+
+@media (min-width: 720px) {
+  .ebook {
     display: flex;
-    flex-direction: column;
-  }
-
-  .desc-ebook1,
-  .desc-ebook2 {
-    width: 100%;
-    text-align: center;
-  }
-
-  .ebook2 img {
-    order: 0 !important;
+    flex-direction: row;
+    gap: 20px;
   }
 }
