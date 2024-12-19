@@ -1,147 +1,82 @@
-.gradient-text-news {
-  background: linear-gradient(90deg, #000000, #a7a7a7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 .container {
+  padding: 10px;
+  max-width: 1378px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  margin: 1em;
-  gap: 1em;
-  align-items: center;
+  gap: 1rem;
 }
 
 .color-box {
-  padding-right: 2em;
-  transition: background-color 1s ease;
+  padding: 1rem;
   border-radius: 10px;
-  height: 19em;
-}
-
-.color-box img {
-  border-right: 1px solid #fff;
-}
-
-.card {
   display: flex;
-  align-items: center;
-  gap: 1em;
-  color: white;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.color-box .image-container {
   width: 100%;
 }
 
-.card img {
-  min-width: 400px;
+.color-box img {
+  min-width: 100%;
   object-fit: cover;
-  border-radius: 10px 0 0 10px;
+  margin-bottom: 1rem;
+  border-radius: 10px;
 }
 
-.container-card p {
-  min-width: 25em;
-  max-width: 45em;
-  margin-top: 1em;
-  margin-bottom: 2em;
+.color-box .container-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.color-box .container-card h3 {
   color: white;
 }
 
-.container-card h3 {
+.color-box .container-card p {
   color: white;
-  max-width: 30em;
+  margin-bottom: 2rem;
 }
 
-.container-card a {
-  margin-top: 40px;
-}
-
-h2 {
-  margin-bottom: 1em;
-}
-
-.confira-btn {
+.color-box .container-card .confira-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
-  background: none;
-  border: 1px solid #fff;
-  border-radius: 4px;
-  padding: 1em;
-  width: min-content;
+  gap: 10px;
+
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 1rem;
+  color: white;
+
   margin-top: auto;
 }
 
-.confira-btn,
-.confira-btn a {
-  color: #fff;
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 1em;
-}
-
-.ajusteRight {
-  margin-right: -100px;
-}
-
-.ajusteLeft {
-  margin-left: -100px;
-}
-
-.card-insta {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 1em;
-}
-
-.instagramProjeto {
-  display: flex;
-  align-items: center;
-  gap: 0.2em;
-}
-
-/* mudança de cores do card pro instagram */
-#gradientBox {
-  margin: 2em;
-  padding: 2em;
-}
-
-/* Responsividade */
-/* Celulares e Telas menores */
-@media (min-width: 320px) and (max-width: 480px) {
-  main h2 {
-    font-size: 1.5em;
-    margin: 1em;
-  }
-
-  .card {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  .card img {
-    order: 0 !important;
-    border-radius: 10px;
-  }
-
-  .card p {
-    width: 90%;
-  }
-
-  .ajusteRight {
-    margin-right: 0;
-  }
-  
-  .ajusteLeft {
-    margin-left: 0;
-  }
-
+@media (min-width: 720px) {
   .color-box {
-    height: max-content;
-    padding-right: 0;
-    padding: 10px;
+    flex-direction: row;
+    padding: 0 1rem 0 0;
+    height: 300px;
+    margin: 0 auto;
+  }
+
+  .color-box .image-container {
+    width: 2000px;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px 0 0 10px;
+   }
+
+  .color-box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-right: 1px solid white;
+  }
+
+  .color-box .container-card {
+    padding: 1rem;
   }
 }
