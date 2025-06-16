@@ -4,6 +4,34 @@
     border: none;
 } */
 
+#nav-bar,
+#menu-op {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  min-height: 5em;
+}
+
+li a {
+  color: #eeeeee;
+}
+
+#nav-bar {
+  padding-left: 5em;
+  padding-right: 5em;
+  user-select: none;
+  background: #000 !important;
+}
+
+#menu-op {
+  gap: 3em;
+}
+
 #voltarTopo {
   display: none;
   position: fixed;
