@@ -424,13 +424,57 @@ footer p {
 
 /*  sobre o projeto */
 
-.video{
+.video-carousel-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  gap: 50px; /* espaço entre botão e vídeo */
+  position: relative;
 }
 
+.video-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-slide {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-slide.active {
+  display: flex;
+}
+
+/* Botões ao lado do vídeo */
+.prev-video,
+.next-video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, var(--roxo), var(--rosaEscuro));
+  border: none;
+  color: white;
+  font-size: 2em;
+  padding: 0.5em 0.8em;
+  cursor: pointer;
+  border-radius: 30%;
+  height: 50px;
+  width: 50px;
+}
+
+.prev-video:hover,
+.next-video:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Texto do slide */
+.video-slide p {
+  margin-top: 1em;
+  font-weight: bold;
+}
 
 
 .slideNews {
@@ -654,6 +698,38 @@ button.next:hover {
 /* Responsividade */
 /* Celulares e Telas menores */
 @media screen and (max-width: 480px) {
+  
+  .video-carousel-container {
+    flex-direction: column; /* empilha elementos no mobile */
+    gap: 20px; /* diminui espaço */
+  }
+
+  /* Botões vão para os lados do vídeo */
+  .prev-video,
+  .next-video {
+    font-size: 1.5em;
+    height: 40px;
+    width: 40px;
+    padding: 0.4em 0.6em;
+  }
+
+  /* Cria um "mini container" só para os botões no mobile */
+  .video-controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px; /* largura máxima no mobile */
+    margin-top: 10px;
+  }
+
+  .video-slide iframe {
+  width: 100%;
+  max-width: 600px; /* limita em telas maiores */
+  aspect-ratio: 16 / 9; /* mantém proporção */
+  border: none;
+  border-radius: 10px; /* opcional, deixa cantos arredondados */
+}
+
   #nav-bar img {
     display: none;
   }
