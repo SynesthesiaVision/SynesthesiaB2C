@@ -436,17 +436,38 @@ footer p {
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .video-slide {
-  display: none;
+  opacity: 0;
+  visibility: hidden;          /* esconde quando não ativo */
+  pointer-events: none;        /* bloqueia clique em vídeos invisíveis */
   flex-direction: column;
   align-items: center;
+  position: absolute;          /* ficam sobrepostos */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) scale(1.05); 
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  width: 850px;
+  height: 550px;
 }
 
 .video-slide.active {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  position: relative;
+  transform: translateX(-50%) scale(1); /* efeito zoom suave */
 }
+
+.title-carousel{
+  display: flex;
+  justify-content: center;
+}
+
+
 
 /* Botões ao lado do vídeo */
 .prev-video,

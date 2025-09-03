@@ -85,70 +85,72 @@
               <iframe
                 width="850"
                 height="550"
-                src="https://www.youtube.com/embed/zJbMHiAeXqk"
+                src="https://www.youtube.com/embed/zJbMHiAeXqk?enablejsapi=1"
                 title="Mark1"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
               >
               </iframe>
-              <p>MarkI: Primeiro protótipo</p>
+              <div class="title-carousel"><p>MarkI: Primeiro protótipo</p></div>
             </div>
             <!-- Slide 2 -->
             <div class="video-slide">
               <iframe
                 width="850"
                 height="550"
-                src="https://www.youtube.com/embed/CXpxIWeviLA"
+                src="https://www.youtube.com/embed/CXpxIWeviLA?enablejsapi=1"
                 title="Mark2"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
               >
               </iframe>
-              <p>MarkII: Segundo protótipo</p>
+              <div class="title-carousel"><p>MarkII: Segundo protótipo</p></div>
             </div>
             <!-- Slide 3 -->
             <div class="video-slide">
               <iframe
                 width="850"
                 height="550"
-                src="https://www.youtube.com/embed/rXjUszR_eEk"
+                src="https://www.youtube.com/embed/rXjUszR_eEk?enablejsapi=1"
                 title="Mark3"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
               >
               </iframe>
-              <p>MarkIII: Terceiro protótipo</p>
+              <div class="title-carousel">
+                <p>MarkIII: Terceiro protótipo</p>
+              </div>
             </div>
             <!-- Slide 4 -->
             <div class="video-slide">
               <iframe
                 width="850"
                 height="550"
-                src="https://www.youtube.com/embed/bn4pNaW-zNA"
+                src="https://www.youtube.com/embed/bn4pNaW-zNA?enablejsapi=1"
                 title="Mark3"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
               >
               </iframe>
-              <p>MarkIV: Quarto protótipo</p>
+              <div class="title-carousel"><p>MarkIV: Quarto protótipo</p></div>
             </div>
             <!-- Slide 5 -->
             <div class="video-slide">
               <iframe
                 width="850"
                 height="550"
-                src="https://www.youtube.com/embed/D7xrCcwzR94"
+                src="https://www.youtube.com/embed/D7xrCcwzR94?enablejsapi=1"
                 title="Mark3"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
               >
               </iframe>
-              <p>Synesthesia-2025</p>
+              <div class="title-carousel"><p>Synesthesia-2025</p></div>
             </div>
           </div>
 
@@ -484,29 +486,6 @@
       >
     </footer>
     <script src="./assets/scripts/script.js"></script>
-    <script>
-      let videoIndex = 0;
-      const videoSlides = document.querySelectorAll(".video-slide");
-      const totalVideos = videoSlides.length;
-
-      function showVideo(index) {
-        videoSlides.forEach((slide, i) => {
-          slide.classList.toggle("active", i === index);
-        });
-      }
-
-      document.querySelector(".next-video").addEventListener("click", () => {
-        videoIndex = (videoIndex + 1) % totalVideos;
-        showVideo(videoIndex);
-      });
-
-      document.querySelector(".prev-video").addEventListener("click", () => {
-        videoIndex = (videoIndex - 1 + totalVideos) % totalVideos;
-        showVideo(videoIndex);
-      });
-
-      // inicia exibindo o primeiro
-      showVideo(videoIndex);
-    </script>
+    <script src="assets/scripts/carrosel.js"></script>
   </body>
 </html>
